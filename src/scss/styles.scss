@@ -1,0 +1,35 @@
+@import 'type.scss';
+@import 'mixins.scss';
+
+
+h1, h2, h3 {
+  font-family: 'Malina';
+}
+
+body {
+  -webkit-animation: AnimationName 30s ease infinite;
+  -moz-animation: AnimationName 30s ease infinite;
+  animation: AnimationName 30s ease infinite;
+  background-size: 400% 400%;
+  background: rgb(18,32,36);
+  background: linear-gradient(140deg, rgba(18,32,36,1) 0%, rgba(12,25,48,1) 100%);
+  font-family: 'Mulish', sans-serif;
+  letter-spacing: 0.03em;
+  color: #F0FCFF;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 51%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 51%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 51%}
+    100%{background-position:0% 50%}
+}
