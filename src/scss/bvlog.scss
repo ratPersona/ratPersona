@@ -1,25 +1,47 @@
 .bvlog {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  position: relative;
   padding: 0 20px;
   .sidebar {
     align-self: center;
     text-align: left;
-    width: 20%;
+    transition: opacity 300ms ease;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+
+    &.hide {
+      opacity: 0;
+    }
+    opacity: 1;
+    align-self: center;
+    text-align: left;
+
     .flex-col {
-      // min-height: 200px;
-      // width: 30%;
       padding: 15px 10px;
-      border-radius: 20px;
+      border-radius: 100em;
+      height: 250px;
+      width: 250px;
       background: rgba(98,168,142,.75);
       margin-bottom: 20px;
+      color: #F0FCFF;
+      border: none;
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
-  .content {
-    width: 75%;
-    h1 {
-      // text-align: center;
+  .samb-content {
+    .active {
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: auto;
+      top: -40%;
+      height: 170%;
+      width: 90%;
+      padding: 20px;
+      border-radius: 20px;
+      background: rgba(98,168,142, 1);
     }
   }
 }

@@ -3,8 +3,16 @@
 @import 'subpage.scss';
 
 
-h1, h2, h3 {
-  font-family: 'Malina-Regular';
+button {
+  outline: none;
+}
+
+h1 {
+  font-family: 'Paris Dreamer';
+}
+
+h2, h3 {
+  // font-family: 'Paris Dreamer';
 }
 
 html {
@@ -39,12 +47,18 @@ body {
       transition: width 300ms ease, height 300ms ease;
     }
   }
+
   header {
     padding-bottom: 200px;
   }
+
   .subpage {
-    // overflow: hidden;
     h1 {
+      width: 35%;
+      margin: 0 auto 0;
+      font-size: 28px;
+      transform: skew(0deg, -3deg);
+      margin-bottom: 150px;
       text-align: center;
     }
   }

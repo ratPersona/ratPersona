@@ -6,7 +6,7 @@
   <section class="social-info" @click="toggleFooter()">
     <div v-if="closed" class="content closed">
       <div class="flex closed">
-
+        <svg class="icon"><use href="#social"></use></svg>
       </div>
     </div>
     <div v-else class="content open">

@@ -1,17 +1,7 @@
 <style lang="scss">
   @import '@/scss/home.scss';
-
-  @font-face {
-      font-family: 'Malina';
-      src: url('/assets/fonts/Malina-Regular.otf') format('font-type'),
-          url('/assets/fonts/Malina-Regular.ttf') format('truetype');
-      font-weight: normal;
-      font-style: normal;
-      font-display: swap;
-  }
-
-  h1, h2, h3 {
-    font-family: 'Malina';
+  .hello {
+    transform: skew(7deg, -11deg);
   }
   canvas {
     position: absolute;
@@ -31,7 +21,7 @@
     <div class="content">
       <div class="about">
         <aside>
-          <h1 @click="getNewGreeting()">{{ this.hello }}!</h1>
+          <h1 class="hello" @click="getNewGreeting()">{{ this.hello }}!</h1>
           <div class="image">
             <img class="home-pic" src="@/assets/prof.jpg">
             <span class="background"></span>
@@ -41,35 +31,39 @@
           </div>
         </aside>
         <main>
-          <section class="resume">
-            <h2>Sam Nelson - She/They</h2>
-            <h3>Software Developer | UX Guru</h3>
-            <div class="edu">
-              <p class="degree">Master of Professional Studies - <strong>User Experience Design</strong></p>
-              <p><em>2020-2021</em> - In Progress!</p>
+          <div class="flex-outer">
+            <h2 class="name">Sam Nelson - <small>She/They</small></h2>
+            <div class="flex-inner">
+              <section class="resume">
+                <h3>Software Developer | UX Guru</h3>
+                <div class="edu">
+                  <p class="degree">Master of Professional Studies - <strong>User Experience Design</strong></p>
+                  <p><em>2020-2021</em> - In Progress!</p>
+                </div>
+                <div class="edu">
+                  <p class="degree">Certificate of Web Development</p>
+                  <p><em>2016-2017</em></p>
+                </div>
+                <div class="edu">
+                  <p class="degree">Bachelor of Fine Arts - <strong>Illustration</strong></p>
+                  <p><em>2010-2015</em></p>
+                </div>
+                <div class="edu">
+                  <p class="degree">Bachelor of Arts- <strong>German</strong></p>
+                  <p><em>2010-2015</em></p>
+                </div>
+              </section>
+              <section class="hobbies">
+                <span>User Experience</span>
+                <span>Yarn Spinning</span>
+                <span>Homesteading</span>
+                <span>Druidry</span>
+                <span>Artistry</span>
+                <span>Rats & Rabbits</span>
+                <span>Reptiles</span>
+              </section>
             </div>
-            <div class="edu">
-              <p class="degree">Certificate of Web Development</p>
-              <p><em>2016-2017</em></p>
-            </div>
-            <div class="edu">
-              <p class="degree">Bachelor of Fine Arts - <strong>Illustration</strong></p>
-              <p><em>2010-2015</em></p>
-            </div>
-            <div class="edu">
-              <p class="degree">Bachelor of Arts- <strong>German</strong></p>
-              <p><em>2010-2015</em></p>
-            </div>
-          </section>
-          <section class="hobbies">
-            <span>User Experience</span>
-            <span>Yarn Spinning</span>
-            <span>Homesteading</span>
-            <span>Druidry</span>
-            <span>Artistry</span>
-            <span>Rats & Rabbits</span>
-            <span>Reptiles</span>
-          </section>
+          </div>
         </main>
       </div>
     </div>

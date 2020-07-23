@@ -48,7 +48,23 @@
         width: 50%;
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        .flex-outer {
+          width: 100%;
+          .flex-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+          }
+        }
+        // flex-wrap: wrap;
+        .name {
+          width: 100%;
+          margin: 0;
+          small {
+            // display: block;
+            color: rgba(98,168,142,1);
+          }
+        }
         .resume,
         .hobbies {
           width: 50%;

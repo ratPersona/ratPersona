@@ -6,6 +6,15 @@
 //     font-style: normal;
 //     font-display: swap;
 // }
+
+@font-face {
+font-family: 'Paris Dreamer';
+src: url('~@/assets/fonts/ParisDreamer-Regular.woff2') format('woff2'),
+    url('~@/assets/fonts/ParisDreamer-Regular.woff') format('woff');
+font-weight: normal;
+font-style: normal;
+}
+
 @font-face {
     font-family: 'Malina-Regular';
     src: url('/assets/fonts/Malina-Regular.otf') format('font-type'),
