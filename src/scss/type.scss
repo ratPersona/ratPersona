@@ -7,20 +7,20 @@
 //     font-display: swap;
 // }
 @font-face {
-    font-family: 'Malina';
+    font-family: 'Malina-Regular';
     src: url('/assets/fonts/Malina-Regular.otf') format('font-type'),
-        url('/assets/fonts/Malina-Regular.ttf') format('font-type');
+        url('/assets/fonts/Malina-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 
 h1 {
-  font-size: 60px;
-}
-h2 {
   font-size: 40px;
 }
-h3 {
+h2 {
   font-size: 32px;
+}
+h3 {
+  font-size: 28px;
 }

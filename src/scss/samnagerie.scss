@@ -1,0 +1,25 @@
+.samnagerie {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 20px;
+  .sidebar {
+    align-self: center;
+    text-align: left;
+    width: 20%;
+    .flex-col {
+      // min-height: 200px;
+      // width: 30%;
+      padding: 15px 10px;
+      border-radius: 20px;
+      background: rgba(98,168,142,.75);
+      margin-bottom: 20px;
+    }
+  }
+  .content {
+    width: 75%;
+    h1 {
+      // text-align: center;
+    }
+  }
+}

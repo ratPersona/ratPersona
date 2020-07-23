@@ -1,12 +1,21 @@
 @import 'type.scss';
 @import 'mixins.scss';
+@import 'subpage.scss';
 
 
 h1, h2, h3 {
-  font-family: 'Malina';
+  font-family: 'Malina-Regular';
+}
+
+html {
+  height: 100%;
+  width: 100%;
 }
 
 body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
   -webkit-animation: AnimationName 30s ease infinite;
   -moz-animation: AnimationName 30s ease infinite;
   animation: AnimationName 30s ease infinite;
@@ -16,6 +25,30 @@ body {
   font-family: 'Mulish', sans-serif;
   letter-spacing: 0.03em;
   color: #F0FCFF;
+  position: relative;
+
+  .main-content {
+    &::after {
+      content: '';
+      z-index: 10;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 0;
+      transition: width 300ms ease, height 300ms ease;
+    }
+  }
+  header {
+    padding-bottom: 200px;
+  }
+  .subpage {
+    overflow: hidden;
+    h1 {
+      text-align: center;
+    }
+  }
+
 }
 
 @-webkit-keyframes AnimationName {

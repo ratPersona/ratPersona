@@ -6,17 +6,30 @@
     height: 100%;
     width: 100%;
   }
+  .content {
+    position: relative;
+    z-index: 100;
+  }
 </style>
 
 
 <template>
   <section id="home" class="home">
     <canvas id="canvas"></canvas>
-    <div>
-      <h1>{{ this.hello }}!</h1>
-      <article>
-        lorem ipsum
-      </article>
+    <div class="content">
+      <h1 @click="getNewGreeting()">{{ this.hello }}!</h1>
+      <div class="about">
+        <aside>
+          <img src="/">
+          <div>
+            <span>User Experience Bard</span>
+          </div>
+        </aside>
+        <main>
+          <p>Let me say "hello" in all the ways!</p>
+          <p>Thanks for visiting, take a look around and if you want - leave me some love</p>
+        </main>
+      </div>
     </div>
   </section>
 </template>
@@ -33,6 +46,7 @@ export default {
     return {
       hello: '',
       greetings: ['Hello', 'Bonjour', 'Salut', 'Hola', '¿Qué tal?', 'Zdravstvuyte', 'Privet', 'Nǐn hǎo', 'Salve', 'Ciao', 'Konnichiwa', 'Yō', 'Guten Tag', 'Hallo', 'Olá', 'Anyoung', 'Ahlan', 'Goddag', 'Halløj', 'Shikamoo', 'Habari', ]
+
     }
   },
   methods: {
