@@ -55,6 +55,10 @@
           span {
             display: block;
             margin-bottom: 5px;
+
+            &:nth-child(even) {
+              color: rgba(98,168,142,1);
+            }
           }
         }
         .hobbies {
