@@ -42,6 +42,7 @@
         </aside>
         <main>
           <section class="resume">
+            <h2>Sam Nelson - She/They</h2>
             <h3>Software Developer | UX Guru</h3>
             <div class="edu">
               <p class="degree">Master of Professional Studies - <strong>User Experience Design</strong></p>
