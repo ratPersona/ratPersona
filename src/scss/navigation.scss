@@ -15,6 +15,7 @@
     text-decoration: none;
     position: relative;
     &.router-link-exact-active {
+      font-family: 'Paris Dreamer';
       &::after {
         width: 100%;
       }

@@ -16,17 +16,17 @@
         </button>
       </aside>
       <main class="samb-content">
-        <div ref="main" v-show="activeItem === 'main'" :class="[{activeMain: activeItem === 'main'}]">
+        <div ref="main" :class="[{activeMain: activeItem === 'main'}]">
         </div>
-        <div ref="blog" v-show="activeItem === 'blog'" :class="[{active: activeItem === 'blog'}]">
-          <section class="samb-content">
+        <div ref="blog" class="blog inner-content" :class="[{active: activeItem === 'blog'}]">
+          <section class="blog-content">
             <button @click="selectItem('main')">Back</button>
             <Blog />
             TEST
           </section>
         </div>
-        <div ref="vlog" v-show="activeItem === 'vlog'" :class="[{active: activeItem === 'vlog'}]">
-          <section class="samb-content">
+        <div ref="vlog" class="vlog inner-content" :class="[{active: activeItem === 'vlog'}]">
+          <section class="vlog-content">
             <button @click="selectItem('main')">Back</button>
             <Vlog />
             TEST

@@ -1,5 +1,8 @@
 <style lang="scss">
   @import '@/scss/navigation.scss';
+  // .fancy {
+  //   font-family: 'Paris Dreamer';
+  // }
 </style>
 
 <template>
@@ -9,7 +12,7 @@
     <router-link to="/projects">Projects</router-link>
     <router-link to="/bvlog">B/Vlog</router-link>
     <router-link to="/samnagerie">Samnagerie</router-link>
-    <button @click="randomize()" class="random">Down the Rabbit Hole</button>
+    <!-- <button @click="randomize()" class="random">Down the Rabbit Hole</button> -->
   </nav>
 </template>
 

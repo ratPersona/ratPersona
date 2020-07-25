@@ -2,7 +2,6 @@
   @import '@/scss/samnagerie.scss';
 </style>
 
-
 <template>
   <section class="subpage">
     <h1>{{ this.title }}</h1>
@@ -19,26 +18,24 @@
         </button>
       </aside>
       <main class="samb-content">
-        <div ref="main" v-show="activeItem === 'main'" :class="[{activeMain: activeItem === 'main'}]">
-        </div>
-        <div ref="rats" v-show="activeItem === 'rats'" :class="[{active: activeItem === 'rats'}]">
-          <main class="samb-content">
+        <div ref="main" :class="[{activeMain: activeItem === 'main'}]"></div>
+        <div ref="rats" class="rats inner-content" :class="[{active: activeItem === 'rats'}]">
+          <section>
             <button @click="selectItem('main')">Back</button>
             <Rats />
-            TEST
-          </main>
+          </section>
         </div>
-        <div ref="reptiles" v-show="activeItem === 'reptiles'" :class="[{active: activeItem === 'reptiles'}]">
-          <main class="samb-content">
+        <div ref="reptiles" class="reptiles inner-content" :class="[{active: activeItem === 'reptiles'}]">
+          <section>
             <button @click="selectItem('main')">Back</button>
             <Reptiles />
-          </main>
+          </section>
         </div>
-        <div ref="homesteaders" v-show="activeItem === 'homesteaders'" :class="[{active: activeItem === 'homesteaders'}]">
-          <main class="samb-content">
+        <div ref="homesteaders" class="homesteaders inner-content" :class="[{active: activeItem === 'homesteaders'}]">
+          <section>
             <button @click="selectItem('main')">Back</button>
             <Homesteaders />
-          </main>
+          </section>
         </div>
       </main>
     </div>
