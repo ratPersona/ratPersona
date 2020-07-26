@@ -8,7 +8,7 @@
 <template>
   <nav class="navigation">
     <router-link to="/">Home</router-link>
-    <router-link to="/lifestyle">Lifestyle</router-link>
+    <router-link to="/store">Store</router-link>
     <router-link to="/projects">Projects</router-link>
     <router-link to="/bvlog">B/Vlog</router-link>
     <router-link to="/samnagerie">Samnagerie</router-link>
