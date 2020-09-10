@@ -1,4 +1,11 @@
 <style lang="scss">
+  nav {
+    ol {
+      li {
+        margin: 5px 0;
+      }
+    }
+  }
   h1 {
     font-size: 40px;
   }
@@ -8,39 +15,48 @@
   .inner {
     padding: 0 0 200px;
     display: flex;
+    justify-content: center;
+    margin: auto;
   }
   .sidebar-inner {
     width: 20%;
   }
   .main-inner {
     position: relative;
-    background-color: #F0FCFF;
+    // background-color: #F0FCFF;
     color: #0c1930;
     padding: 20px;
-    height: 100%;
+    // height: 100%;
     width: 75%;
     border-radius: 20px;
     top: 0;
     .contain {
       width: 765px;
       margin: auto;
+
+      #males, #females {
+        width: 50%;
+        float: left;
+      }
     }
   }
 </style>
 
 <template>
   <section class="flex-col inner rats-inner">
-    <aside class="sidebar-inner">
+    <!-- <aside class="sidebar-inner">
       <h1>Rats</h1>
-      <ol>
-        <li><a href="#why-rats">Why Rats?</a></li>
-        <li><a href="#males">Males</a></li>
-        <li><a href="#females">Females</a></li>
-        <li><a href="#litters">Litters</a></li>
-        <li><a href="#avail-rats">Available Rats</a></li>
-        <li><a href="#j-line">J-Line Legacy</a></li>
-      </ol>
-    </aside>
+      <nav>
+        <ol>
+          <li><a href="#why-rats">Why Rats?</a></li>
+          <li><a href="#males">Males</a></li>
+          <li><a href="#females">Females</a></li>
+          <li><a href="#litters">Litters</a></li>
+          <li><a href="#avail-rats">Available Rats</a></li>
+          <li><a href="#j-line">J-Line Legacy</a></li>
+        </ol>
+      </nav>
+    </aside> -->
     <main class="main-inner">
       <section class="contain">
         <article id="why-rats">
@@ -51,7 +67,7 @@
         </article>
         <article id="males">
           <h2 class="inner-h2">The Boys</h2>
-          <p>Males tend to be larger and squishier than females, at least in my experience. I love boys, they're my favorite cuddle-buddies and so eager to please!</p>
+          <!-- <p>Males tend to be larger and squishier than females, at least in my experience. I love boys, they're my favorite cuddle-buddies and so eager to please!</p> -->
           <h3>Current Boys</h3>
           <ul>
             <li><strong>Joona</strong> - Gen 1 Russian Blue Berk</li>
@@ -63,7 +79,7 @@
         </article>
         <article id="females">
           <h2 class="inner-h2">The Girls</h2>
-          <p>Girls are speedy little goofballs who enjoy causing a ruckus and love playtime. All my girls demand chase games in the morning right when I wake up!</p>
+          <!-- <p>Girls are speedy little goofballs who enjoy causing a ruckus and love playtime. All my girls demand chase games in the morning right when I wake up!</p> -->
           <h3>Current Girls</h3>
           <ul>
             <li><strong>Louise</strong> - Gen 1 Platinum Berk</li>

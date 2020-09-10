@@ -52,11 +52,14 @@
     &.active {
       position: fixed;
       left: 0;
+      margin: auto;
       top: 0;
+      right: 0;
+      bottom: 0;
       opacity: 1;
-      border-radius: 0;
-      height: 100%;
-      width: 100%;
+      border-radius: 20px;
+      height: 80%;
+      width: 80%;
       padding: 20px;
       background: rgba(98,168,142, 1);
       transition: height 500ms ease, width 500ms ease, top 500ms ease, left 500ms ease, border-radius 500ms ease;

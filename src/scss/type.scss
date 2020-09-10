@@ -33,3 +33,13 @@ h2 {
 h3 {
   font-size: 20px;
 }
+
+a {
+  color: #0c1930;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 300ms ease;
+  &:hover {
+    color: #3b6fcc;
+  }
+}

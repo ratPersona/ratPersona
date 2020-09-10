@@ -41,9 +41,25 @@
     border-radius: 100em;
     transition: height 500ms ease, width 500ms ease, top 500ms ease, left 500ms ease, border-radius 500ms ease;
 
-    button {
+    .back-btn {
       position: absolute;
-      right: 0;
+      right: 90px;
+      top: 50px;
+      z-index: 1;
+      background: #62a88e;
+      border: none;
+      padding: 12px 12px 10px;
+      border-radius: 200em;
+      transition: background 300ms ease;
+      .icon {
+        width: 20px;
+        height: 20px;
+      }
+
+      &:hover {
+        background: #0c1930;
+        cursor: pointer;
+      }
     }
 
     &.rats {
@@ -60,17 +76,20 @@
     }
 
     &.active {
-      // display: block;
       overflow: scroll;
       position: fixed;
       left: 0;
+      margin: auto;
       top: 0;
+      right: 0;
+      bottom: 0;
       opacity: 1;
-      border-radius: 0;
-      height: 100%;
-      width: 100%;
+      border-radius: 20px;
+      height: 80%;
+      width: 80%;
       padding: 20px;
-      background: rgba(98,168,142, 1);
+      // background: rgba(98,168,142, 1);
+      background: #F0FCFF;
       transition: height 500ms ease, width 500ms ease, top 500ms ease, left 500ms ease, border-radius 500ms ease;
     }
   }

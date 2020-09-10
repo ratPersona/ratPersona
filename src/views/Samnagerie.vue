@@ -21,19 +21,19 @@
         <div ref="main" :class="[{activeMain: activeItem === 'main'}]"></div>
         <div ref="rats" class="rats inner-content" :class="[{active: activeItem === 'rats'}]">
           <section>
-            <button @click="selectItem('main')">Back</button>
+            <button class="back-btn" @click="selectItem('main')"><svg class="icon"><use href="#close"></use></svg></button>
             <Rats />
           </section>
         </div>
         <div ref="reptiles" class="reptiles inner-content" :class="[{active: activeItem === 'reptiles'}]">
           <section>
-            <button @click="selectItem('main')">Back</button>
+            <button class="back-btn" @click="selectItem('main')"><svg class="icon"><use href="#close"></use></svg></button>
             <Reptiles />
           </section>
         </div>
         <div ref="homesteaders" class="homesteaders inner-content" :class="[{active: activeItem === 'homesteaders'}]">
           <section>
-            <button @click="selectItem('main')">Back</button>
+            <button class="back-btn" @click="selectItem('main')"><svg class="icon"><use href="#close"></use></svg></button>
             <Homesteaders />
           </section>
         </div>
