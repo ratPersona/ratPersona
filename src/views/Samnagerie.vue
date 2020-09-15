@@ -1,5 +1,6 @@
 <style lang="scss">
-  @import '@/scss/samnagerie.scss';
+  // @import '@/scss/samnagerie.scss';
+  @import '@/scss/modal.scss';
 </style>
 
 <template>
@@ -58,7 +59,6 @@ export default {
     return {
       title: '',
       samnagerieTitles: ['My chickens are cooler than your children.', 'I am the rat queen.', 'Snakes, snuggles, and snacks!'],
-
       activeItem: 'main',
     }
   },

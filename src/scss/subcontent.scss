@@ -1,5 +1,14 @@
+@import '@/scss/mixins.scss';
+
 .rats-inner,
 .reptiles-inner,
 .homesteaders-inner {
 
+}
+
+.inner-content {
+  &.active {
+    font-weight: 800;
+    color: $dark-blue;
+  }
 }

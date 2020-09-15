@@ -34,7 +34,8 @@ export default {
   name: 'App',
   components: {
     Nav,
-    Social
+    Social,
+    // Firebase
   },
   data: function() {
     return {

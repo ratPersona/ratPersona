@@ -41,6 +41,10 @@
     border-radius: 100em;
     transition: height 500ms ease, width 500ms ease, top 500ms ease, left 500ms ease, border-radius 500ms ease;
 
+
+    h1, h2, h3 {
+      color: #62a88e;
+    }
     .back-btn {
       position: absolute;
       right: 90px;
@@ -76,7 +80,7 @@
     }
 
     &.active {
-      overflow: scroll;
+      // overflow: scroll;
       position: fixed;
       left: 0;
       margin: auto;
@@ -91,6 +95,29 @@
       // background: rgba(98,168,142, 1);
       background: #F0FCFF;
       transition: height 500ms ease, width 500ms ease, top 500ms ease, left 500ms ease, border-radius 500ms ease;
+
+      > section {
+        height: 100%;
+      }
+
     }
+  }
+}
+h1 {
+  font-size: 40px;
+}
+.inner-h2 {
+  font-family: 'Paris Dreamer';
+}
+.main-inner {
+  position: relative;
+  color: #0c1930;
+  padding: 20px;
+  width: 75%;
+  border-radius: 20px;
+  top: 0;
+  .contain {
+    width: 765px;
+    margin: auto;
   }
 }

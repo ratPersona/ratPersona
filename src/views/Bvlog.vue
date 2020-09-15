@@ -1,5 +1,6 @@
 <style lang="scss">
   @import '@/scss/bvlog.scss';
+  @import '@/scss/modal.scss';
 </style>
 
 
@@ -20,14 +21,14 @@
         </div>
         <div ref="blog" class="blog inner-content" :class="[{active: activeItem === 'blog'}]">
           <section class="blog-content">
-            <button @click="selectItem('main')">Back</button>
+            <button class="back-btn" @click="selectItem('main')"><svg class="icon"><use href="#close"></use></svg></button>
             <Blog />
-            TEST
           </section>
         </div>
         <div ref="vlog" class="vlog inner-content" :class="[{active: activeItem === 'vlog'}]">
           <section class="vlog-content">
-            <button @click="selectItem('main')">Back</button>
+            <button class="back-btn" @click="selectItem('main')"><svg class="icon"><use href="#close"></use></svg></button>
+            <!-- <button @click="selectItem('main')">Back</button> -->
             <Vlog />
             TEST
           </section>
@@ -51,7 +52,6 @@ export default {
     return {
       title: '',
       bvlogTitles: ['Look at me say things about stuff.', 'So many rants to choose from!', 'Basically your dose of glitter and gore.'],
-
       activeItem: 'main',
     }
   },

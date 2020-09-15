@@ -6,12 +6,12 @@
       }
     }
   }
-  h1 {
-    font-size: 40px;
-  }
-  .inner-h2 {
-    font-family: 'Paris Dreamer';
-  }
+  // h1 {
+  //   font-size: 40px;
+  // }
+  // .inner-h2 {
+  //   font-family: 'Paris Dreamer';
+  // }
   .inner {
     padding: 0 0 200px;
     display: flex;
@@ -22,18 +22,7 @@
     width: 20%;
   }
   .main-inner {
-    position: relative;
-    // background-color: #F0FCFF;
-    color: #0c1930;
-    padding: 20px;
-    // height: 100%;
-    width: 75%;
-    border-radius: 20px;
-    top: 0;
     .contain {
-      width: 765px;
-      margin: auto;
-
       #males, #females {
         width: 50%;
         float: left;
