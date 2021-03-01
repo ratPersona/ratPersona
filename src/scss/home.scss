@@ -1,3 +1,5 @@
+// @import '@/scss/styles.scss';
+
 .home {
   font-family: 'Mulish', sans-serif;
   top: 0;
@@ -9,8 +11,15 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  .content {
+  .name {
     width: 100%;
+    margin: 0 0 20px;
+    text-align: left;
+    small {
+      color: rgba(98,168,142,1);
+    }
+  }
+  .content {
     .about {
       width: 100%;
       display: flex;
@@ -50,9 +59,9 @@
         justify-content: space-between;
         list-style: none;
         padding: 0;
+        margin-bottom: 20px;
         .button {
           width: 30%;
-
           > button {
             width: 100%;
             position: relative;
@@ -70,7 +79,7 @@
               display: none;
               z-index: 1;
               top: 40px;
-              right: 70px;
+              right: 45%;
               border-top: 12px solid rgba(98, 168, 142, 0.8);
               border-right: 12px solid transparent;
               border-left: 12px solid transparent;
@@ -78,7 +87,6 @@
 
             &.active {
               background-color: rgba(98, 168, 142, 0.8);
-
               &::after {
                 display: block;
               }
@@ -87,48 +95,80 @@
         }
       }
 
+      .about-me-content {
+        width: 50%;
+      }
+
       .main-info {
         text-align: left;
-        // width: 50%;
         display: flex;
-        align-items: center;
+        justify-content: space-between;
+        // align-items: center;
+        min-height: 350px;
+        width: 100%;
         .flex-outer {
           width: 100%;
           .flex-inner {
             display: flex;
-            align-items: center;
+            // align-items: center;
             justify-content: space-between;
           }
         }
-        // flex-wrap: wrap;
-        .name {
-          width: 100%;
-          margin: 0;
-          small {
-            // display: block;
-            color: rgba(98,168,142,1);
-          }
+        em {
+          color: rgba(98,168,142,1);
         }
-        .resume,
+        .about-me {
+          width: 70%;
+          padding: 0;
+        }
         .hobbies {
-          width: 50%;
+          width: 30%;
           span {
             display: block;
+          }
+        }
+        .resume {
+          width: 100%;
+        }
+        .jobs,
+        .volunteering {
+          width: 100%;
+        }
+        .about-me,
+        .hobbies,
+        .resume,
+        .volunteering {
+          span {
+            // display: block;
             margin-bottom: 5px;
 
             &:nth-child(even) {
               color: rgba(98,168,142,1);
             }
+
+            &.dot {
+              margin-left: 5px;
+              margin-right: 5px;
+              color: rgba(98,168,142,1);
+            }
           }
         }
-        .hobbies {
+        .hobbies,
+        .volunteering {
           text-align: right;
         }
 
-        .edu {
-          margin-bottom: 10px;
-          .degree {
+        .edu,
+        .job {
+          margin-bottom: 20px;
+          .degree,
+          .job-name {
             color: rgba(98,168,142,1);
+            font-size: 18px;
+            margin-bottom: 5px;
+            strong {
+              color: #fff;
+            }
           }
           p {
             margin: 0;

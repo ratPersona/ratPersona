@@ -8,7 +8,6 @@
   .footer {
     position: relative;
     padding: 20px;
-    // width: 100%;
   }
 </style>
 
