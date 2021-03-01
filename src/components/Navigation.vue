@@ -7,10 +7,10 @@
 
 <template>
   <nav class="navigation">
-    <router-link to="/">Home</router-link>
+    <router-link to="/">About</router-link>
+    <router-link to="/portfolio">Portfolio</router-link>
     <router-link to="/store">Store</router-link>
-    <router-link to="/projects">Projects</router-link>
-    <router-link to="/bvlog">B/Vlog</router-link>
+    <router-link to="/bvlog">Blog</router-link>
     <router-link to="/samnagerie">Samnagerie</router-link>
     <!-- <button @click="randomize()" class="random">Down the Rabbit Hole</button> -->
   </nav>

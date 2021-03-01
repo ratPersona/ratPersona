@@ -2,17 +2,11 @@
 </style>
 
 <template>
-  <main>
-    <ul class="home-display-options">
-      <li><button role="button">About</button></li>
-      <li><button role="button">Latest Post</button></li>
-      <li><button role="button">Random Factoid</button></li>
-    </ul>
-
-    <div v-if="about" class="flex-outer">
+  <section>
+    <div class="flex-outer">
       <h2 class="name">Sam Nelson - <small>She/They</small></h2>
       <div class="flex-inner">
-        <section class="resume">
+        <article class="resume">
           <h3>Software Developer | UX Guru</h3>
           <div class="edu">
             <p class="degree">Master of Professional Studies - <strong>User Experience Design</strong></p>
@@ -30,31 +24,25 @@
             <p class="degree">Bachelor of Arts- <strong>German</strong></p>
             <p><em>2010-2015</em></p>
           </div>
-        </section>
-        <section class="hobbies">
+        </article>
+        <article class="hobbies">
           <span>User Experience</span>
           <span>Yarn Spinning</span>
           <span>Homesteading</span>
           <span>Druidry</span>
           <span>Artistry</span>
-          <span>Rats & Rabbits</span>
+          <span>Rats &amp; Rabbits</span>
           <span>Reptiles</span>
-        </section>
+        </article>
       </div>
     </div>
-
-    <div v-else-if="blog" class="flex-outer">BLOG FEED</div>
-    <div v-else-if="random" class="flex-outer">RANDOM</div>
-  </main>
+  </section>
 </template>
 
 <script>
 export default {
   data: function() {
     return {
-      about: true,
-      blog: false,
-      random: false
 
     }
   },

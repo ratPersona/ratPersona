@@ -2,6 +2,13 @@
   @import '@/scss/home.scss';
   .hello {
     transform: skew(7deg, -11deg);
+    background: transparent;
+    border: none;
+    // position: relative;
+    h1 {
+      // position: absolute;
+      color: #62a88e;
+    }
   }
   .content {
     position: relative;
@@ -15,7 +22,14 @@
     <div class="content">
       <div class="about">
         <aside>
-          <h1 class="hello" @click="getNewGreeting()">{{ this.hello }}!</h1>
+          <button
+          class="hello"
+          role="button"
+          @click="getNewGreeting()">
+            <h1 class="header">
+              {{ this.hello }}!
+            </h1>
+          </button>
           <div class="image">
             <img class="home-pic" src="@/assets/prof.jpg">
             <span class="background"></span>
@@ -24,7 +38,16 @@
             <h2>{{ this.caption }}</h2>
           </div>
         </aside>
-        <About />
+        <main class="about-me-content">
+          <ul class="home-display-options">
+            <li class="button"><button class="active" role="button">Education</button></li>
+            <li class="button"><button role="button">Resume</button></li>
+            <li class="button"><button role="button">Fun Stuff</button></li>
+          </ul>
+          <div class="main-info">
+            <About />
+          </div>
+        </main>
       </div>
     </div>
   </section>
