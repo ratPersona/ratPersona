@@ -3,8 +3,8 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding: 50px 0;
-    top: -30px;
+    padding: 70px 0 50px;
+    top: -70px;
     position: relative;
     .portfolio-card {
       position: relative;
@@ -12,7 +12,7 @@
       height: 300px;
       width: 300px;
       border-radius: 5px;
-      // background-image: url('~@/assets/portfolio/ux/nomader.png');
+      background-image: url('~@/assets/portfolio/ux/nomader.png');
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
@@ -37,6 +37,7 @@
         bottom: 0;
         &::after {
           background-color: #0c1930;
+          transition: opacity ease 300ms, border ease 300ms;
         }
       }
 
@@ -53,7 +54,7 @@
         cursor: pointer;
         &::after {
           opacity: .8;
-          border: #0c1930 solid 20px;
+          border: #3a5d9c solid 20px;
         }
         &:nth-child(even) {
           &::after {
@@ -73,10 +74,11 @@
 <template>
   <div class="ux-projects">
     <horizontal-scroll class="ux-portfolio">
+      <!-- :style="'background-image: url(@/assets/portfolio/ux/' + card + '.png'" -->
+
       <div
       class="portfolio-card"
       v-for="card in portfolioItems"
-      :style="'background-image: url(~@/assets/portfolio/ux/' + card + '.png)'"
       :key="card">
         <h2 class="paris-dreamer">{{ removeChar(card) }}</h2>
       </div>

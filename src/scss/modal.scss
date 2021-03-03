@@ -1,10 +1,16 @@
 @import 'subcontent.scss';
 
 .samnagerie,
+.bvlog {
+  padding: 30px 20px;
+}
+
+.portfolio {}
+
+.samnagerie,
 .bvlog,
 .portfolio {
   position: relative;
-  padding: 30px 20px;
 
   .sidebar {
     display: flex;
