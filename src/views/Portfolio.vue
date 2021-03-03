@@ -1,38 +1,77 @@
 <style lang="scss">
   @import '@/scss/modal.scss';
+
+  .back-btn {
+    position: absolute;
+    left: 90px;
+    top: 230px;
+    z-index: 1;
+    background: #62a88e;
+    border: none;
+    padding: 12px 12px 10px;
+    border-radius: 200em;
+    transition: background 300ms ease;
+    .icon {
+      position: relative;
+      left: -1px;
+      width: 20px;
+      height: 20px;
+      color: #fff;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
 </style>
 
 <template>
-  <div class="portfolio subpage">
-    <h1>{{ this.title }}</h1>
+  <section class="subpage">
+    <button
+    v-if="activeItem !== ''"
+    class="back-btn"
+    @click="selectItem('')">
+      <svg class="icon"><use href="#back"></use></svg>
+    </button>
+    <h1 v-if="activeItem == 'ux'">UX Pojects</h1>
+    <h1 v-else>{{ this.title }}</h1>
+    <div class="portfolio">
+      <aside
+      v-show="activeItem == ''"
+      class="sidebar">
+        <button
+        @click="selectItem('ux')"
+        role="button"
+        class="flex-col ux">
+          <h2>UX Projects</h2>
+        </button>
+        <button
+        @click="selectItem('apps')"
+        role="button"
+        class="flex-col apps">
+          <h2>Apps</h2>
+        </button>
+        <button
+        @click="selectItem('illustration')"
+        role="button"
+        class="flex-col illustration">
+          <h2>Illustration</h2>
+        </button>
+      </aside>
 
-    <aside class="sidebar" :class="[{hide: activeItem != 'main'}]">
-      <button
-      @click="selectItem('ux')"
-      role="button"
-      class="flex-col ux">
-        <h2>UX Projects</h2>
-      </button>
-      <button
-      @click="selectItem('apps')"
-      role="button"
-      class="flex-col apps">
-        <h2>Apps</h2>
-      </button>
-      <button
-      @click="selectItem('illustration')"
-      role="button"
-      class="flex-col illustration">
-        <h2>Illustration</h2>
-      </button>
-    </aside>
-  </div>
+      <main class="projects" v-show="activeItem !== ''">
+        <section
+        class="ux-projects"
+        :class="[{active: activeItem === 'ux'}]"
+        v-if="activeItem == 'ux'">
+          <UX />
+        </section>
+      </main>
+    </div>
+  </section>
 </template>
 
 <script>
 import UX from '@/components/UX.vue'
-// import Reptiles from '@/components/Reptiles.vue'
-// import Homesteaders from '@/components/Homesteaders.vue'
 
 export default {
   name: 'Portfolio',
@@ -43,7 +82,7 @@ export default {
     return {
       title: '',
       portfolioTitles: ['Humble Brag', 'I draw mythical creatures & cute girls', "Enjoy all the segues you're in for"],
-      activeItem: 'main',
+      activeItem: '',
     }
   },
   methods: {

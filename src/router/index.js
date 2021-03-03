@@ -8,22 +8,34 @@ Vue.use(VueRouter)
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: Home,
+    meta: {
+      isPublic:true
+    }
   },
   {
     path: '/store',
     name: 'Store',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Store.vue')
+    component: () => import(/* webpackChunkName: "about" */ '../views/Store.vue'),
+    meta: {
+      isPublic:true
+    }
   },
   {
     path: '/portfolio',
     name: 'Portfolio',
-    component: () => import(/* webpackChunkName: "rats" */ '../views/Portfolio.vue')
+    component: () => import(/* webpackChunkName: "rats" */ '../views/Portfolio.vue'),
+    meta: {
+      isPublic:true
+    }
   },
   {
     path: '/samnagerie',
     name: 'Samnagerie',
-    component: () => import(/* webpackChunkName: "rats" */ '../views/Samnagerie.vue')
+    component: () => import(/* webpackChunkName: "rats" */ '../views/Samnagerie.vue'),
+    meta: {
+      isPublic:true
+    }
   },
   {
     path: '/bvlog',
@@ -31,7 +43,10 @@ Vue.use(VueRouter)
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "bvlog" */ '../views/Bvlog.vue')
+    component: () => import(/* webpackChunkName: "bvlog" */ '../views/Bvlog.vue'),
+    meta: {
+      isPublic:true
+    }
   }
 ]
 

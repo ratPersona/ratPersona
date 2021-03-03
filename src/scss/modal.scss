@@ -1,9 +1,10 @@
 @import 'subcontent.scss';
 
 .samnagerie,
-.bvlog {
+.bvlog,
+.portfolio {
   position: relative;
-  padding: 0 20px;
+  padding: 30px 20px;
 
   .sidebar {
     display: flex;
@@ -80,7 +81,6 @@
     }
 
     &.active {
-      // overflow: scroll;
       position: fixed;
       left: 0;
       margin: auto;
@@ -92,7 +92,6 @@
       height: 80%;
       width: 80%;
       padding: 20px;
-      // background: rgba(98,168,142, 1);
       background: #F0FCFF;
       transition: height 500ms ease, width 500ms ease, top 500ms ease, left 500ms ease, border-radius 500ms ease;
 
