@@ -18,10 +18,10 @@
       <Nav v-show="desktop" />
     </header>
     <router-view/>
-    <footer class="footer">
+    <!-- <footer class="footer">
       <Nav v-show="mobile" />
       <Social v-show="desktop" />
-    </footer>
+    </footer> -->
   </div>
 </template>
 

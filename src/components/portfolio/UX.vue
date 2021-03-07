@@ -1,8 +1,13 @@
 <style lang="scss">
+@import '@/scss/mixins';
+ h1 {
+   color: $green;
+ }
   .ux-portfolio {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    width: 100%;
     padding: 70px 0 50px;
     top: -70px;
     position: relative;
@@ -12,7 +17,8 @@
       height: 300px;
       width: 300px;
       border-radius: 5px;
-      background-image: url('~@/assets/portfolio/ux/nomader.png');
+      background-color: transparent;
+      border: none;
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
@@ -27,18 +33,9 @@
         width: 100%;
         height: 100%;
         border-radius: 5px;
-        background-color: #62a88e;
         opacity: .4;
         z-index: 1;
         transition: opacity ease 300ms, border ease 300ms;
-      }
-
-      &:nth-child(even) {
-        bottom: 0;
-        &::after {
-          background-color: #0c1930;
-          transition: opacity ease 300ms, border ease 300ms;
-        }
       }
 
       .paris-dreamer {
@@ -46,21 +43,12 @@
         z-index: 2;
         font-size: 30px;
         text-transform: capitalize;
+        color: $white;
         text-shadow: 5px 5px 20px #000;
-        transition: font-size ease 300ms, font-family ease 300ms;
       }
 
       &:hover {
         cursor: pointer;
-        &::after {
-          opacity: .8;
-          border: #3a5d9c solid 20px;
-        }
-        &:nth-child(even) {
-          &::after {
-            border: #62a88e solid 20px;
-          }
-        }
         .paris-dreamer {
           font-size: 24px;
           font-family: 'Paris Dreamer';
@@ -74,35 +62,50 @@
 <template>
   <div class="ux-projects">
     <horizontal-scroll class="ux-portfolio">
-      <!-- :style="'background-image: url(@/assets/portfolio/ux/' + card + '.png'" -->
-
       <div
-      class="portfolio-card"
       v-for="card in portfolioItems"
       :key="card">
-        <h2 class="paris-dreamer">{{ removeChar(card) }}</h2>
+        <button class="portfolio-card" @click="showProject(card)">
+          <h2 class="paris-dreamer">{{ removeChar(card) }}</h2>
+        </button>
       </div>
     </horizontal-scroll>
+    <div>
+      <LineWebtoon v-show="activeItem == 'LineWebtoon'" />
+      <Nomader v-show="activeItem == 'Nomader'" />
+      <SIMS v-show="activeItem == 'SIMS'" />
+    </div>
   </div>
 </template>
 
 <script>
 import HorizontalScroll from 'vue-horizontal-scroll'
 import 'vue-horizontal-scroll/dist/vue-horizontal-scroll.css'
+import LineWebtoon from '@/components/portfolio/LineWebtoon'
+import Nomader from '@/components/portfolio/Nomader'
+import SIMS from '@/components/portfolio/SIMS'
 
 export default {
   components: {
-    HorizontalScroll
+    HorizontalScroll,
+    LineWebtoon,
+    Nomader,
+    SIMS
   },
   data: function() {
     return {
-      portfolioItems: ['line-webtoon', 'nomader', 'test']
+      portfolioItems: ['line-webtoon', 'nomader', 'SIMS'],
+      activeItem: '',
     }
   },
   methods: {
     removeChar(value) {
       value = value.replace(/-/g, ' ');
       return value
+    },
+    showProject(item) {
+      let newItem = this.removeChar(item)
+      this.activeItem = newItem
     }
   }
 }

@@ -1,4 +1,6 @@
 @import 'subcontent.scss';
+@import '@/scss/mixins';
+
 
 .samnagerie,
 .bvlog {
@@ -25,7 +27,7 @@
     text-align: left;
     .flex-col {
       background: rgba(98,168,142,.75);
-      color: #F0FCFF;
+      color: $black-blue;
       border: none;
       border-radius: 100em;
       height: 250px;
@@ -50,14 +52,14 @@
 
 
     h1, h2, h3 {
-      color: #62a88e;
+      color: $green;
     }
     .back-btn {
       position: absolute;
       right: 90px;
       top: 50px;
       z-index: 1;
-      background: #62a88e;
+      background: $green;
       border: none;
       padding: 12px 12px 10px;
       border-radius: 200em;
@@ -68,7 +70,7 @@
       }
 
       &:hover {
-        background: #0c1930;
+        background: $black-blue;
         cursor: pointer;
       }
     }
@@ -116,7 +118,7 @@ h1 {
 }
 .main-inner {
   position: relative;
-  color: #0c1930;
+  color: $black-blue;
   padding: 20px;
   width: 75%;
   border-radius: 20px;

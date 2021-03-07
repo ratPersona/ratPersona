@@ -4,22 +4,24 @@
 
 
 <template>
-  <div class="store subpage">
+  <div class="contact subpage">
     <h1>{{ this.title }}</h1>
+    <Contact />
   </div>
 </template>
 
 <script>
+import Contact from '@/components/Contact.vue'
 
 export default {
-  name: 'Store',
+  name: 'ContactView',
   components: {
-
+    Contact
   },
   data: function() {
     return {
       title: '',
-      storeTitles: ['Support my reptile problem.', 'Pls gib dollars.', 'Enjoy some art! It comes in lots of forms!'],
+      storeTitles: ['Send me smoke signals.', 'Carrier pigeon at the ready!', 'Get in touch!'],
     }
   },
   methods: {

@@ -5,7 +5,7 @@
     background: transparent;
     border: none;
     h1 {
-      color: #62a88e;
+      color: $green;
     }
   }
   .content {
@@ -76,9 +76,9 @@
 
 <script>
 /* eslint-disable */
-import About from '@/components/About'
-import Employment from '@/components/Employment'
-import Education from '@/components/Education'
+import About from '@/components/home/About'
+import Employment from '@/components/home/Employment'
+import Education from '@/components/home/Education'
 
 export default {
   name: 'Home',

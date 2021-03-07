@@ -14,9 +14,9 @@ Vue.use(VueRouter)
     }
   },
   {
-    path: '/store',
-    name: 'Store',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Store.vue'),
+    path: '/contact',
+    name: 'ContactView',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Contact.vue'),
     meta: {
       isPublic:true
     }

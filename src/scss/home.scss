@@ -1,4 +1,6 @@
 // @import '@/scss/styles.scss';
+@import '@/scss/mixins';
+
 
 .home {
   font-family: 'Mulish', sans-serif;
@@ -68,10 +70,17 @@
             border: none;
             min-height: 40px;
             border-radius: 5px;
-            color: #fff;
-            font-weight: bold;
-            text-transform: uppercase;
-            background-color: rgba(98, 168, 142, 0.4);
+            color: $white;
+            font-weight: 800;
+            font-size: 16px;
+            background-color: transparent;
+            border: $green 3px solid;
+            border-radius: 5px;
+            transition: background-color 300ms ease, color 300ms ease;
+
+            &:hover {
+              cursor: pointer;
+            }
 
             &::after {
               content: '';
@@ -80,13 +89,15 @@
               z-index: 1;
               top: 40px;
               right: 45%;
-              border-top: 12px solid rgba(98, 168, 142, 0.8);
+              border-top: 12px solid $green;
               border-right: 12px solid transparent;
               border-left: 12px solid transparent;
             }
 
             &.active {
-              background-color: rgba(98, 168, 142, 0.8);
+              background-color: $green;
+              color: $black-blue;
+              border: none;
               &::after {
                 display: block;
               }
@@ -103,14 +114,12 @@
         text-align: left;
         display: flex;
         justify-content: space-between;
-        // align-items: center;
         min-height: 350px;
         width: 100%;
         .flex-outer {
           width: 100%;
           .flex-inner {
             display: flex;
-            // align-items: center;
             justify-content: space-between;
           }
         }

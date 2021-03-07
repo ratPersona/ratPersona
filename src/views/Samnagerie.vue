@@ -44,9 +44,9 @@
 </template>
 
 <script>
-import Rats from '@/components/Rats.vue'
-import Reptiles from '@/components/Reptiles.vue'
-import Homesteaders from '@/components/Homesteaders.vue'
+import Rats from '@/components/samnagerie/Rats.vue'
+import Reptiles from '@/components/samnagerie/Reptiles.vue'
+import Homesteaders from '@/components/samnagerie/Homesteaders.vue'
 
 export default {
   name: 'Samnagerie',

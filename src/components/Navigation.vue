@@ -9,7 +9,7 @@
   <nav class="navigation">
     <router-link to="/">About</router-link>
     <router-link to="/portfolio">Portfolio</router-link>
-    <router-link to="/store">Store</router-link>
+    <router-link to="/contact">Contact</router-link>
     <router-link to="/bvlog">Blog</router-link>
     <router-link to="/samnagerie">Samnagerie</router-link>
     <!-- <button @click="randomize()" class="random">Down the Rabbit Hole</button> -->

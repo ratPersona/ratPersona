@@ -1,3 +1,5 @@
+@import '@/scss/mixins';
+
 // @font-face {
 //     font-family: 'Paris Dreamer';
 //     src: url(/assets/fonts/ParisDreamer-Regular.woff2) format('woff2'),
@@ -35,11 +37,11 @@ h3 {
 }
 
 a {
-  color: #0c1930;
+  color: $black-blue;
   font-weight: 700;
   text-decoration: none;
   transition: color 300ms ease;
   &:hover {
-    color: #3b6fcc;
+    color: $canary;
   }
 }

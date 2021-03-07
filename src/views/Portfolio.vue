@@ -6,7 +6,7 @@
     left: 90px;
     top: 230px;
     z-index: 1;
-    background: #62a88e;
+    background: $green;
     border: none;
     padding: 12px 12px 10px;
     border-radius: 200em;
@@ -45,10 +45,10 @@
           <h2>UX Projects</h2>
         </button>
         <button
-        @click="selectItem('apps')"
+        @click="selectItem('design')"
         role="button"
-        class="flex-col apps">
-          <h2>Apps</h2>
+        class="flex-col design">
+          <h2>Design</h2>
         </button>
         <button
         @click="selectItem('illustration')"
@@ -71,7 +71,7 @@
 </template>
 
 <script>
-import UX from '@/components/UX.vue'
+import UX from '@/components/portfolio/UX.vue'
 
 export default {
   name: 'Portfolio',

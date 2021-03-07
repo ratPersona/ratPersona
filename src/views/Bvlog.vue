@@ -12,9 +12,6 @@
         <button @click="selectItem('blog')" role="button" class="flex-col blog">
           <h2>Blog</h2>
         </button>
-        <button @click="selectItem('vlog')" role="button" class="flex-col vlog">
-          <h2>Vlog</h2>
-        </button>
       </aside>
       <main class="samb-content">
         <div ref="main" :class="[{activeMain: activeItem === 'main'}]">
@@ -25,14 +22,6 @@
             <Blog />
           </section>
         </div>
-        <div ref="vlog" class="vlog inner-content" :class="[{active: activeItem === 'vlog'}]">
-          <section class="vlog-content">
-            <button class="back-btn" @click="selectItem('main')"><svg class="icon"><use href="#close"></use></svg></button>
-            <!-- <button @click="selectItem('main')">Back</button> -->
-            <Vlog />
-            TEST
-          </section>
-        </div>
       </main>
     </div>
   </section>
@@ -40,13 +29,11 @@
 
 <script>
 import Blog from '@/components/Blog.vue'
-import Vlog from '@/components/Vlog.vue'
 
 export default {
   name: 'Samnagerie',
   components: {
     Blog,
-    Vlog
   },
   data: function() {
     return {
