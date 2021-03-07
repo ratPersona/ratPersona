@@ -17,24 +17,19 @@
     <header id="nav">
       <Nav v-show="desktop" />
     </header>
-    <router-view/>
-    <!-- <footer class="footer">
-      <Nav v-show="mobile" />
-      <Social v-show="desktop" />
-    </footer> -->
+    <router-view :key="componentKey"/>
   </div>
 </template>
 
 <script>
+import { mapState, mapMutations } from 'vuex';
+
 import Nav from '@/components/Navigation.vue'
-import Social from '@/components/Footer.vue'
 
 export default {
   name: 'App',
   components: {
     Nav,
-    Social,
-    // Firebase
   },
   data: function() {
     return {
@@ -42,7 +37,15 @@ export default {
       mobile: false
     }
   },
+  computed: {
+    ...mapState([
+      'componentKey',
+    ]),
+  },
   methods: {
+    ...mapMutations([
+      'UPDATE_KEY'
+    ]),
     fireflies() {
       let g = '';
       let rint2 = '';
