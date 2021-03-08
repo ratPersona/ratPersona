@@ -17,13 +17,13 @@
     <header id="nav">
       <Nav v-show="desktop" />
     </header>
-    <router-view :key="componentKey"/>
+    <router-view />
+    <!-- <router-view :key="componentKey"/> -->
   </div>
 </template>
 
 <script>
 import { mapState, mapMutations } from 'vuex';
-
 import Nav from '@/components/Navigation.vue'
 
 export default {

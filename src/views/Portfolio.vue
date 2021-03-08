@@ -1,5 +1,6 @@
 <style lang="scss">
   @import '@/scss/modal.scss';
+  @import '@/scss/portfolio.scss';
 
   .back-btn {
     position: absolute;
@@ -10,7 +11,6 @@
     border: none;
     padding: 12px 12px 10px;
     border-radius: 200em;
-    transition: background 300ms ease;
     .icon {
       position: relative;
       left: -1px;
@@ -31,10 +31,8 @@
     border: none;
     padding: 12px 12px 10px;
     border-radius: 200em;
-    transition: background 300ms ease;
     .icon {
       position: relative;
-      // left: -1px;
       width: 20px;
       height: 20px;
       color: #fff;
@@ -48,41 +46,46 @@
 <template>
   <section class="subpage">
     <button
-    v-if="page !== ''"
+    v-show="page == 'sub-landing'"
     class="back-btn"
-    @click="selectItem('landing')">
+    @click="returnToLanding">
       <svg class="icon"><use href="#back"></use></svg>
     </button>
     <button
-    v-if="page !== ''"
+    v-show="page == 'project-page'"
     class="cancel-btn"
-    @click="selectItem('sub-landing')">
+    @click="closePortfolioPage">
       <svg class="icon"><use href="#cancel"></use></svg>
     </button>
-    <h1 v-if="page == 'landing'" class="portfolio-title">
-      {{ this.title }}
-    </h1>
-    <h1 v-else class="portfolio-title">
-      {{ this.title }}
-    </h1>
+    <div>
+      <h1 v-show="page == 'sub-landing'" class="portfolio-title">
+        {{ this.innerTitle }}
+      </h1>
+      <h1 v-show="page == 'project-page'" class="portfolio-title">
+        {{ this.projectTitle }}
+      </h1>
+      <h1 v-show="page == 'landing'" class="portfolio-title">
+        {{ this.title }}
+      </h1>
+    </div>
     <div class="portfolio">
       <aside
       v-show="page == 'landing'"
       class="sidebar">
         <button
-        @click="selectItem('ux')"
+        @click="selectItem('UX Projects')"
         role="button"
         class="flex-col ux">
           <h2>UX Projects</h2>
         </button>
         <button
-        @click="selectItem('design')"
+        @click="selectItem('Design')"
         role="button"
         class="flex-col design">
           <h2>Design</h2>
         </button>
         <button
-        @click="selectItem('illustration')"
+        @click="selectItem('Illustration')"
         role="button"
         class="flex-col illustration">
           <h2>Illustration</h2>
@@ -119,12 +122,14 @@ export default {
       title: '',
       portfolioTitles: ['Humble Brag', 'Inky Goodness', 'Vueru Reporting In!'],
       activeItem: '',
+      previousItem: ''
     }
   },
   computed: {
     ...mapState([
       'page',
       'innerTitle',
+      'projectTitle',
       'componentKey',
     ]),
   },
@@ -135,24 +140,23 @@ export default {
       'UPDATE_KEY',
     ]),
     getNewTitle() {
-      if(this.page == 'landing') {
-        let title = this.portfolioTitles[Math.floor(Math.random() * this.portfolioTitles.length)]
-        this.title = title
-      } else {
-        this.INNER_TITLE(this.activeItem)
-        this.title = this.innerTitle
-      }
+      let title = this.portfolioTitles[Math.floor(Math.random() * this.portfolioTitles.length)]
+      this.title = title
     },
     selectItem(index) {
         this.activeItem = index
-        this.WHAT_PAGE(this.activeItem)
-        this.getNewTitle()
-        this.UPDATE_KEY(this.componentKey += 1)
+        this.previousItem = index
+        this.WHAT_PAGE('sub-landing')
+        this.INNER_TITLE(index)
+        this.getNewTitle();
     },
     returnToLanding() {
+      this.activeItem = ''
       this.WHAT_PAGE('landing')
     },
     closePortfolioPage(){
+      this.activeItem = this.previousItem
+      // this.ACTIVE('sub-landing')
       this.WHAT_PAGE('sub-landing')
     }
   },

@@ -4,7 +4,6 @@
 
 <template>
   <div class="ux-projects">
-    <h1>{{ this.title }}</h1>
     <section>
       <div class="name">
         Content
