@@ -5,22 +5,19 @@
 
 <template>
   <div class="ux-projects">
-    <horizontal-scroll
-    v-show="activeItem == ''"
-    class="ux-portfolio">
+    <horizontal-scroll class="ux-portfolio">
       <div
       v-for="card in portfolioItems"
       :key="card">
-        <button class="portfolio-card" @click="showProject(card)">
+        <router-link
+        role="button"
+        to="/ux-project"
+        class="portfolio-card"
+        v-on.native:click="setItem(card)">
           <h2 class="paris-dreamer">{{ removeChar(card) }}</h2>
-        </button>
+        </router-link>
       </div>
     </horizontal-scroll>
-    <div>
-      <LineWebtoon v-show="activeItem == 'line webtoon'" />
-      <Nomader v-show="activeItem == ' nomader'" />
-      <SIMS v-show="activeItem == 'SIMS'" />
-    </div>
   </div>
 </template>
 
@@ -29,16 +26,10 @@ import { mapState, mapMutations } from 'vuex';
 
 import HorizontalScroll from 'vue-horizontal-scroll'
 import 'vue-horizontal-scroll/dist/vue-horizontal-scroll.css'
-import LineWebtoon from '@/components/portfolio/LineWebtoon'
-import Nomader from '@/components/portfolio/Nomader'
-import SIMS from '@/components/portfolio/SIMS'
 
 export default {
   components: {
     HorizontalScroll,
-    LineWebtoon,
-    Nomader,
-    SIMS
   },
   data: function() {
     return {
@@ -48,13 +39,13 @@ export default {
   },
   computed: {
     ...mapState([
-      'activeReset',
+      'activeUxItem',
       'componentKey',
     ]),
   },
   methods: {
     ...mapMutations([
-      'ACTIVE_ITEM',
+      'ACTIVE_UX_ITEM',
       'WHAT_PAGE',
       'PROJECT_TITLE'
     ]),
@@ -62,21 +53,18 @@ export default {
       value = value.replace(/-/g, ' ');
       return value
     },
-    showProject(item) {
+    setItem(item) {
       let newItem = this.removeChar(item)
-      this.activeItem = newItem
-      this.WHAT_PAGE('project-page')
-      this.PROJECT_TITLE(newItem)
+      this.ACTIVE_UX_ITEM(newItem)
     },
     checkActive() {
       if (this.activeReset == 'reset') {
         this.activeItem = ''
-        this.ACTIVE_ITEM('')
+        this.ACTIVE_UX_ITEM('')
       }
     }
   },
   mounted() {
-    this.checkActive()
   }
 }
 </script>

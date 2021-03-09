@@ -6,6 +6,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     activeReset: '',
+    activeUxItem: '',
     page: 'landing',
     innerTitle: '',
     projectTitle: '',
@@ -14,6 +15,9 @@ export default new Vuex.Store({
   mutations: {
     ACTIVE_ITEM: (state, active) => {
       state.activeReset = active
+    },
+    ACTIVE_UX_ITEM: (state, item) => {
+      state.activeUxItem = item
     },
     INNER_TITLE: (state, title) => {
       state.innerTitle = title

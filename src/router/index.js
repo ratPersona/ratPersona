@@ -30,6 +30,14 @@ Vue.use(VueRouter)
     }
   },
   {
+    path: '/ux-project',
+    name: 'UX Project',
+    component: () => import(/* webpackChunkName: "rats" */ '../views/UXProjects.vue'),
+    meta: {
+      isPublic:true
+    }
+  },
+  {
     path: '/samnagerie',
     name: 'Samnagerie',
     component: () => import(/* webpackChunkName: "rats" */ '../views/Samnagerie.vue'),
