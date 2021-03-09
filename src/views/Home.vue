@@ -37,8 +37,8 @@
         </aside>
         <main class="about-me-content">
           <h2 class="name">Sam Nelson - <small>She/They</small></h2>
-          <ul class="home-display-options">
-            <li class="button">
+          <ul class="home-display-options internal-nav">
+            <li class="button button-one">
               <button
               @click="changeActive('about')"
               :class="{ active: active == 'about' }"
@@ -46,7 +46,7 @@
                 <span>About</span>
               </button>
             </li>
-            <li class="button">
+            <li class="button button-two">
               <button
               @click="changeActive('employment')"
               :class="{ active: active == 'employment' }"
@@ -54,7 +54,7 @@
                 <span>Employment</span>
               </button>
             </li>
-            <li class="button">
+            <li class="button button-three">
               <button
               @click="changeActive('education')"
               :class="{ active: active == 'education' }"

@@ -17,8 +17,8 @@
     <header id="nav">
       <Nav v-show="desktop" />
     </header>
-    <router-view />
-    <!-- <router-view :key="componentKey"/> -->
+    <!-- <router-view /> -->
+    <router-view :key="componentKey"/>
   </div>
 </template>
 
@@ -126,7 +126,8 @@ export default {
     }
   },
   mounted() {
-    this.fireflies();
+    this.fireflies()
+    // this.UPDATE_KEY(this.componentKey += 1)
   }
 }
 </script>

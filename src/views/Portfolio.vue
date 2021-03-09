@@ -135,6 +135,7 @@ export default {
   },
   methods: {
     ...mapMutations([
+      'ACTIVE_ITEM',
       'WHAT_PAGE',
       'INNER_TITLE',
       'UPDATE_KEY',
@@ -155,9 +156,15 @@ export default {
       this.WHAT_PAGE('landing')
     },
     closePortfolioPage(){
-      this.activeItem = this.previousItem
-      // this.ACTIVE('sub-landing')
+      // this.activeItem = this.previousItem
+      this.activeItem = ''
+      // this.ACTIVE_ITEM('reset')
       this.WHAT_PAGE('sub-landing')
+      // if (this.activeReset == 'reset') {
+      //   this.activeItem = ''
+      //   this.ACTIVE_ITEM('')
+      // }
+      // this.UPDATE_KEY(this.componentKey += 1)
     }
   },
   mounted() {

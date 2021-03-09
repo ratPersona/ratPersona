@@ -1,5 +1,6 @@
 // @import '@/scss/styles.scss';
 @import '@/scss/mixins';
+@import '@/scss/buttons';
 
 
 .home {
@@ -52,57 +53,6 @@
         h2 {
           position: relative;
           z-index: 10;
-        }
-      }
-
-      .home-display-options {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        list-style: none;
-        padding: 0;
-        margin-bottom: 20px;
-        .button {
-          width: 30%;
-          > button {
-            width: 100%;
-            position: relative;
-            border: none;
-            min-height: 40px;
-            border-radius: 5px;
-            color: $white;
-            font-weight: 800;
-            font-size: 16px;
-            background-color: transparent;
-            border: $green 3px solid;
-            border-radius: 5px;
-            transition: background-color 300ms ease, color 300ms ease;
-
-            &:hover {
-              cursor: pointer;
-            }
-
-            &::after {
-              content: '';
-              position: absolute;
-              display: none;
-              z-index: 1;
-              top: 40px;
-              right: 45%;
-              border-top: 12px solid $green;
-              border-right: 12px solid transparent;
-              border-left: 12px solid transparent;
-            }
-
-            &.active {
-              background-color: $green;
-              color: $black-blue;
-              border: none;
-              &::after {
-                display: block;
-              }
-            }
-          }
         }
       }
 

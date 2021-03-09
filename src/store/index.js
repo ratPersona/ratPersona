@@ -5,12 +5,16 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    activeReset: '',
     page: 'landing',
     innerTitle: '',
     projectTitle: '',
     componentKey: 0,
   },
   mutations: {
+    ACTIVE_ITEM: (state, active) => {
+      state.activeReset = active
+    },
     INNER_TITLE: (state, title) => {
       state.innerTitle = title
     },

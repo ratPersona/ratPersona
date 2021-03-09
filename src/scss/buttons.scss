@@ -1,0 +1,122 @@
+.internal-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+
+  &.home-display-options {
+    padding: 0;
+    margin-bottom: 20px;
+    }
+    .button-one {
+      > button {
+        &.active {
+          background: linear-gradient(90deg, rgba(11,155,120,1) 0%, rgba(39,136,84,1) 100%, rgba(255,255,255,1) 0122024%);
+          color: $black-blue;
+          border: none;
+          &::after {
+            display: block;
+            border-top: 12px solid rgba(11,155,120,1);
+          }
+        }
+      }
+    }
+    .button-two {
+      > button {
+        &.active {
+          background: linear-gradient(90deg, rgba(39,136,84,1) 0%, rgba(36,143,43,1) 100%, rgba(255,255,255,1) 0122024%);
+          color: $black-blue;
+          border: none;
+          &::after {
+            display: block;
+            border-top: 12px solid rgba(39,136,84,1);
+          }
+        }
+      }
+    }
+    .button-three {
+      > button {
+        &.active {
+          background: linear-gradient(90deg, rgba(39,136,84,1) 0%, rgba(35,135,139,1) 100%, rgba(255,255,255,1) 0122024%);
+          color: $black-blue;
+          border: none;
+          &::after {
+            display: block;
+            border-top: 12px solid rgba(39,136,84,1);
+          }
+        }
+      }
+    }
+    .button-four {
+      > button {
+        &.active {
+          background: linear-gradient(90deg, rgba(35,135,139,1) 0%, rgba(80,142,165,1) 100%, rgba(255,255,255,1) 0122024%);
+          color: $black-blue;
+          border: none;
+          &::after {
+            display: block;
+            border-top: 12px solid rgba(35,135,139,1);
+          }
+        }
+      }
+    }
+    .button-five {
+      > button {
+        &.active {
+          background: linear-gradient(90deg, rgba(80,142,165,1) 0%, rgba(111,183,210,1) 100%, rgba(255,255,255,1) 0122024%);
+          color: $black-blue;
+          border: none;
+          &::after {
+            display: block;
+            border-top: 12px solid rgba(80,142,165,1);
+          }
+        }
+      }
+    }
+    .button-six {
+      > button {
+        &.active {
+          background: linear-gradient(90deg, rgba(111,183,210,1) 0%, rgba(91,175,232,1) 100%, rgba(255,255,255,1) 0122024%);
+          color: $black-blue;
+          border: none;
+          &::after {
+            display: block;
+            border-top: 12px solid $green;
+          }
+        }
+      }
+    }
+
+  .button {
+    width: 30%;
+    > button {
+      background-color: transparent;
+      width: 100%;
+      position: relative;
+      border: none;
+      min-height: 40px;
+      border-radius: 5px;
+      color: $white;
+      font-weight: 800;
+      font-size: 16px;
+      border: $green 3px solid;
+      border-radius: 5px;
+      transition: background-color 300ms ease, color 300ms ease;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        display: none;
+        z-index: 1;
+        top: 40px;
+        right: 45%;
+        border-right: 12px solid transparent;
+        border-left: 12px solid transparent;
+      }
+    }
+  }
+}

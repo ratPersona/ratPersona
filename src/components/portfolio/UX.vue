@@ -48,11 +48,13 @@ export default {
   },
   computed: {
     ...mapState([
+      'activeReset',
       'componentKey',
     ]),
   },
   methods: {
     ...mapMutations([
+      'ACTIVE_ITEM',
       'WHAT_PAGE',
       'PROJECT_TITLE'
     ]),
@@ -65,7 +67,16 @@ export default {
       this.activeItem = newItem
       this.WHAT_PAGE('project-page')
       this.PROJECT_TITLE(newItem)
+    },
+    checkActive() {
+      if (this.activeReset == 'reset') {
+        this.activeItem = ''
+        this.ACTIVE_ITEM('')
+      }
     }
+  },
+  mounted() {
+    this.checkActive()
   }
 }
 </script>
