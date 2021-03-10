@@ -5,13 +5,13 @@
 
 <template>
   <div>
-    <h1 v-show="page == 'sub-landing'" class="portfolio-title">
+    <h1 v-if="page == 'sub-landing'" class="portfolio-title">
       {{ this.innerTitle }}
     </h1>
-    <h1 v-show="page == 'project-page'" class="portfolio-title">
+    <h1 v-else-if="page == 'project-page'" class="portfolio-title">
       {{ this.projectTitle }}
     </h1>
-    <h1 v-show="page == 'landing'" class="portfolio-title">
+    <h1 v-else-if="page == 'landing'" class="portfolio-title">
       {{ this.title }}
     </h1>
   </div>
@@ -39,9 +39,13 @@ export default {
   },
   methods: {
     ...mapMutations([
-      'WHAT_PAGE',
-      'INNER_TITLE',
+      // 'WHAT_PAGE',
+      // 'INNER_TITLE',
     ]),
+    getNewTitle() {
+      let title = this.portfolioTitles[Math.floor(Math.random() * this.portfolioTitles.length)]
+      this.title = title
+    },
   },
   mounted() {
     this.getNewTitle();

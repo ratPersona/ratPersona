@@ -24,7 +24,15 @@ Vue.use(VueRouter)
   {
     path: '/portfolio',
     name: 'Portfolio',
-    component: () => import(/* webpackChunkName: "rats" */ '../views/Portfolio.vue'),
+    component: () => import(/* webpackChunkName: "rats" */ '../views/portfolio/Portfolio.vue'),
+    meta: {
+      isPublic:true
+    }
+  },
+  {
+    path: '/ux-portfolio',
+    name: 'UXPortfolio',
+    component: () => import(/* webpackChunkName: "rats" */ '../views/portfolio/UXPortfolio.vue'),
     meta: {
       isPublic:true
     }
@@ -32,7 +40,7 @@ Vue.use(VueRouter)
   {
     path: '/ux-project',
     name: 'UX Project',
-    component: () => import(/* webpackChunkName: "rats" */ '../views/UXProjects.vue'),
+    component: () => import(/* webpackChunkName: "rats" */ '../views/portfolio/UXProjects.vue'),
     meta: {
       isPublic:true
     }

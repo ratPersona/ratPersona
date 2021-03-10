@@ -1,46 +1,6 @@
 <style lang="scss">
   @import '@/scss/modal.scss';
   @import '@/scss/portfolio.scss';
-
-  .back-btn {
-    position: absolute;
-    left: 90px;
-    top: 230px;
-    z-index: 1;
-    background: $green;
-    border: none;
-    padding: 12px 12px 10px;
-    border-radius: 200em;
-    .icon {
-      position: relative;
-      left: -1px;
-      width: 20px;
-      height: 20px;
-      color: #fff;
-    }
-    &:hover {
-      cursor: pointer;
-    }
-  }
-  .cancel-btn {
-    position: absolute;
-    right: 90px;
-    top: 230px;
-    z-index: 1;
-    background: $green;
-    border: none;
-    padding: 12px 12px 10px;
-    border-radius: 200em;
-    .icon {
-      position: relative;
-      width: 20px;
-      height: 20px;
-      color: #fff;
-    }
-    &:hover {
-      cursor: pointer;
-    }
-  }
 </style>
 
 <template>
@@ -51,12 +11,7 @@
     @click="returnToLanding">
       <svg class="icon"><use href="#back"></use></svg>
     </button>
-    <button
-    v-show="page == 'project-page'"
-    class="cancel-btn"
-    @click="closePortfolioPage">
-      <svg class="icon"><use href="#cancel"></use></svg>
-    </button>
+
   </nav>
 </template>
 
@@ -74,11 +29,31 @@ export default {
   },
   computed: {
     ...mapState([
+      'page',
+      'activeReset',
+      'innerTitle',
+      'projectTitle',
+      'componentKey',
     ]),
   },
   methods: {
     ...mapMutations([
+      'ACTIVE_ITEM',
+      'ACTIVE_UX_ITEM',
+      'WHAT_PAGE',
+      'INNER_TITLE',
+      'UPDATE_KEY',
     ]),
+    returnToLanding() {
+      this.activeItem = ''
+      this.WHAT_PAGE('landing')
+    },
+    closePortfolioPage(){
+      this.activeItem = this.activeReset
+      this.ACTIVE_UX_ITEM('')
+      this.WHAT_PAGE('sub-landing')
+      this.router.go('/portfolio')
+    }
   },
   mounted() {
   }
