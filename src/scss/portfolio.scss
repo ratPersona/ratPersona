@@ -42,7 +42,6 @@
      cursor: pointer;
    }
  }
-
   .ux-portfolio {
     display: flex;
     align-items: center;
@@ -95,4 +94,9 @@
         }
       }
     }
+  }
+
+  .case-study-content {
+    margin: auto;
+    max-width: 600px;
   }

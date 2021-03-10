@@ -19,6 +19,16 @@
             border-top: 12px solid rgba(11,155,120,1);
           }
         }
+        &.bottom {
+          &.active {
+            &::after {
+              border-bottom: 12px solid rgba(11,155,120,1);
+              bottom: auto;
+              top: -12px;
+              border-top: none;
+            }
+          }
+        }
       }
     }
     .button-two {
@@ -30,6 +40,16 @@
           &::after {
             display: block;
             border-top: 12px solid rgba(39,136,84,1);
+          }
+        }
+        &.bottom {
+          &.active {
+            &::after {
+              border-bottom: 12px solid rgba(39,136,84,1);
+              bottom: auto;
+              top: -12px;
+              border-top: none;
+            }
           }
         }
       }
@@ -45,6 +65,16 @@
             border-top: 12px solid rgba(39,136,84,1);
           }
         }
+        &.bottom {
+          &.active {
+            &::after {
+              border-bottom: 12px solid rgba(39,136,84,1);
+              bottom: auto;
+              top: -12px;
+              border-top: none;
+            }
+          }
+        }
       }
     }
     .button-four {
@@ -58,6 +88,16 @@
             border-top: 12px solid rgba(35,135,139,1);
           }
         }
+        &.bottom {
+          &.active {
+            &::after {
+              border-bottom: 12px solid rgba(35,135,139,1);
+              bottom: auto;
+              top: -12px;
+              border-top: none;
+            }
+          }
+        }
       }
     }
     .button-five {
@@ -68,7 +108,17 @@
           border: none;
           &::after {
             display: block;
-            border-top: 12px solid rgba(80,142,165,1);
+            border-top: 12px solid rgba(111,183,210,1);
+          }
+        }
+        &.bottom {
+          &.active {
+            &::after {
+              border-bottom: 12px solid rgba(111,183,210,1);
+              bottom: auto;
+              top: -12px;
+              border-top: none;
+            }
           }
         }
       }
@@ -82,6 +132,16 @@
           &::after {
             display: block;
             border-top: 12px solid $green;
+          }
+        }
+        &.bottom {
+          &.active {
+            &::after {
+              border-bottom: 12px solid $green;
+              bottom: auto;
+              top: -12px;
+              border-top: none;
+            }
           }
         }
       }
@@ -116,6 +176,34 @@
         right: 45%;
         border-right: 12px solid transparent;
         border-left: 12px solid transparent;
+      }
+    }
+  }
+}
+
+.subpage-bottom-nav {
+  position: absolute;
+  width: 100%;
+  bottom: 50px;
+  .internal-nav {
+    padding: 0;
+    justify-content: space-around;
+    .button-one,
+    .button-two,
+    .button-three,
+    .button-four,
+    .button-five {
+      max-width: 15%;
+      > button {
+        .bottom {
+          &.active {
+            &:after {
+              bottom: auto;
+              top: -12px;
+              border-top: none;
+            }
+          }
+        }
       }
     }
   }

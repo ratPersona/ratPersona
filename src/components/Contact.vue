@@ -1,18 +1,26 @@
 <style lang="scss">
-  @import '@/scss/bvlog.scss';
-  @import '@/scss/modal.scss';
+  @import '@/scss/contact.scss';
 </style>
-
-
 <template>
-  <section class="subpage">
-    <h1>{{ this.title }}</h1>
-    <div class="contact">
-      <main class="samb-content">
-        Henlo
-      </main>
+  <main class="contact subpage">
+    <div class="flex-container">
+      <div>
+        <h2>Email Me:</h2>
+        <p>I check it, I promise</p>
+        <button>Let's Go!</button>
+      </div>
+      <div>
+        <h2>Add Me:</h2>
+        <p>Yeah I have a LinkedIn...kinda...</p>
+        <button>Let's Go!</button>
+      </div>
+      <div>
+        <h2>Email Me:</h2>
+        <p>I check it, I promise</p>
+        <button>Let's Go!</button>
+      </div>
     </div>
-  </section>
+  </main>
 </template>
 
 <script>
@@ -24,7 +32,6 @@ export default {
   },
   data: function() {
     return {
-      title: '',
     }
   },
   methods: {

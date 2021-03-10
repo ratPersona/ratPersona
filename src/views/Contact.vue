@@ -5,7 +5,9 @@
 
 <template>
   <div class="contact subpage">
-    <h1>{{ this.title }}</h1>
+    <header class="content-header">
+      <h1>{{ this.title }}</h1>
+    </header>
     <Contact />
   </div>
 </template>

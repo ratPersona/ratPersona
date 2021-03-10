@@ -1,0 +1,12 @@
+@import '@/scss/mixins';
+
+.contact {
+  text-align: center;
+  .content-header {
+    padding: 0;
+  }
+  .flex-container {
+    display: flex;
+    justify-content: space-around;
+  }
+}
