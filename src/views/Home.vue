@@ -37,6 +37,11 @@
         </aside>
         <main class="about-me-content">
           <h2 class="name">Sam Nelson - <small>She/They</small></h2>
+          <div class="main-info">
+            <About v-show="active == 'about'" />
+            <Employment v-show="active == 'employment'" />
+            <Education v-show="active == 'education'" />
+          </div>
           <ul class="home-display-options internal-nav">
             <li class="button button-one">
               <button
@@ -63,11 +68,6 @@
               </button>
             </li>
           </ul>
-          <div class="main-info">
-            <About v-show="active == 'about'" />
-            <Employment v-show="active == 'employment'" />
-            <Education v-show="active == 'education'" />
-          </div>
         </main>
       </div>
     </div>

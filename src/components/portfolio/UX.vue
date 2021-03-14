@@ -46,7 +46,9 @@ export default {
   },
   data: function() {
     return {
-
+      lineWebtoon: [],
+      nomader: [],
+      SIMS: []
     }
   },
   computed: {
@@ -58,14 +60,31 @@ export default {
   methods: {
     ...mapMutations([
       'ACTIVE_UX_ITEM',
+      'ADD_TITLES',
       'WHAT_PAGE',
       'INNER_TITLE',
       'PROJECT_TITLE'
     ]),
+    camelize(str) {
+      return str.replace(/(?:^\w|[A-Z]|\b\w)/g, function(word, index) {
+        return index === 0 ? word.toLowerCase() : word.toUpperCase();
+      }).replace(/\s+/g, '');
+    },
     setItem(item) {
+      let title = this.camelize(item)
+      console.log(title)
+      let result = []
+      if (title == 'lineWebtoon') {
+        result = ['Line Webtoon', 'Research', 'Methodology', 'Design', 'Conclusion']
+      } else if (title == 'nomader') {
+        result = ['Nomader', 'Research', 'Methodology', 'Design', 'Conclusion']
+      } else if (title == 'sIMS') {
+        result = ['SIMS', 'Research', 'Methodology', 'Design', 'Conclusion']
+      }
+      this.ADD_TITLES(result)
       this.ACTIVE_UX_ITEM(item)
       this.WHAT_PAGE('project-page')
-      console.log(item)
+      console.log(result)
     },
     returnToLanding(){
       this.activeItem = this.activeReset

@@ -5,12 +5,18 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    activeButton: 0,
     activeReset: '',
     activeItem: '',
+    buttonTitle: '',
+    titles: [],
     page: 'landing',
     innerTitle: '',
     projectTitle: '',
     componentKey: 0,
+  },
+  getters: {
+    getActiveButton: state => state.activeButton
   },
   mutations: {
     ACTIVE_ITEM: (state, active) => {
@@ -19,11 +25,20 @@ export default new Vuex.Store({
     ACTIVE_UX_ITEM: (state, item) => {
       state.activeUxItem = item
     },
+    ACTIVE_BUTTON: (state, activeButton) => {
+      state.activeButton = activeButton
+    },
     INNER_TITLE: (state, title) => {
       state.innerTitle = title
     },
     PROJECT_TITLE: (state, projectTitle) => {
       state.projectTitle = projectTitle
+    },
+    ADD_TITLES: (state, titles) => {
+      state.titles = titles
+    },
+    GET_TITLE: (state, title) => {
+      state.buttonTitle = title
     },
     WHAT_PAGE: (state, template) => {
       state.page = template
@@ -33,6 +48,9 @@ export default new Vuex.Store({
     },
   },
   actions: {
+    setActiveButton({commit}, button) {
+      commit('ACTIVE_BUTTON', button)
+    }
   },
   modules: {
   }

@@ -98,7 +98,6 @@
         .resume,
         .volunteering {
           span {
-            // display: block;
             margin-bottom: 5px;
 
             &:nth-child(even) {
@@ -131,6 +130,92 @@
           }
           p {
             margin: 0;
+          }
+        }
+      }
+    }
+  }
+
+  // X-Small devices (portrait phones, less than 576px)
+  @media screen and (max-width: 576px) {
+
+  }
+
+  // Small devices (landscape phones, less than 768px)
+  @media screen and (min-width: 768px) {
+
+  }
+
+  // Medium devices (tablets, less than 992px)
+  @media screen and (min-width: 992px) {
+
+  }
+
+  // Large devices (desktops, less than 1200px)
+  @media screen and (min-width: 1200px) {
+    .content {
+      .about {
+        aside {
+          .image {
+            .home-pic {
+              width: 200px;
+              height: 200px;
+            }
+            .background {
+              width: 250px;
+              height: 250px;
+            }
+          }
+        }
+
+        .about-me-content {
+          width: 50%;
+        }
+
+        .main-info {
+          min-height: 200px;
+          > section {
+            padding: 0 10px 0 0;
+            height: 270px;
+            overflow-y: scroll;
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  // X-Large devices (large desktops, less than 1400px)
+  @media screen and (min-width: 1400px) {
+
+  }
+
+  // X-Large devices (large desktops, less than 1400px)
+  @media screen and (min-width: 1800px) {
+    .content {
+      .about {
+        aside {
+          .image {
+            .home-pic {
+              width: 300px;
+              height: 300px;
+            }
+            .background {
+              width: 400px;
+              height: 400px;
+            }
+          }
+        }
+
+        .about-me-content {
+          width: 50%;
+        }
+
+        .main-info {
+          min-height: 350px;
+
+          > section {
+
           }
         }
       }

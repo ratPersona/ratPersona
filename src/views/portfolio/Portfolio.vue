@@ -1,5 +1,6 @@
 <style lang="scss">
   @import '@/scss/modal.scss';
+  @import '@/scss/subpage.scss';
   @import '@/scss/portfolio.scss';
 </style>
 

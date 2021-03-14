@@ -12,63 +12,6 @@ h1 {
 h2, h3 {
   // font-family: 'Paris Dreamer';
 }
-.right {
-  text-align: right;
-}
-.flex-wrapper {
-  width: 100%;
-}
-strong {
-  color: $green;
-}
-// X-Small devices (portrait phones, less than 576px)
-@media screen and (max-width: 576px) {
-  .content-container {
-    width: 575px;
-  }
-}
-
-// Small devices (landscape phones, less than 768px)
-@media screen and (min-width: 768px) {
-  .content-container {
-    width: 767px;
-  }
-}
-
-// Medium devices (tablets, less than 992px)
-@media screen and (min-width: 992px) {
-  .content-container {
-    width: 991px;
-  }
-}
-
-// Large devices (desktops, less than 1200px)
-@media screen and (min-width: 1200px) {
-  .content-container {
-    width: 1199px;
-  }
-}
-
-// X-Large devices (large desktops, less than 1400px)
-@media screen and (min-width: 1500px) {
-  .content-container {
-    width: 1499px;
-  }
-}
-
-// X-Large devices (large desktops, less than 1400px)
-@media screen and (min-width: 1800px) {
-  .content-container {
-    width: 1799px;
-  }
-}
-
-
-html {
-  height: 100%;
-  width: 100%;
-}
-
 body {
   margin: 0;
   height: 100%;
@@ -125,15 +68,11 @@ body {
     }
   }
 
-  header {
-    padding-bottom: 200px;
-  }
-
   .subpage {
     h1 {
       width: 35%;
       margin: 0 auto 0;
-      font-size: 28px;
+      font-size: 18px;
       transform: skew(0deg, -3deg);
       margin-bottom: 150px;
       text-align: center;
@@ -141,6 +80,100 @@ body {
   }
 
 }
+.right {
+  text-align: right;
+}
+.flex-wrapper {
+  width: 100%;
+}
+strong {
+  color: $green;
+}
+// X-Small devices (portrait phones, less than 576px)
+@media screen and (max-width: 576px) {
+  body {
+    font-size: 12px;
+  }
+  .content-container {
+    width: 575px;
+  }
+}
+
+// Small devices (landscape phones, less than 768px)
+@media screen and (min-width: 768px) {
+  body {
+    font-size: 12px;
+  }
+  .content-container {
+    width: 767px;
+  }
+}
+
+// Medium devices (tablets, less than 992px)
+@media screen and (min-width: 992px) {
+  .content-container {
+    width: 991px;
+  }
+}
+
+// Large devices (desktops, less than 1200px)
+@media screen and (min-width: 1200px) {
+  body {
+    font-size: 13px;
+    .subpage {
+      h1 {
+        font-size: 24px;
+        margin-bottom: 30px;
+      }
+    }
+  }
+  header {
+    padding-bottom: 100px;
+  }
+  .content-container {
+    width: 1199px;
+  }
+}
+
+// X-Large devices (large desktops, less than 1400px)
+@media screen and (min-width: 1400px) {
+  body {
+    .subpage {
+      h1 {
+
+      }
+    }
+  }
+  .content-container {
+    width: 1499px;
+  }
+}
+
+// X-Large devices (large desktops, less than 1400px)
+@media screen and (min-width: 1800px) {
+  body {
+    font-size: 16px;
+    .subpage {
+      h1 {
+        font-size: 28px;
+        margin-bottom: 150px;
+      }
+    }
+  }
+  header {
+    padding-bottom: 200px;
+  }
+  .content-container {
+    width: 1799px;
+  }
+}
+
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
 
 @-webkit-keyframes AnimationName {
     0%{background-position:0% 50%}
