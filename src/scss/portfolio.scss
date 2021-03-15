@@ -189,7 +189,14 @@
         position: absolute;
         width: 300px;
         top: -50px;
-        right: 50px;
+        right: 0;
+        // right: -50px;
+        &.sketch {
+          right: -50px;
+        }
+        &.sketchflow {
+          right: -50px;
+        }
         &.wireframes {
           right: -100px;
           top: 50px;
@@ -213,6 +220,14 @@
             padding-right: 15px;
             max-height: 300px;
             max-width: 500px;
+          }
+        }
+        &.method-info {
+          .inner {
+            margin-left: 0;
+            // padding-right: 15px;
+            // max-height: 300px;
+            // max-width: 500px;
           }
         }
         &.design-info,
@@ -255,30 +270,36 @@
               }
               &.active {
                 &.one {
-                  h2 {
+                  h2, h3 {
                     color: rgba(11,155,120,1);
                   }
                   border-radius: 10px 10px 10px 0;
                 }
                 &.two {
-                  h2 {
+                  h2, h3 {
                     color: rgba(39,136,84,1);
                   }
                   border-radius: 10px;
                 }
                 &.three {
-                  h2 {
+                  h2, h3 {
                     color: rgba(35,135,139,1);
                   }
                   border-radius: 10px;
                 }
                 &.four {
-                  h2 {
+                  h2, h3 {
                     color: rgba(80,142,165,1);
                   }
                   border-radius: 10px 10px 0 10px;
                 }
               }
+            }
+          }
+          .method-lower {
+            width: 75%;
+            .info-card {
+              max-width: 550px;
             }
           }
           .inner {
@@ -406,7 +427,7 @@
         position: absolute;
         width: 400px;
         top: 50px;
-        right: 50px;
+        // right: 50px;
       }
       .study-info {
         .inner {

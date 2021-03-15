@@ -75,7 +75,7 @@
             <div v-else-if="activeCard == 3" class="info-card three" :class="{active : activeCard == 3}">
               <h2>Was our hypothesis <em>validated</em>?</h2>
               <p>After conducting interviews, the general basis for each proto persona was tweaked to reflect the findings.</p>
-              <p>Talking to people who planned trips and travelled often was an eye-opening experience into today's technologically-influenced trip-planning world.</p>
+              <p>Talking to people who plan trips and travel often was an eye-opening experience into today's technologically-influenced trip-planning world.</p>
               <p>
                 Paint points discussed included:
                 <ul class="green-list">
@@ -90,9 +90,15 @@
             <div v-else-if="activeCard == 4" class="info-card four" :class="{active : activeCard == 4}">
               <h2>Research Conclusion:</h2>
               <p>After gathering all the notes from each interview and noting overlapping interests, pain-points, and goals the team begain to ideate.</p>
-              <p>We knew <em>what</em> we wanted our app to be, but how we needed to tackle the <em>how</em></p>
-              <p>The team created a mood board showcasing 60s aesthetic and features from various travelling apps; simple, complex, or somewhere in between.</p>
-              <p>However, before we could design, we needed to sketch, wireframe, test, rinse and repeat.</p>
+              <p>The team discussed the <strong>MVP</strong> for Nomader and the following was declared:</p>
+              <h3>Nomader Minimal Viable Product</h3>
+              <ul class="green-list">
+                <li><span>A unique travel profile</span></li>
+                <li><span>Smart trip curation system</span></li>
+                <li><span>Map with on-the-road suggestions for unique stops</span></li>
+                <li><span>Game center with social media and advertisement hooks</span></li>
+              </ul>
+              <p>We knew <em>what</em> we wanted our app to be, but how we needed to tackle the <em>how</em>.</p>
             </div>
           </div>
         </div>
@@ -116,20 +122,39 @@
           <div class="method-lower">
             <div v-if="activeCard == 1" class="info-card one" :class="{active : activeCard == 1}">
               <h2>Sketches</h2>
+              <p>The design team held brainstorming sessions utilizing lightening sketches and crazy 8s to get a feel for the layout of Nomader.</p>
+              <p>Collectively, we peiced together the best of these sketches and discussed what sort of screens we would need and how we could tie layouts together.</p>
+              <p>We felt it was important to have functionally sound, yet fun design and we wanted to portray that with consistency through the various templates, iconography, and language.</p>
             </div>
             <div v-else-if="activeCard == 2"  class="info-card two" :class="{active : activeCard == 2}">
               <h2>Wireflows</h2>
+              <p>I chose to design the trip curation. I sketched out what trip planning might look like and what the flow would be for the user.</p>
+              <p>My proposal was that the curation process user 3 actionable screens when making a new trip.</p>
+              <ol class="green-list">
+                <li><span>Weather along the route sorted by day.</span></li>
+                <li><span>Trip activities offered based on personalized interests; displayed at the user's bequest.</span></li>
+                <li><span>Route game planning and reviews available in a list corresponding to the places they're going.</span></li>
+              </ol>
+              <p>My biggest worry was a cluttered interface, especially for a map, and I was very selective on what was shown on the UI.</p>
+              <p>I performed sketch tests to find out how to improve these ideas, and I was delighted to hear comments like <em>"The interface looks very neat!"</em></p>
             </div>
             <div v-else-if="activeCard == 3" class="info-card three" :class="{active : activeCard == 3}">
               <h2>Wireframes</h2>
+              <p>The group came back together with notes following the sketch testing and we shuffled our sketches around into proper wireframes.</p>
+              <p>The wireframes were simple and used to make our content areas more concrete. We began design shortly afterward.</p>
             </div>
             <div v-else-if="activeCard == 4" class="info-card four" :class="{active : activeCard == 4}">
               <h2>Design</h2>
+              <p>For our design and prototype we used <strong>Figma</strong>, and while my tool of choice is usually <strong>Adobe XD</strong> I had a kickass experience with Figma and I'll be using it more from now on!</p>
+              <p>The team created a mood board showcasing 60s aesthetic and features from various travelling apps; simple, complex, or somewhere in between.</p>
+              <p>Hashing out the preliminary design ideas, I stressed I felt it was important for us to be a little outside the box with our design. <em>"Let's break away from current trends!"</em></p>
+              <p>We settled on the <strong>Prizefighter</strong> font for our logo and headings, and <strong>Lato</strong> for our general body text.</p>
+              <p>Prizefighter is a callback to vintage signage and had a great optional font that resembled a road; it was an excellent font to work with (and I finally got to use my license, huzzah!)</p>
             </div>
           </div>
         </div>
-        <img v-if="activeCard == 1" class="nomader-three" src="@/assets/portfolio/ux/sketch.png">
-        <img v-else-if="activeCard == 2" class="nomader-three" src="@/assets/portfolio/ux/sketchflow.png">
+        <img v-if="activeCard == 1" class="nomader-three sketch" src="@/assets/portfolio/ux/sketch.png">
+        <img v-else-if="activeCard == 2" class="nomader-three sketchflow" src="@/assets/portfolio/ux/sketchflow.png">
         <img v-else-if="activeCard == 3" class="nomader-three wireframes" src="@/assets/portfolio/ux/wireframes.png">
         <img v-else-if="activeCard == 4" class="nomader-three" src="@/assets/portfolio/ux/sketchflow.png">
       </div>
@@ -152,16 +177,16 @@
           </div>
           <div class="design-lower">
             <div v-if="activeCard == 1" class="info-card one" :class="{active : activeCard == 1}">
-              <h2>Sketches</h2>
+              <h2>Color Palette</h2>
             </div>
             <div v-else-if="activeCard == 2"  class="info-card two" :class="{active : activeCard == 2}">
-              <h2>Wireflows</h2>
+              <h2>Accessibility</h2>
             </div>
             <div v-else-if="activeCard == 3" class="info-card three" :class="{active : activeCard == 3}">
-              <h2>Wireframes</h2>
+              <h2>Template Ideas</h2>
             </div>
             <div v-else-if="activeCard == 4" class="info-card four" :class="{active : activeCard == 4}">
-              <h2>Design</h2>
+              <h2>Final Design</h2>
             </div>
           </div>
         <img class="nomader-four" src="@/assets/portfolio/ux/mockup.png">
