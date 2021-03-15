@@ -91,6 +91,12 @@ strong {
 }
 // X-Small devices (portrait phones, less than 576px)
 @media screen and (max-width: 576px) {
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
   body {
     font-size: 12px;
   }
@@ -101,6 +107,12 @@ strong {
 
 // Small devices (landscape phones, less than 768px)
 @media screen and (min-width: 768px) {
+  .desktop {
+    display: block;
+  }
+  .mobile {
+    display: none;
+  }
   body {
     font-size: 12px;
   }

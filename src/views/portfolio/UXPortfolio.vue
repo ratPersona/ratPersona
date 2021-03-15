@@ -49,6 +49,7 @@ export default {
   methods: {
     ...mapMutations([
       'ACTIVE_ITEM',
+      'ACTIVE_NAV',
       'ACTIVE_UX_ITEM',
       'WHAT_PAGE',
       'INNER_TITLE',
@@ -60,6 +61,7 @@ export default {
     },
   },
   mounted() {
+    this.ACTIVE_NAV('portfolio')  
     this.getNewTitle()
   }
 }

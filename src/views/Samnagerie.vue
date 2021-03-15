@@ -47,6 +47,7 @@
 import Rats from '@/components/samnagerie/Rats.vue'
 import Reptiles from '@/components/samnagerie/Reptiles.vue'
 import Homesteaders from '@/components/samnagerie/Homesteaders.vue'
+import { mapMutations } from 'vuex'
 
 export default {
   name: 'Samnagerie',
@@ -70,8 +71,12 @@ export default {
     selectItem(index) {
         this.activeItem = index;
     },
+    ...mapMutations([
+      'ACTIVE_NAV'
+    ]),
   },
   mounted() {
+    this.ACTIVE_NAV('samnagerie')
     this.getNewTitle();
   }
 }

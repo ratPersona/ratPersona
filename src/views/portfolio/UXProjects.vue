@@ -47,7 +47,8 @@ export default {
   methods: {
     ...mapMutations([
       'ACTIVE_UX_ITEM',
-      'WHAT_PAGE'
+      'WHAT_PAGE',
+      'ACTIVE_NAV'
     ]),
     closePortfolioPage() {
       this.ACTIVE_UX_ITEM('')
@@ -56,7 +57,7 @@ export default {
     }
   },
   mounted() {
-    
+    this.ACTIVE_NAV('portfolio')
   }
 }
 </script>

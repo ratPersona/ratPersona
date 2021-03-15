@@ -8,6 +8,7 @@ export default new Vuex.Store({
     activeButton: 0,
     activeReset: '',
     activeItem: '',
+    activeNav: '',
     buttonTitle: '',
     titles: [],
     page: 'landing',
@@ -21,6 +22,9 @@ export default new Vuex.Store({
   mutations: {
     ACTIVE_ITEM: (state, active) => {
       state.activeItem = active
+    },
+    ACTIVE_NAV: (state, nav) => {
+      state.activeNav = nav
     },
     ACTIVE_UX_ITEM: (state, item) => {
       state.activeUxItem = item

@@ -1,25 +1,28 @@
 @import '@/scss/mixins';
 
+#nav {
+  position: relative;
+  z-index: 100;
+}
+
 .navigation {
-  // height: 100px;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  position: absolute;
-  width: 100%;
-  top: 0;
-  left: 0;
   z-index: 10;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  padding: 20px 0;
+  background: $green;
   a {
     color: $white;
-    font-size: 16px;
+    font-size: 12px;
     text-decoration: none;
     position: relative;
-    &.router-link-exact-active {
-      font-family: 'Paris Dreamer';
-      &::after {
-        width: 100%;
-      }
+    .desktop {
+      display: none;
     }
     &::after {
       position: absolute;
@@ -68,7 +71,7 @@
   }
 
   // Small devices (landscape phones, less than 768px)
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 500px) {
 
   }
 
@@ -79,7 +82,74 @@
 
   // Large devices (desktops, less than 1200px)
   @media screen and (min-width: 1200px) {
+    position: absolute;
     height: 70px;
+    top: 0;
+    left: 0;
+    padding: 0;
+    background: transparent;
+    a {
+      color: $white;
+      font-size: 16px;
+      text-decoration: none;
+      position: relative;
+      .desktop {
+        display: block;
+      }
+      .mobile {
+        display: none;
+      }
+      &.router-link-exact-active {
+        font-family: 'Paris Dreamer';
+        &::after {
+          width: 100%;
+        }
+      }
+      &::after {
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        content: '';
+        width: 0;
+        height: 2px;
+        transition: width 300ms ease;
+      }
+      &:hover {
+        &.one {
+          color: rgba(11,155,120,1);
+          &::after {
+            background: linear-gradient(90deg, rgba(11,155,120,1) 0%, rgba(39,136,84,1) 100%, rgba(255,255,255,1) 0122024%);
+          }
+        }
+        &.two {
+          color: rgba(39,136,84,1);
+          &::after {
+            background: linear-gradient(90deg, rgba(39,136,84,1) 0%, rgba(36,143,43,1) 100%, rgba(255,255,255,1) 0122024%);
+          }
+        }
+        &.three {
+          color: rgba(39,136,84,1);
+          &::after {
+            background: linear-gradient(90deg, rgba(39,136,84,1) 0%, rgba(35,135,139,1) 100%, rgba(255,255,255,1) 0122024%);
+          }
+        }
+        &.four {
+          color: rgba(35,135,139,1);
+          &::after {
+            background: linear-gradient(90deg, rgba(35,135,139,1) 0%, rgba(80,142,165,1) 100%, rgba(255,255,255,1) 0122024%);
+          }
+        }
+        &.five {
+          color: rgba(80,142,165,1);
+          &::after {
+            background: linear-gradient(90deg, rgba(80,142,165,1) 0%, rgba(111,183,210,1) 100%, rgba(255,255,255,1) 0122024%);
+          }
+        }
+        &::after {
+          width: 100%;
+        }
+      }
+    }
   }
 
   // X-Large devices (large desktops, less than 1400px)

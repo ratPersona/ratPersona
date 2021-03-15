@@ -1,17 +1,5 @@
 <style lang="scss">
   @import '@/scss/home.scss';
-  .hello {
-    transform: skew(7deg, -11deg);
-    background: transparent;
-    border: none;
-    h1 {
-      color: $green;
-    }
-  }
-  .content {
-    position: relative;
-    z-index: 100;
-  }
 </style>
 
 <template>
@@ -31,7 +19,7 @@
             <img class="home-pic" src="@/assets/prof.jpg">
             <span class="background"></span>
           </div>
-          <div>
+          <div class="desktop">
             <h2>{{ this.caption }}</h2>
           </div>
         </aside>
