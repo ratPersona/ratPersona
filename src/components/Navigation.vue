@@ -7,15 +7,18 @@
     <router-link class="one" to="/">
       About
     </router-link>
-    <router-link class="two" to="/portfolio" v-on.native:click="this.WHAT_PAGE('landing')">
+    <router-link class="two" to="/resume">
+      Resume
+    </router-link>
+    <router-link class="three" to="/portfolio" v-on.native:click="this.WHAT_PAGE('landing')">
       Portfolio
     </router-link>
-    <router-link class="three" to="/contact">
+    <router-link class="four" to="/contact">
       Contact
     </router-link>
-    <router-link class="four" to="/bvlog" v-on.native:click="this.WHAT_PAGE('landing')">
+    <!-- <router-link class="four" to="/bvlog" v-on.native:click="this.WHAT_PAGE('landing')">
       Blog
-    </router-link>
+    </router-link> -->
     <router-link class="five" to="/samnagerie">
       <span class="desktop">Samnagerie</span>
       <span class="mobile">Animals</span>

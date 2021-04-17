@@ -22,6 +22,14 @@ Vue.use(VueRouter)
     }
   },
   {
+    path: '/resume',
+    name: 'Resume',
+    component: () => import(/* webpackChunkName: "rats" */ '../views/Resume.vue'),
+    meta: {
+      isPublic:true
+    }
+  },
+  {
     path: '/portfolio',
     name: 'Portfolio',
     component: () => import(/* webpackChunkName: "rats" */ '../views/portfolio/Portfolio.vue'),

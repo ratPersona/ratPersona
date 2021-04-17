@@ -257,6 +257,10 @@
           .about-me {
             width: 70%;
             padding: 0;
+
+            &.lower {
+              width: 100%;
+            }
           }
           .hobbies {
             width: 30%;

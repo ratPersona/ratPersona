@@ -45,7 +45,7 @@
 
   .green-list {
     li {
-      color: $green;
+      color: $canary;
       span {
         color: $white;
       }
@@ -190,7 +190,6 @@
         width: 300px;
         top: -50px;
         right: 0;
-        // right: -50px;
         &.sketch {
           right: -50px;
         }
@@ -198,9 +197,11 @@
           right: -50px;
         }
         &.wireframes {
-          right: -100px;
-          top: 50px;
-          width: 400px;
+          right: 0;
+          width: 300px;
+          top: 135px;
+          left: 0;
+          margin: auto;
         }
       }
       .nomader-four {

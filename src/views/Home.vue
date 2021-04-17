@@ -26,35 +26,35 @@
         <main class="about-me-content">
           <h2 class="name">Sam Nelson - <small>She/They</small></h2>
           <div class="main-info">
-            <About v-show="active == 'about'" />
-            <Employment v-show="active == 'employment'" />
-            <Education v-show="active == 'education'" />
+            <!-- <About v-show="active == 'about'" /> -->
+            <!-- <Employment v-show="active == 'employment'" /> -->
+            <!-- <Education v-show="active == 'education'" /> -->
           </div>
           <ul class="home-display-options internal-nav">
-            <li class="button button-one">
+            <!-- <li class="button button-one">
               <button
               @click="changeActive('about')"
               :class="{ active: active == 'about' }"
               role="button">
                 <span>About</span>
               </button>
-            </li>
-            <li class="button button-two">
+            </li> -->
+            <!-- <li class="button button-two">
               <button
               @click="changeActive('employment')"
               :class="{ active: active == 'employment' }"
               role="button">
                 <span>Employment</span>
               </button>
-            </li>
-            <li class="button button-three">
+            </li> -->
+            <!-- <li class="button button-three">
               <button
               @click="changeActive('education')"
               :class="{ active: active == 'education' }"
               role="button">
                 <span>Education</span>
               </button>
-            </li>
+            </li> -->
           </ul>
         </main>
       </div>
@@ -64,16 +64,16 @@
 
 <script>
 /* eslint-disable */
-import About from '@/components/home/About'
-import Employment from '@/components/home/Employment'
-import Education from '@/components/home/Education'
+// import About from '@/components/home/About'
+// import Employment from '@/components/home/Employment'
+// import Education from '@/components/home/Education'
 
 export default {
   name: 'Home',
   components: {
-    About,
-    Employment,
-    Education
+    // About,
+    // Employment,
+    // Education
   },
   data: function() {
     return {

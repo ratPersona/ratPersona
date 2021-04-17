@@ -148,7 +148,7 @@
               <p>For our design and prototype we used <strong>Figma</strong>, and while my tool of choice is usually <strong>Adobe XD</strong> I had a kickass experience with Figma and I'll be using it more from now on!</p>
               <p>The team created a mood board showcasing 60s aesthetic and features from various travelling apps; simple, complex, or somewhere in between.</p>
               <p>Hashing out the preliminary design ideas, I stressed I felt it was important for us to be a little outside the box with our design. <em>"Let's break away from current trends!"</em></p>
-              <p>We settled on the <strong>Prizefighter</strong> font for our logo and headings, and <strong>Lato</strong> for our general body text.</p>
+              <p>We settled on the <strong><a href="https://www.designcuts.com/product/prizefighter-art-deco-display-font/">Prizefighter</a></strong> font for our logo and headings, and <strong>Lato</strong> for our general body text.</p>
               <p>Prizefighter is a callback to vintage signage and had a great optional font that resembled a road; it was an excellent font to work with (and I finally got to use my license, huzzah!)</p>
             </div>
           </div>
@@ -156,7 +156,7 @@
         <img v-if="activeCard == 1" class="nomader-three sketch" src="@/assets/portfolio/ux/sketch.png">
         <img v-else-if="activeCard == 2" class="nomader-three sketchflow" src="@/assets/portfolio/ux/sketchflow.png">
         <img v-else-if="activeCard == 3" class="nomader-three wireframes" src="@/assets/portfolio/ux/wireframes.png">
-        <img v-else-if="activeCard == 4" class="nomader-three" src="@/assets/portfolio/ux/sketchflow.png">
+        <!-- <img v-else-if="activeCard == 4" class="nomader-three" src="@/assets/portfolio/ux/sketchflow.png"> -->
       </div>
 
       <div v-else-if="activeButton == 3" class="study-each design">
@@ -212,8 +212,6 @@
         </li>
       </ul>
     </nav>
-
-    <!-- <Navigation /> -->
   </div>
 </template>
 
@@ -241,20 +239,14 @@ export default {
     ...mapGetters([
       // 'getActiveButton'
     ]),
-    // updateButton: {
-    //   get: function() {
-    //     return this.getActiveButton
-    //   }
-    // }
   },
   watch: {
-    // this.activeButton
   },
   methods: {
     getActive(item) {
       this.activeItem = item
       this.activeButton = item
-      // this.$store.dispatch('setActiveButton')
+      this.activeCard = 1
     },
     activeButtonResearch(button) {
       this.activeCard = button

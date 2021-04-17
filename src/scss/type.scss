@@ -37,11 +37,11 @@ h3 {
 }
 
 a {
-  color: $black-blue;
+  color: $canary;
   font-weight: 700;
-  text-decoration: none;
-  transition: color 300ms ease;
-  &:hover {
-    color: $canary;
-  }
+  // text-decoration: none;
+  // transition: color 300ms ease;
+  // &:hover {
+  //   color: $canary;
+  // }
 }
