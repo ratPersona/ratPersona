@@ -1,4 +1,5 @@
 @import '@/scss/mixins';
+
  h1 {
    color: $canary;
  }
@@ -42,25 +43,6 @@
      cursor: pointer;
    }
  }
-
-  .green-list {
-    li {
-      color: $canary;
-      span {
-        color: $white;
-      }
-    }
-  }
-
-  .white-list {
-    padding-left: 10px;
-    li {
-      color: $white;
-      span {
-        color: $black-blue;
-      }
-    }
-  }
 
 
   .ux-portfolio {
@@ -178,8 +160,8 @@
       .study-media {
         width: 30%;
         .nomader-one {
-          top: -160px;
-          left: -100px;
+          top: -20px;
+          left: -150px;
           position: absolute;
           width: 700px;
           height: auto;
@@ -219,7 +201,7 @@
           .inner {
             margin-left: 150px;
             padding-right: 15px;
-            max-height: 300px;
+            max-height: none;
             max-width: 500px;
           }
         }
@@ -304,6 +286,7 @@
             }
           }
           .inner {
+            display: block;
             width: 45%;
             max-width: none;
             &.card {

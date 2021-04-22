@@ -5,9 +5,9 @@
 
 <template>
   <div class="subpage">
-    <h1 class="portfolio-title">
+    <!-- <h1 class="portfolio-title">
       {{ this.title }}
-    </h1>
+    </h1> -->
     <main class="projects">
       <section>
         <UX class="ux-projects"/>
@@ -61,7 +61,7 @@ export default {
     },
   },
   mounted() {
-    this.ACTIVE_NAV('portfolio')  
+    this.ACTIVE_NAV('portfolio')
     this.getNewTitle()
   }
 }

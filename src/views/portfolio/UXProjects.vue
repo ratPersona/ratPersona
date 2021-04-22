@@ -10,12 +10,14 @@
     @click="closePortfolioPage">
       <svg class="icon"><use href="#cancel"></use></svg>
     </button>
-    <h1 class="portfolio-title">
-      {{ this.activeUxItem }}
-    </h1>
-    <LineWebtoon v-show="activeUxItem == 'Line Webtoon'" />
-    <Nomader v-show="activeUxItem == 'Nomader'" />
-    <SIMS v-show="activeUxItem == 'SIMS'" />
+    <div>
+      <!-- <h1 class="portfolio-title">
+        {{ this.activeUxItem }}
+      </h1> -->
+      <LineWebtoon v-show="activeUxItem == 'Line Webtoon'" />
+      <Nomader v-show="activeUxItem == 'Nomader'" />
+      <SIMS v-show="activeUxItem == 'SIMS'" />
+    </div>
   </div>
 </template>
 

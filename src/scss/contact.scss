@@ -2,11 +2,101 @@
 
 .contact {
   text-align: center;
+  .socials {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    // display: flex;
+    // justify-content: space-between;
+    .flex-container {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .social {
+      // width: 20%;
+      .icon {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+  .contact-btn {
+    background-color: transparent;
+    width: 100%;
+    position: relative;
+    border: none;
+    min-height: 40px;
+    border-radius: 5px;
+    color: $white;
+    font-weight: 800;
+    font-size: 16px;
+    border: $green 3px solid;
+    border-radius: 5px;
+    transition: background-color 300ms ease, color 300ms ease;
+    &:hover {
+      cursor: pointer;
+      color: $black-blue;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      display: none;
+      z-index: 1;
+      top: 20px;
+      right: 48%;
+      border-right: 5px solid transparent;
+      border-left: 5px solid transparent;
+      border-bottom: 5px solid #fff;
+    }
+  }
   .content-header {
     padding: 0;
   }
   .flex-container {
     display: flex;
     justify-content: space-around;
+    > div {
+      width: 25%;
+      &:nth-child(1) {
+        .contact-btn {
+          &:hover {
+            &:first-of-type {
+              border-color: rgba(11,155,120,1);
+              background-color: rgba(11,155,120,1);
+            }
+          }
+        }
+      }
+      &:nth-child(2) {
+        .contact-btn {
+          &:hover {
+            &:first-of-type {
+              border-color: rgba(36,143,43,1);
+              background-color: rgba(36,143,43,1);
+            }
+          }
+        }
+      }
+      &:nth-child(3) {
+        .contact-btn {
+          &:hover {
+            &:first-of-type {
+              border-color: rgba(80,142,165,1);
+              background-color: rgba(80,142,165,1);
+            }
+          }
+        }
+      }
+      .icon {
+        fill: $green;
+        width: 50px;
+        height: 50px;
+        margin-bottom: 20px;
+      }
+    }
   }
 }

@@ -8,7 +8,7 @@
       About
     </router-link>
     <router-link class="two" to="/resume">
-      Resume
+      Résumé
     </router-link>
     <router-link class="three" to="/portfolio" v-on.native:click="this.WHAT_PAGE('landing')">
       Portfolio

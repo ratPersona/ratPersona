@@ -11,9 +11,9 @@
           <img class="nomader-one" src="@/assets/portfolio/ux/nomadermu1.png">
         </div>
         <div class="study-info name-info">
+          <h1>Nomader</h1>
           <div class="inner">
-            <p>Road trips provide a lot of things, one of the most important being memories. Whether alone, with family, or just a pair of pals; the memories and experiences are the greatest takeaway. Nomader is an app that produces and saves these neato moments in a colorful way!</p>
-            <p>The creation of the Nomader app was the cumulation of the thoughts of a 4 member design team.</p>
+            <p>Road trips provide a lot of things, one of the most important being memories. Whether alone, with family, or just a pair of pals; the memories and experiences are the greatest takeaway. Nomader is an app that produces and saves these neato moments in a colorful way! The creation of the Nomader app was the cumulation of the thoughts of a 4 member design team.</p>
             <p>This team was formed by MICA's UX MPS program, during the Prototyping course.</p>
             <p>This app aims to soothe pain points in existing travel apps, provide a collaborative user experience, and make the driving part of a road trip fun and as interesting as the destinations.</p>
           </div>

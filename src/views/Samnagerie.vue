@@ -5,7 +5,7 @@
 
 <template>
   <section class="subpage">
-    <h1>{{ this.title }}</h1>
+    <!-- <h1>{{ this.title }}</h1> -->
     <div class="samnagerie">
       <aside class="sidebar" :class="[{hide: activeItem != 'main'}]">
         <button @click="selectItem('rats')" role="button" class="flex-col rats">

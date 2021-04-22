@@ -6,31 +6,31 @@
 
 <template>
   <section class="subpage">
-    <h1 class="portfolio-title">
-      {{ this.title }}
-    </h1>
-    <div class="portfolio">
-      <nav
-      class="sidebar">
-        <button
-        @click="selectItem('ux')"
-        role="button"
-        class="flex-col ux">
-          <h2>UX Projects</h2>
-        </button>
-        <button
-        @click="selectItem('design')"
-        role="button"
-        class="flex-col design">
-          <h2>Design</h2>
-        </button>
-        <button
-        @click="selectItem('illustration')"
-        role="button"
-        class="flex-col illustration">
-          <h2>Illustration</h2>
-        </button>
-      </nav>
+    <div>
+
+      <div class="portfolio">
+        <nav
+        class="selection-nav">
+          <button
+          @click="selectItem('ux')"
+          role="button"
+          class="flex-col ux">
+            <h2>UX Projects</h2>
+          </button>
+          <button
+          @click="selectItem('design')"
+          role="button"
+          class="flex-col design">
+            <h2>Design</h2>
+          </button>
+          <button
+          @click="selectItem('illustration')"
+          role="button"
+          class="flex-col illustration">
+            <h2>Illustration</h2>
+          </button>
+        </nav>
+      </div>
     </div>
   </section>
 </template>

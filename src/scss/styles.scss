@@ -11,6 +11,26 @@ h1 {
 h2, h3 {
   // font-family: 'Paris Dreamer';
 }
+.green-list {
+  padding: 0 0 0 12px;
+  li {
+    color: $green;
+    margin-bottom: 10px;
+    span {
+      color: $white;
+    }
+  }
+}
+
+.white-list {
+  padding-left: 10px;
+  li {
+    color: $white;
+    span {
+      color: $black-blue;
+    }
+  }
+}
 body {
   margin: 0;
   height: 100%;
@@ -68,6 +88,15 @@ body {
   }
 
   .subpage {
+    margin: auto;
+    position: absolute;
+    height: 90%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
     h1 {
       width: 35%;
       margin: 0 auto 0;
@@ -75,6 +104,17 @@ body {
       transform: skew(0deg, -3deg);
       margin-bottom: 150px;
       text-align: center;
+    }
+    h2, h3 {
+      // margin: auto;
+    }
+    p {
+      line-height: 2;
+    }
+    > div {
+      width: 100%;
+      // display: flex;
+      // align-items: center;
     }
   }
 
@@ -116,22 +156,23 @@ strong {
     font-size: 12px;
   }
   .content-container {
-    width: 767px;
+    max-width: 767px;
   }
 }
 
 // Medium devices (tablets, less than 992px)
 @media screen and (min-width: 992px) {
   .content-container {
-    width: 991px;
+    max-width: 991px;
   }
 }
 
 // Large devices (desktops, less than 1200px)
 @media screen and (min-width: 1200px) {
   body {
-    font-size: 13px;
+    font-size: 12px;
     .subpage {
+      max-width: 1199px;
       h1 {
         font-size: 24px;
         margin-bottom: 30px;
@@ -142,7 +183,7 @@ strong {
     padding-bottom: 100px;
   }
   .content-container {
-    width: 1199px;
+    max-width: 1199px;
   }
 }
 
@@ -150,13 +191,15 @@ strong {
 @media screen and (min-width: 1400px) {
   body {
     .subpage {
+      // max-width: 1499px;
+      max-width: 1300px;
       h1 {
 
       }
     }
   }
   .content-container {
-    width: 1499px;
+    // max-width: 1499px;
   }
 }
 
@@ -165,6 +208,7 @@ strong {
   body {
     font-size: 16px;
     .subpage {
+      max-width: 1700px;
       h1 {
         font-size: 28px;
         margin-bottom: 100px;
@@ -175,7 +219,7 @@ strong {
     padding-bottom: 150px;
   }
   .content-container {
-    width: 1799px;
+    max-width: 1799px;
   }
 }
 

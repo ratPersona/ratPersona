@@ -5,10 +5,12 @@
 
 <template>
   <div class="contact subpage">
-    <header class="content-header">
-      <h1>{{ this.title }}</h1>
-    </header>
-    <Contact />
+    <div>
+      <!-- <header class="content-header">
+        <h1>{{ this.title }}</h1>
+      </header> -->
+      <Contact />
+    </div>
   </div>
 </template>
 
