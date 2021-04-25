@@ -11,6 +11,19 @@ h1 {
 h2, h3 {
   // font-family: 'Paris Dreamer';
 }
+a {
+  text-decoration: none;
+}
+button {
+  a {
+    color: $white;
+  }
+  &:hover {
+    a {
+      color: $black-blue;
+    }
+  }
+}
 .green-list {
   padding: 0 0 0 12px;
   li {
@@ -99,10 +112,10 @@ body {
     align-items: center;
     h1 {
       width: 35%;
-      margin: 0 auto 0;
+      margin: 0 auto 150px;
       font-size: 18px;
       transform: skew(0deg, -3deg);
-      margin-bottom: 150px;
+      // margin-bottom: 150px;
       text-align: center;
     }
     h2, h3 {
@@ -113,8 +126,6 @@ body {
     }
     > div {
       width: 100%;
-      // display: flex;
-      // align-items: center;
     }
   }
 
@@ -161,6 +172,19 @@ strong {
 }
 
 // Medium devices (tablets, less than 992px)
+
+@media screen and (max-width: 992px) {
+  body {
+    .subpage {
+      h1 {
+        width: 100%;
+        margin-bottom: 50px;
+        font-size: 28px;
+      }
+    }
+  }
+}
+
 @media screen and (min-width: 992px) {
   .content-container {
     max-width: 991px;
@@ -169,6 +193,13 @@ strong {
 
 // Large devices (desktops, less than 1200px)
 @media screen and (min-width: 1200px) {
+  body {
+    .subpage {
+      h1 {
+        display: none;
+      }
+    }
+  }
   body {
     font-size: 12px;
     .subpage {

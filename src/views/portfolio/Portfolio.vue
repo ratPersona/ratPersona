@@ -7,7 +7,7 @@
 <template>
   <section class="subpage">
     <div>
-
+      <h1>My Work!</h1>
       <div class="portfolio">
         <nav
         class="selection-nav">
@@ -15,18 +15,21 @@
           @click="selectItem('ux')"
           role="button"
           class="flex-col ux">
+            <svg class="icon"><use href="#ux"></use></svg>
             <h2>UX Projects</h2>
           </button>
           <button
           @click="selectItem('design')"
           role="button"
           class="flex-col design">
-            <h2>Design</h2>
+              <svg class="icon"><use href="#design"></use></svg>
+              <h2>Design</h2>
           </button>
           <button
           @click="selectItem('illustration')"
           role="button"
           class="flex-col illustration">
+            <svg class="icon"><use href="#illustration"></use></svg>
             <h2>Illustration</h2>
           </button>
         </nav>

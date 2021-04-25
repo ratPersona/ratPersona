@@ -4,9 +4,8 @@
 </style>
 
 <template>
-  <section class="subpage">
-    <!-- <h1>{{ this.title }}</h1> -->
-    <div class="samnagerie">
+  <div class="subpage">
+    <!-- <div class="samnagerie">
       <aside class="sidebar" :class="[{hide: activeItem != 'main'}]">
         <button @click="selectItem('rats')" role="button" class="flex-col rats">
           <h2>Rats</h2>
@@ -39,22 +38,25 @@
           </section>
         </div>
       </main>
-    </div>
-  </section>
+    </div> -->
+    <Soon />
+  </div>
 </template>
 
 <script>
-import Rats from '@/components/samnagerie/Rats.vue'
-import Reptiles from '@/components/samnagerie/Reptiles.vue'
-import Homesteaders from '@/components/samnagerie/Homesteaders.vue'
+import Soon from '@/views/ComingSoon.vue'
+// import Rats from '@/components/samnagerie/Rats.vue'
+// import Reptiles from '@/components/samnagerie/Reptiles.vue'
+// import Homesteaders from '@/components/samnagerie/Homesteaders.vue'
 import { mapMutations } from 'vuex'
 
 export default {
   name: 'Samnagerie',
   components: {
-    Rats,
-    Reptiles,
-    Homesteaders
+    Soon
+    // Rats,
+    // Reptiles,
+    // Homesteaders
   },
   data: function() {
     return {

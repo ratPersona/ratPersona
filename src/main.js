@@ -9,12 +9,16 @@ import router from './router'
 import store from './store'
 import axios from 'axios' //URL https://vuejs.org/v2/cookbook/using-axios-to-consume-apis.html
 
+import device from "vue-device-detector"
+
 import styles from './scss/type.scss';
 console.log(styles)
 
 // Vue.use(firebase)
 Vue.use(firestorePlugin)
 Vue.use(axios)
+Vue.use(device)
+
 
 firebase.initializeApp({
   apiKey: "AIzaSyCyZeac_yevgSLXqnlKNH1Xm2zULOYLY9Q",
@@ -31,6 +35,7 @@ export const db = firebase.firestore()
 Vue.config.productionTip = false
 
 new Vue({
+  device,
   router,
   store,
   axios,

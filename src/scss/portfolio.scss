@@ -1,7 +1,7 @@
 @import '@/scss/mixins';
 
  h1 {
-   color: $canary;
+   color: $white;
  }
 
  .back-btn {
@@ -44,30 +44,52 @@
    }
  }
 
+ .selection-nav {
+   width: 100%;
+   // display: flex;
+   // justify-content: space-between;
+   .flex-col {
+     background-color: transparent;
+     border: none;
+     color: $white;
+     width: 25%;
+     // transition: transform 300ms ease;
+     h2 {
+      transition: font-family 300ms ease, transform 300ms ease;
+     }
+     .icon {
+       width: 30px;
+       height: 30px;
+       // margin-bottom: 10px;
+       transition: transform 300ms ease;
+     }
+
+     &:hover {
+       cursor: pointer;
+       h2 {
+         transform: scale(1.5);
+         font-family: 'ParisDreamer-Regular';
+       }
+       .icon {
+         transform: scale(1.5);
+       }
+     }
+   }
+ }
+
 
   .ux-portfolio {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
     width: 100%;
-    padding: 70px 0 50px;
-    top: -70px;
     position: relative;
 
     .portfolio-card {
       position: relative;
-      bottom: 50px;
-      height: 300px;
-      width: 300px;
       border-radius: 5px;
       background-color: transparent;
       border: none;
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
 
       &::after {
         content: '';
@@ -136,12 +158,65 @@
   }
 
   // Medium devices (tablets, less than 992px)
-  @media screen and (min-width: 992px) {
-
+  @media screen and (max-width: 992px) {
+    .selection-nav {
+      width: 100%;
+      .flex-col {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 3px solid $green;
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 20px;
+        .icon {
+          margin-right: 20px;
+        }
+        h2 {
+          margin: 0;
+          font-size: 24px;
+          display: inline;
+        }
+      }
+    }
   }
 
   // Large devices (desktops, less than 1200px)
   @media screen and (min-width: 1200px) {
+    .ux-portfolio {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      width: 100%;
+      padding: 70px 0 50px;
+      top: -70px;
+      position: relative;
+      .portfolio-card {
+        bottom: 50px;
+        height: 300px;
+        width: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    .selection-nav {
+      display: flex;
+      justify-content: space-between;
+      .flex-col {
+        h2 {
+          font-size: 18px;
+        }
+        .icon {
+          width: 50px;
+          height: 50px;
+          margin-bottom: 30px;
+        }
+      }
+    }
+
     .cancel-btn {
       right: 90px;
       top: 150px;
@@ -153,19 +228,31 @@
     }
     .case-study-content {
       width: 1100px;
+      .study-each {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        // justify-content: center;
+        .study-media {
+          position: relative;
+          width: 30%;
+          .nomader-one {
+            top: -20px;
+            left: -150px;
+            position: absolute;
+            width: 700px;
+            height: auto;
+          }
+        }
+        .study-info {
+          .inner {
+            overflow-y: scroll;
+          }
+        }
+      }
       h2 {
         font-size: 20px;
         margin-top: 0;
-      }
-      .study-media {
-        width: 30%;
-        .nomader-one {
-          top: -20px;
-          left: -150px;
-          position: absolute;
-          width: 700px;
-          height: auto;
-        }
       }
       .nomader-three {
         position: absolute;
@@ -377,11 +464,35 @@
 
   // X-Large devices (large desktops, less than 1400px)
   @media screen and (min-width: 1400px) {
-
+    .selection-nav {
+      .flex-col {
+        h2 {
+          font-size: 24px;
+        }
+        .icon {
+          width: 70px;
+          height: 70px;
+          margin-bottom: 40px;
+        }
+      }
+    }
   }
 
   // X-Large devices (large desktops, less than 1400px)
   @media screen and (min-width: 1800px) {
+    .selection-nav {
+      .flex-col {
+        h2 {
+          font-size: 32px;
+        }
+        .icon {
+          width: 100px;
+          height: 100px;
+          margin-bottom: 40px;
+        }
+      }
+    }
+
     .cancel-btn {
       right: 90px;
       top: 230px;

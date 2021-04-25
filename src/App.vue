@@ -13,9 +13,9 @@
 
 <template>
   <div id="main-app">
-    <canvas id="canvas"></canvas>
+    <canvas v-show="desktop" id="canvas"></canvas>
     <header id="nav">
-      <Nav v-show="desktop" />
+      <Nav />
     </header>
     <!-- <router-view /> -->
     <router-view :key="componentKey"/>
@@ -23,18 +23,20 @@
 </template>
 
 <script>
-import { mapState, mapMutations } from 'vuex';
+import { mapState, mapMutations } from 'vuex'
+import { isBrowser } from 'mobile-device-detect'
 import Nav from '@/components/Navigation.vue'
 
 export default {
   name: 'App',
   components: {
     Nav,
+    // isBrowser
   },
   data: function() {
     return {
-      desktop: true,
-      mobile: false
+      desktop: isBrowser ? true : false
+      // mobile: false
     }
   },
   computed: {
@@ -126,6 +128,7 @@ export default {
     }
   },
   mounted() {
+    console.log(this.$device)
     this.fireflies()
     // this.UPDATE_KEY(this.componentKey += 1)
   }

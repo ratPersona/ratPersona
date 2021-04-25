@@ -54,6 +54,30 @@ Vue.use(VueRouter)
     }
   },
   {
+    path: '/illustration-portfolio',
+    name: 'Illustration',
+    component: () => import(/* webpackChunkName: "rats" */ '../views/portfolio/IllustrationPortfolio.vue'),
+    meta: {
+      isPublic:true
+    }
+  },
+  {
+    path: '/design-portfolio',
+    name: 'Design',
+    component: () => import(/* webpackChunkName: "rats" */ '../views/portfolio/DesignPortfolio.vue'),
+    meta: {
+      isPublic:true
+    }
+  },
+  {
+    path: '/design-project',
+    name: 'Design Project',
+    component: () => import(/* webpackChunkName: "rats" */ '../views/portfolio/UXProjects.vue'),
+    meta: {
+      isPublic:true
+    }
+  },
+  {
     path: '/samnagerie',
     name: 'Samnagerie',
     component: () => import(/* webpackChunkName: "rats" */ '../views/Samnagerie.vue'),

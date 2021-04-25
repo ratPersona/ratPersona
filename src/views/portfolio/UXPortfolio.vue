@@ -10,7 +10,8 @@
     </h1> -->
     <main class="projects">
       <section>
-        <UX class="ux-projects"/>
+        <Soon />
+        <!-- <UX class="ux-projects"/> -->
         <!-- <Design class="design-projects" :class="[{active: activeItem === 'Design'}]" v-if="activeItem == 'Design'"/> -->
         <!-- <Illustration class="illustration-projects" :class="[{active: activeItem === 'Illustration'}]" v-if="activeItem == 'Illustration'"/> -->
       </section>
@@ -20,6 +21,7 @@
 
 <script>
 import { mapState, mapMutations } from 'vuex'
+import Soon from '@/views/ComingSoon.vue'
 
 import UX from '@/components/portfolio/UX.vue'
 import Title from '@/components/portfolio/global/PortfolioTitles.vue'
@@ -28,7 +30,8 @@ export default {
   name: 'UXPortfolio',
   components: {
     UX,
-    Title
+    Title,
+    Soon
   },
   data: function() {
     return {
