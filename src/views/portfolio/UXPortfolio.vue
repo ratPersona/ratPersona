@@ -11,9 +11,9 @@
     <main class="projects">
       <section>
         <Soon />
-        <!-- <UX class="ux-projects"/> -->
-        <!-- <Design class="design-projects" :class="[{active: activeItem === 'Design'}]" v-if="activeItem == 'Design'"/> -->
-        <!-- <Illustration class="illustration-projects" :class="[{active: activeItem === 'Illustration'}]" v-if="activeItem == 'Illustration'"/> -->
+        <UX class="ux-projects"/>
+        <Design class="design-projects" :class="[{active: activeItem === 'Design'}]" v-if="activeItem == 'Design'"/>
+        <Illustration class="illustration-projects" :class="[{active: activeItem === 'Illustration'}]" v-if="activeItem == 'Illustration'"/>
       </section>
     </main>
   </div>
@@ -36,7 +36,7 @@ export default {
   data: function() {
     return {
       title: '',
-      portfolioTitles: ['Kickass UX', "Words, straight from the User's mouth!", 'I fight for User rights!'],
+      // portfolioTitles: ["Kickass UX", "Words, straight from the User's mouth!", 'I fight for User rights!'],
     }
   },
   computed: {

@@ -30,6 +30,22 @@ Vue.use(VueRouter)
     }
   },
   {
+    path: '/employment',
+    name: 'Employment',
+    component: () => import(/* webpackChunkName: "rats" */ '../components/resume/Employment.vue'),
+    meta: {
+      isPublic:true
+    }
+  },
+  {
+    path: '/education',
+    name: 'Education',
+    component: () => import(/* webpackChunkName: "rats" */ '../components/resume/Education.vue'),
+    meta: {
+      isPublic:true
+    }
+  },
+  {
     path: '/portfolio',
     name: 'Portfolio',
     component: () => import(/* webpackChunkName: "rats" */ '../views/portfolio/Portfolio.vue'),

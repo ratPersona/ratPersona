@@ -6,12 +6,6 @@
   span {
     color: $green;
   }
-  // h2 {
-  //   text-align: center;
-  //   color: $green;
-  //   font-family: 'Paris Dreamer';
-  //   font-size: 20px;
-  // }
   &.ux-projects {
     h2 {
       text-align: center;
@@ -64,36 +58,36 @@
     }
   }
 
-  .content-container {
-    max-width: 100%;
-    margin: auto;
-  }
-  .sidebar {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    transition: opacity 300ms ease;
-    opacity: 1;
-    align-self: center;
-    text-align: left;
-    &.hide {
-      opacity: 0;
-    }
-    .flex-col {
-      background: rgba(98,168,142,.75);
-      color: $black-blue;
-      border: none;
-      // border-radius: 100em;
-      // height: 250px;
-      // width: 250px;
-      h2 {
-
-      }
-      &:hover {
-        cursor: pointer;
-      }
-    }
-  }
+  // .content-container {
+  //   max-width: 100%;
+  //   margin: auto;
+  // }
+  // .sidebar {
+  //   display: flex;
+  //   justify-content: space-around;
+  //   width: 100%;
+  //   transition: opacity 300ms ease;
+  //   opacity: 1;
+  //   align-self: center;
+  //   text-align: left;
+  //   &.hide {
+  //     opacity: 0;
+  //   }
+  //   .flex-col {
+  //     background: rgba(98,168,142,.75);
+  //     color: $black-blue;
+  //     border: none;
+  //     // border-radius: 100em;
+  //     // height: 250px;
+  //     // width: 250px;
+  //     h2 {
+  //
+  //     }
+  //     &:hover {
+  //       cursor: pointer;
+  //     }
+  //   }
+  // }
 
   // X-Small devices (portrait phones, less than 576px)
   @media screen and (max-width: 576px) {

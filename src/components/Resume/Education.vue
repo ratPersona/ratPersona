@@ -1,4 +1,7 @@
 <style lang="scss">
+@import '@/scss/subpage';
+@import '@/scss/buttons';
+@import '@/scss/resume';
 </style>
 
 <template>
