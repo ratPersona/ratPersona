@@ -5,23 +5,35 @@
 <template>
   <nav class="navigation">
     <router-link class="one" to="/">
-      About
+      <div>
+        <svg class="icon mobile"><use href="#email"></use></svg>
+        About
+      </div>
     </router-link>
     <router-link class="two" to="/resume">
-      Résumé
+      <div>
+        <svg class="icon mobile"><use href="#resume"></use></svg>
+        Résumé
+      </div>
     </router-link>
     <router-link class="three" to="/portfolio" v-on.native:click="this.WHAT_PAGE('landing')">
-      Portfolio
+      <div>
+        <svg class="icon mobile"><use href="#email"></use></svg>
+        Portfolio
+      </div>
     </router-link>
     <router-link class="four" to="/contact">
-      Contact
+      <div>
+        <svg class="icon mobile"><use href="#email"></use></svg>
+        Contact
+      </div>
     </router-link>
-    <!-- <router-link class="four" to="/bvlog" v-on.native:click="this.WHAT_PAGE('landing')">
-      Blog
-    </router-link> -->
     <router-link class="five" to="/samnagerie">
-      <span class="desktop">Samnagerie</span>
-      <span class="mobile">Animals</span>
+      <div>
+        <svg class="icon mobile"><use href="#chicken"></use></svg>
+        <span class="desktop">Samnagerie</span>
+        <span class="mobile">Animals</span>
+      </div>
     </router-link>
   </nav>
 </template>

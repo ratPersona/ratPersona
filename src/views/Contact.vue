@@ -6,16 +6,15 @@
 <template>
   <div class="contact subpage">
     <div>
-      <!-- <header class="content-header">
-        <h1>{{ this.title }}</h1>
-      </header> -->
-      <Contact />
+      <!-- <h1>Get in Touch!</h1> -->
+      <Contact :class="{'content-container': !desktop}" />
     </div>
   </div>
 </template>
 
 <script>
 import Contact from '@/components/Contact.vue'
+import { isBrowser } from 'mobile-device-detect'
 
 export default {
   name: 'ContactView',
@@ -24,6 +23,7 @@ export default {
   },
   data: function() {
     return {
+      desktop: isBrowser ? true : false,
       title: '',
       storeTitles: ['Send me smoke signals.', 'Carrier pigeon at the ready!', 'Get in touch!'],
     }

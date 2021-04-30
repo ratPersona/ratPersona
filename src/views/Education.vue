@@ -5,42 +5,27 @@
 </style>
 
 <template>
-  <section class="subpage">
-    <div class="content-container">
-    <h1>Professional Stuff!</h1>
-      <div class="resume">
-        <nav
-        class="selection-nav">
-          <router-link
-          to="/employment"
-          tag="button"
-          class="flex-col employment">
-            <svg class="icon"><use href="#employment"></use></svg>
-            <h2>Employment</h2>
-          </router-link>
-          <router-link
-          to="/education"
-          tag="button"
-          class="flex-col education">
-              <svg class="icon education"><use href="#education"></use></svg>
-              <h2>Education</h2>
-          </router-link>
-        </nav>
-      </div>
-    </div>
+  <section>
+    <Education v-if="desktop" />
+    <EducationMobile v-else />
   </section>
 </template>
 
 <script>
 import { mapState, mapGetters } from 'vuex'
+import Education from '@/components/resume/Education.vue'
+import EducationMobile from '@/components/resume/EducationMobile.vue'
+import { isBrowser } from 'mobile-device-detect'
 
 export default {
   name: 'Resume',
   components: {
-
+    Education,
+    EducationMobile
   },
   data: function() {
     return {
+      desktop: isBrowser ? true : false,
       activeItem: '',
       activeButton: 0,
       activeCard: 1,

@@ -6,7 +6,7 @@
 
 <template>
   <section class="subpage">
-    <div>
+    <div class="content-container">
       <h1>My Work!</h1>
       <div class="portfolio">
         <nav

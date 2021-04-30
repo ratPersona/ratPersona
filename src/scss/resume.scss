@@ -61,20 +61,6 @@
 
   // Medium devices (tablets, less than 992px)
   @media screen and (max-width: 992px) {
-    &.employment {
-      .selection-nav {
-        .flex-col {
-          border: 3px solid #248e2d;
-        }
-      }
-    }
-    &.education {
-      .selection-nav {
-        .flex-col {
-          border: 3px solid #29888f;
-        }
-      }
-    }
     .selection-nav {
       width: 100%;
       .flex-col {
@@ -85,6 +71,9 @@
         border-radius: 10px;
         padding: 20px;
         margin-bottom: 20px;
+        border-width: 3px;
+        border-style: solid;
+        // border: 3px solid $green;
         .icon {
           margin-right: 20px;
         }
@@ -92,6 +81,12 @@
           margin: 0;
           font-size: 24px;
           display: inline;
+        }
+        &.education {
+          border-color: #29888f;
+        }
+        &.employment {
+          border-color: #248e2d;
         }
       }
     }

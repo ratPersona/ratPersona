@@ -32,36 +32,7 @@
             <p>If my hobbies and professional goals/interests were a venn diagram, they'd basically make a circle. I love code and User Experience, I dabble in things like security penetration for fun and I spend my free time catching up on UX trends.</p>
             <p>My bachelor's degree is in Illustration, and I continue to hone those skills along with design. My master's is in User Experience and I couldn't be more in love with an area of study!</p>
             <p>Get at me! The worst that can happen is I say something mean about you on Twitter or bore you to death with reptile talk.</p>
-            <!-- <About v-show="active == 'about'" /> -->
-            <!-- <Employment v-show="active == 'employment'" /> -->
-            <!-- <Education v-show="active == 'education'" /> -->
           </div>
-          <!-- <ul class="home-display-options internal-nav"> -->
-            <!-- <li class="button button-one">
-              <button
-              @click="changeActive('about')"
-              :class="{ active: active == 'about' }"
-              role="button">
-                <span>About</span>
-              </button>
-            </li> -->
-            <!-- <li class="button button-two">
-              <button
-              @click="changeActive('employment')"
-              :class="{ active: active == 'employment' }"
-              role="button">
-                <span>Employment</span>
-              </button>
-            </li> -->
-            <!-- <li class="button button-three">
-              <button
-              @click="changeActive('education')"
-              :class="{ active: active == 'education' }"
-              role="button">
-                <span>Education</span>
-              </button>
-            </li> -->
-          <!-- </ul> -->
         </main>
       </div>
     </div>
@@ -70,16 +41,10 @@
 
 <script>
 /* eslint-disable */
-// import About from '@/components/home/About'
-// import Employment from '@/components/home/Employment'
-// import Education from '@/components/home/Education'
 
 export default {
   name: 'Home',
   components: {
-    // About,
-    // Employment,
-    // Education
   },
   data: function() {
     return {

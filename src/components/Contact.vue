@@ -3,38 +3,39 @@
   @import '@/scss/buttons.scss';
 </style>
 <template>
-  <main class="contact subpage">
+  <main>
     <div>
+      <h1>Get in Touch!</h1>
       <div class="flex-container">
-        <div>
-          <svg class="icon"><use href="#email"></use></svg>
+        <div class="contact-container">
+          <svg class="icon desktop"><use href="#email"></use></svg>
           <h2>Email Me:</h2>
           <p>I check it, I promise</p>
-          <button class="contact-btn">
-            <a href="mailto:sam@ratpersona.dev">
-              Let's Go!
-            </a>
-          </button>
+          <a class="contact-btn email" href="mailto:sam@ratpersona.dev">
+            <svg class="icon mobile"><use href="#email"></use></svg>
+            <span class="desktop">Let's Go!</span>
+            <span class="mobile">Email Me!</span>
+          </a>
         </div>
-        <div>
-          <svg class="icon"><use href="#add-me"></use></svg>
+        <div class="contact-container">
+          <svg class="icon desktop"><use href="#add-me"></use></svg>
           <h2>Add Me:</h2>
           <p>Yeah I have a LinkedIn...kinda...</p>
-          <button class="contact-btn">
-            <a href="https://www.linkedin.com/in/samantha-nelson-212056104/">
-              Be my Friend!
-            </a>
-          </button>
+          <a class="contact-btn linkedin" href="https://www.linkedin.com/in/samantha-nelson-212056104/">
+            <svg class="icon mobile"><use href="#add-me"></use></svg>
+            <span class="desktop">Be my Friend!</span>
+            <span class="mobile">LinkedIn</span>
+          </a>
         </div>
-        <div>
-          <svg class="icon"><use href="#phone"></use></svg>
+        <div class="contact-container">
+          <svg class="icon desktop"><use href="#phone"></use></svg>
           <h2>Call Me (Beep Me):</h2>
           <p>Just remember to leave a voicemail!</p>
-          <button class="contact-btn">
-            <a href="tel:+19209600612">
-              Beep Boop!
-            </a>
-          </button>
+          <a class="contact-btn call" href="tel:+19209600612">
+            <svg class="icon mobile"><use href="#phone"></use></svg>
+            <span class="desktop">Beep Boop!</span>
+            <span class="mobile">Call Me!</span>
+          </a>
         </div>
       </div>
       <footer class="socials">

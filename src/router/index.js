@@ -32,7 +32,7 @@ Vue.use(VueRouter)
   {
     path: '/employment',
     name: 'Employment',
-    component: () => import(/* webpackChunkName: "rats" */ '../components/resume/Employment.vue'),
+    component: () => import(/* webpackChunkName: "rats" */ '../views/Employment.vue'),
     meta: {
       isPublic:true
     }
@@ -40,7 +40,7 @@ Vue.use(VueRouter)
   {
     path: '/education',
     name: 'Education',
-    component: () => import(/* webpackChunkName: "rats" */ '../components/resume/Education.vue'),
+    component: () => import(/* webpackChunkName: "rats" */ '../views/Education.vue'),
     meta: {
       isPublic:true
     }

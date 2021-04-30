@@ -1,21 +1,20 @@
 <style lang="scss">
-@import '@/scss/mixins';
-@import '@/scss/portfolio';
-@import '@/scss/illustration';
+  @import '@/scss/mixins';
+  @import '@/scss/portfolio';
+  @import '@/scss/illustration';
+  .mobile-portfolio-header {
+    margin: 50px 0 20px !important;
+    font-size: 24px !important;
+    color: #29888f;
+  }
 </style>
-
-
 <template>
   <div class="illustration-projects">
     <div class="portfolio illustration">
-      <!-- <router-link tag="button" to="/employment" class="to-employment">
-        <svg class="icon employment"><use href="#employment"></use></svg>
-      </router-link>
-      <button class="print-me">
-        <svg class="print"><use href="#printer"></use></svg>
-      </button> -->
+      <h1 class="mobile-portfolio-header">Illustration</h1>
       <section class="illustration-content content-container">
-        <div v-if="activeButton ==  0" class="illustration-each">
+        <div class="illustration-each">
+          <h2>Monsters and Maidens</h2>
           <div class="portfolio monsters-and-maidens">
             <img class="illustration-pic angle" src="@/assets/Angle.jpg">
             <img class="illustration-pic dark-pals" src="@/assets/DarkPals.jpg">
@@ -26,34 +25,25 @@
             <img class="illustration-pic smonster" src="@/assets/Smonster.jpg">
           </div>
         </div>
-        <div v-if="activeButton ==  1" class="illustration-each">
+        <div class="illustration-each">
+          <h2>Concept Art</h2>
           <div class="portfolio concept-art">
             <img class="illustration-pic sexy-moth-man" src="@/assets/SexyMothMan.jpg">
           </div>
         </div>
-        <div v-if="activeButton ==  2" class="illustration-each">
+        <div class="illustration-each">
+          <h2>Tarot of the Rat</h2>
           <div class="portfolio tarot-of-the-rat">
             <img class="illustration-pic" src="@/assets/prof.jpg">
           </div>
         </div>
-        <div v-if="activeButton ==  3" class="illustration-each">
+        <div class="illustration-each">
+          <h2>Doodles</h2>
           <div class="portfolio doodles">
             <img class="illustration-pic" src="@/assets/prof.jpg">
           </div>
         </div>
       </section>
-      <nav class="subpage-bottom-nav portfolio">
-        <ul class="internal-nav">
-          <li
-          class="button"
-          :class="'button-' + index "
-          @click="getActive(index)"
-          v-for="(title, index) in titles"
-          :key="title">
-            <button :class="{active : activeItem == index}" class="bottom">{{ title }}</button>
-          </li>
-        </ul>
-      </nav>
     </div>
   </div>
 </template>
@@ -65,10 +55,7 @@ export default {
   // name: 'Illustration',
   data: function() {
     return {
-      activeItem: '',
-      activeButton: 0,
-      activeCard: 1,
-      titles: ['Monsters & Maidens', 'Concept Art', 'Tarot of the Rat', 'Doodles']
+
     }
   },
   computed: {
@@ -80,14 +67,7 @@ export default {
     ]),
   },
   methods: {
-    getActive(item) {
-      this.activeItem = item
-      this.activeButton = item
-      this.activeCard = 1
-    },
-    activeButtonResearch(button) {
-      this.activeCard = button
-    }
+
   }
 }
 </script>

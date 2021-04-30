@@ -1,29 +1,28 @@
 <style lang="scss">
-  // @import '@/scss/samnagerie.scss';
   @import '@/scss/modal.scss';
 </style>
 
 <template>
   <div class="subpage">
-    <!-- <Soon /> -->
-    <Illustration />
+    <Illustration v-if="desktop" />
+    <IllustrationMobile v-else />
   </div>
 </template>
 
 <script>
-import Soon from '@/views/ComingSoon.vue'
 import Illustration from '@/components/portfolio/Illustration.vue'
+import IllustrationMobile from '@/components/portfolio/IllustrationMobile.vue'
 import { mapMutations } from 'vuex'
+import { isBrowser } from 'mobile-device-detect'
 
 export default {
-  // name: 'Illustration',
   components: {
-    Soon,
-    Illustration
+    Illustration,
+    IllustrationMobile
   },
   data: function() {
     return {
-
+      desktop: isBrowser ? true : false
     }
   },
   methods: {

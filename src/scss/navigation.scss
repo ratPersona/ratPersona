@@ -15,7 +15,7 @@
   bottom: 0;
   left: 0;
   padding: 20px 0;
-  background: $green;
+  background: rgba(39,136,84,1);
   a {
     color: $white;
     font-size: 12px;
@@ -83,6 +83,79 @@
   // Small devices (landscape phones, less than 768px)
   @media screen and (min-width: 500px) {
 
+  }
+
+  // Medium devices (tablets, less than 992px)
+  @media screen and (max-width: 992px) {
+    height: 70px;
+    padding: 0;
+    a {
+      color: $white;
+      font-size: 12px;
+      text-decoration: none;
+      position: relative;
+      padding: 0 5px;
+      height: 60px;
+      margin: 0 5px;
+      display: flex;
+      align-items: center;
+      border-radius: 5px;
+      &.router-link-exact-active {
+        background-color: $white;
+      }
+      .icon {
+        fill: $white;
+        margin: 0 auto 5px;
+        width: 20px;
+        height: 20px;
+      }
+      .desktop {
+        display: none;
+      }
+      &::after {
+        display: none;
+      }
+      &.one {
+        &.router-link-exact-active {
+          color: rgba(11,155,120,1);
+          .icon {
+            fill: rgba(11,155,120,1);
+          }
+        }
+      }
+      &.two {
+        &.router-link-exact-active {
+          color: rgba(39,136,84,1);
+          .icon {
+            fill: rgba(39,136,84,1);
+          }
+        }
+      }
+      &.three {
+        &.router-link-exact-active {
+          color: rgba(39,136,84,1);
+          .icon {
+            fill: rgba(39,136,84,1);
+          }
+        }
+      }
+      &.four {
+        &.router-link-exact-active {
+          color: rgba(35,135,139,1);
+          .icon {
+            fill: rgba(35,135,139,1);
+          }
+        }
+      }
+      &.five {
+        &.router-link-exact-active {
+          color: rgba(80,142,165,1);
+          .icon {
+            fill: rgba(80,142,165,1);
+          }
+        }
+      }
+    }
   }
 
   // Medium devices (tablets, less than 992px)

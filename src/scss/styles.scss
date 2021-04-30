@@ -149,9 +149,14 @@ strong {
   }
   body {
     font-size: 12px;
+    aside {
+      margin-top: -65px;
+    }
   }
   .content-container {
-    width: 575px;
+    margin: auto;
+    // padding: 10px;
+    // width: 575px;
   }
 }
 
@@ -175,12 +180,36 @@ strong {
 
 @media screen and (max-width: 992px) {
   body {
+    .content-container {
+      overflow-y: scroll;
+      max-height: 100%;
+      // .
+    }
     .subpage {
+      padding: 0;
+      margin-bottom: 100px;
+      .content-container {
+        padding: 0 30px;
+
+        h2 {
+          margin: 40px 0;
+        }
+      }
       h1 {
         width: 100%;
         margin-bottom: 50px;
         font-size: 28px;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .subpage {
+    &.contact {
+      height: 80%;
+      margin: 0;
+      // margin-top: -20px;
     }
   }
 }
@@ -254,12 +283,10 @@ strong {
   }
 }
 
-
 html {
   height: 100%;
   width: 100%;
 }
-
 
 @-webkit-keyframes AnimationName {
     0%{background-position:0% 50%}

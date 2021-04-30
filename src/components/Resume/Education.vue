@@ -7,10 +7,10 @@
 
 <template>
   <div class="subpage resume education">
-    <router-link tag="button" to="/employment" class="to-employment">
+    <router-link tag="button" to="/employment" class="to-employment desktop">
       <svg class="icon employment"><use href="#employment"></use></svg>
     </router-link>
-    <button class="print-me">
+    <button class="print-me desktop">
       <svg class="print"><use href="#printer"></use></svg>
     </button>
     <section class="resume-content content-container">
