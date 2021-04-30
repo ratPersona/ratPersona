@@ -85,57 +85,6 @@
         .about-me {
           padding: 0;
         }
-        .hobbies {
-          span {
-            display: block;
-          }
-        }
-        .resume {
-          width: 100%;
-        }
-        .jobs,
-        .volunteering {
-          width: 100%;
-        }
-        .about-me,
-        .hobbies,
-        .resume,
-        .volunteering {
-          span {
-            margin-bottom: 5px;
-
-            &:nth-child(even) {
-              color: rgba(98,168,142,1);
-            }
-
-            &.dot {
-              margin-left: 5px;
-              margin-right: 5px;
-              color: rgba(98,168,142,1);
-            }
-          }
-        }
-        .hobbies,
-        .volunteering {
-          // text-align: right;
-        }
-
-        .edu,
-        .job {
-          margin-bottom: 20px;
-          .degree,
-          .job-name {
-            color: rgba(98,168,142,1);
-            font-size: 18px;
-            margin-bottom: 5px;
-            strong {
-              color: #fff;
-            }
-          }
-          p {
-            margin: 0;
-          }
-        }
       }
     }
   }
@@ -240,8 +189,6 @@
 
         .main-info {
           text-align: left;
-          // display: flex;
-          // justify-content: space-between;
           min-height: 350px;
           width: 100%;
           .flex-outer {
@@ -257,62 +204,6 @@
           .about-me {
             width: 70%;
             padding: 0;
-
-            &.lower {
-              width: 100%;
-            }
-          }
-          .hobbies {
-            width: 30%;
-            span {
-              display: block;
-            }
-          }
-          .resume {
-            width: 100%;
-          }
-          .jobs,
-          .volunteering {
-            width: 100%;
-          }
-          .about-me,
-          .hobbies,
-          .resume,
-          .volunteering {
-            span {
-              margin-bottom: 5px;
-
-              &:nth-child(even) {
-                color: rgba(98,168,142,1);
-              }
-
-              &.dot {
-                margin-left: 5px;
-                margin-right: 5px;
-                color: rgba(98,168,142,1);
-              }
-            }
-          }
-          .hobbies,
-          .volunteering {
-            text-align: right;
-          }
-
-          .edu,
-          .job {
-            margin-bottom: 20px;
-            .degree,
-            .job-name {
-              color: rgba(98,168,142,1);
-              font-size: 18px;
-              margin-bottom: 5px;
-              strong {
-                color: #fff;
-              }
-            }
-            p {
-              margin: 0;
-            }
           }
         }
       }
@@ -324,10 +215,18 @@
     .content {
       .about {
         aside {
+          margin-top: 100px;
+          .hello {
+              h1 {
+                margin: 0;
+                font-size: 30px;
+                // color: $green;
+              }
+            }
           .image {
             .home-pic {
-              width: 200px;
-              height: 200px;
+              width: 250px;
+              height: 250px;
             }
             .background {
               width: 250px;
@@ -337,7 +236,9 @@
         }
 
         .about-me-content {
+          margin-top: 45px;
           width: 50%;
+          font-size: 13px;
         }
 
         .main-info {
@@ -345,7 +246,6 @@
           > section {
             padding: 0 10px 0 0;
             height: 270px;
-            // overflow-y: scroll;
             margin-bottom: 20px;
           }
         }
@@ -365,22 +265,26 @@
       z-index: 100;
       .about {
         aside {
+          .hello {
+              h1 {
+                font-size: 36px;
+              }
+            }
           .image {
             .home-pic {
               width: 300px;
               height: 300px;
             }
             .background {
-              width: 400px;
-              height: 400px;
+              width: 300px;
+              height: 300px;
             }
           }
         }
-
         .about-me-content {
-          width: 50%;
+          font-size: 16px;
+          width: 40%;
         }
-
         .main-info {
           min-height: 350px;
 

@@ -25,44 +25,54 @@
       display: none;
     }
     &::after {
+      content: '';
       position: absolute;
       left: 0;
       bottom: -10px;
-      content: '';
       width: 0;
       height: 2px;
       transition: width 300ms ease;
     }
+    &.one {
+      &::after {
+        background: linear-gradient(90deg, rgba(11,155,120,1) 0%, rgba(39,136,84,1) 100%, rgba(255,255,255,1) 0122024%);
+      }
+    }
+    &.two {
+      &::after {
+        background: linear-gradient(90deg, rgba(39,136,84,1) 0%, rgba(36,143,43,1) 100%, rgba(255,255,255,1) 0122024%);
+      }
+    }
+    &.three {
+      &::after {
+        background: linear-gradient(90deg, rgba(39,136,84,1) 0%, rgba(35,135,139,1) 100%, rgba(255,255,255,1) 0122024%);
+      }
+    }
+    &.four {
+      &::after {
+        background: linear-gradient(90deg, rgba(35,135,139,1) 0%, rgba(80,142,165,1) 100%, rgba(255,255,255,1) 0122024%);
+      }
+    }
+    &.five {
+      &::after {
+        background: linear-gradient(90deg, rgba(80,142,165,1) 0%, rgba(111,183,210,1) 100%, rgba(255,255,255,1) 0122024%);
+      }
+    }
     &:hover {
       &.one {
         color: rgba(11,155,120,1);
-        &::after {
-          background: linear-gradient(90deg, rgba(11,155,120,1) 0%, rgba(39,136,84,1) 100%, rgba(255,255,255,1) 0122024%);
-        }
       }
       &.two {
         color: rgba(39,136,84,1);
-        &::after {
-          background: linear-gradient(90deg, rgba(39,136,84,1) 0%, rgba(36,143,43,1) 100%, rgba(255,255,255,1) 0122024%);
-        }
       }
       &.three {
         color: rgba(39,136,84,1);
-        &::after {
-          background: linear-gradient(90deg, rgba(39,136,84,1) 0%, rgba(35,135,139,1) 100%, rgba(255,255,255,1) 0122024%);
-        }
       }
       &.four {
         color: rgba(35,135,139,1);
-        &::after {
-          background: linear-gradient(90deg, rgba(35,135,139,1) 0%, rgba(80,142,165,1) 100%, rgba(255,255,255,1) 0122024%);
-        }
       }
       &.five {
         color: rgba(80,142,165,1);
-        &::after {
-          background: linear-gradient(90deg, rgba(80,142,165,1) 0%, rgba(111,183,210,1) 100%, rgba(255,255,255,1) 0122024%);
-        }
       }
       &::after {
         width: 100%;
@@ -110,10 +120,10 @@
         }
       }
       &::after {
+        content: '';
         position: absolute;
         left: 0;
         bottom: -10px;
-        content: '';
         width: 0;
         height: 2px;
         transition: width 300ms ease;

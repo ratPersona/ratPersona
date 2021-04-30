@@ -4,7 +4,12 @@
 </style>
 
 <template>
-  <div class="ux-projects">
+  <div class="ux-projects subpage">
+    <button
+    class="cancel-btn"
+    @click="closePortfolioPage">
+      <svg class="icon"><use href="#cancel"></use></svg>
+    </button>
     <section class="case-study-content">
       <div v-if="activeButton ==  0" class="study-each name">
         <div class="study-media">

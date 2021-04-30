@@ -5,9 +5,6 @@
 
 <template>
   <div class="subpage">
-    <!-- <h1 class="portfolio-title">
-      {{ this.title }}
-    </h1> -->
     <main class="projects">
       <section>
         <Soon />
@@ -22,7 +19,6 @@
 <script>
 import { mapState, mapMutations } from 'vuex'
 import Soon from '@/views/ComingSoon.vue'
-
 import UX from '@/components/portfolio/UX.vue'
 import Title from '@/components/portfolio/global/PortfolioTitles.vue'
 

@@ -5,18 +5,21 @@
 
 <template>
   <div class="subpage">
-    <Soon />
+    <!-- <Soon /> -->
+    <Illustration />
   </div>
 </template>
 
 <script>
 import Soon from '@/views/ComingSoon.vue'
+import Illustration from '@/components/portfolio/Illustration.vue'
 import { mapMutations } from 'vuex'
 
 export default {
-  name: 'Illustration',
+  // name: 'Illustration',
   components: {
-    Soon
+    Soon,
+    Illustration
   },
   data: function() {
     return {

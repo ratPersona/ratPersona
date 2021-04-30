@@ -5,7 +5,10 @@
 </style>
 
 <template>
-  <div>
+  <div class="subpage resume employment">
+    <router-link tag="button" to="/education"  class="to-education">
+      <svg class="icon education"><use href="#education"></use></svg>
+    </router-link>
     <button class="print-me">
       <svg class="print"><use href="#printer"></use></svg>
     </button>
