@@ -15,7 +15,7 @@
   bottom: 0;
   left: 0;
   padding: 20px 0;
-  background: rgba(39,136,84,1);
+  background: #0c1930;
   a {
     color: $white;
     font-size: 12px;
@@ -58,26 +58,26 @@
         background: linear-gradient(90deg, rgba(80,142,165,1) 0%, rgba(111,183,210,1) 100%, rgba(255,255,255,1) 0122024%);
       }
     }
-    &:hover {
-      &.one {
-        color: rgba(11,155,120,1);
-      }
-      &.two {
-        color: rgba(39,136,84,1);
-      }
-      &.three {
-        color: rgba(39,136,84,1);
-      }
-      &.four {
-        color: rgba(35,135,139,1);
-      }
-      &.five {
-        color: rgba(80,142,165,1);
-      }
-      &::after {
-        width: 100%;
-      }
-    }
+    // &:hover {
+    //   &.one {
+    //     color: rgba(11,155,120,1);
+    //   }
+    //   &.two {
+    //     color: rgba(39,136,84,1);
+    //   }
+    //   &.three {
+    //     color: rgba(39,136,84,1);
+    //   }
+    //   &.four {
+    //     color: rgba(35,135,139,1);
+    //   }
+    //   &.five {
+    //     color: rgba(80,142,165,1);
+    //   }
+    //   &::after {
+    //     width: 100%;
+    //   }
+    // }
   }
 
   // Small devices (landscape phones, less than 768px)
@@ -101,7 +101,10 @@
       align-items: center;
       border-radius: 5px;
       &.router-link-exact-active {
-        background-color: $white;
+        color: $black-blue;
+        .icon {
+          fill: $black-blue;
+        }
       }
       .icon {
         fill: $white;
@@ -116,42 +119,57 @@
         display: none;
       }
       &.one {
+        .icon {
+          fill: rgba(11,155,120,1);
+        }
         &.router-link-exact-active {
-          color: rgba(11,155,120,1);
+          background: rgba(11,155,120,1);
           .icon {
-            fill: rgba(11,155,120,1);
+            fill: $black-blue;
           }
         }
       }
       &.two {
+        .icon {
+          fill: rgba(39,136,84,1);
+        }
         &.router-link-exact-active {
-          color: rgba(39,136,84,1);
+          background: rgba(39,136,84,1);
           .icon {
-            fill: rgba(39,136,84,1);
+            fill: $black-blue;
           }
         }
       }
       &.three {
+        .icon {
+          fill: rgba(36,143,43,1);
+        }
         &.router-link-exact-active {
-          color: rgba(39,136,84,1);
+          background: rgba(36,143,43,1);
           .icon {
-            fill: rgba(39,136,84,1);
+            fill: $black-blue;
           }
         }
       }
       &.four {
+        .icon {
+          fill: rgba(35,135,139,1);
+        }
         &.router-link-exact-active {
-          color: rgba(35,135,139,1);
+          background: rgba(35,135,139,1);
           .icon {
-            fill: rgba(35,135,139,1);
+            fill: $black-blue;
           }
         }
       }
       &.five {
+        .icon {
+          fill: rgba(80,142,165,1);
+        }
         &.router-link-exact-active {
-          color: rgba(80,142,165,1);
+          background: rgba(80,142,165,1);
           .icon {
-            fill: rgba(80,142,165,1);
+            fill: $black-blue;
           }
         }
       }
@@ -235,6 +253,26 @@
         &::after {
           width: 100%;
           transition: width 300ms ease;
+        }
+      }
+      &:hover {
+        &.one {
+          color: rgba(11,155,120,1);
+        }
+        &.two {
+          color: rgba(39,136,84,1);
+        }
+        &.three {
+          color: rgba(39,136,84,1);
+        }
+        &.four {
+          color: rgba(35,135,139,1);
+        }
+        &.five {
+          color: rgba(80,142,165,1);
+        }
+        &::after {
+          width: 100%;
         }
       }
     }

@@ -4,64 +4,51 @@
 </style>
 
 <template>
-  <div class="subpage">
-    <main class="projects">
-      <section>
-        <Soon />
-        <UX class="ux-projects"/>
-        <Design class="design-projects" :class="[{active: activeItem === 'Design'}]" v-if="activeItem == 'Design'"/>
-        <Illustration class="illustration-projects" :class="[{active: activeItem === 'Illustration'}]" v-if="activeItem == 'Illustration'"/>
-      </section>
-    </main>
+  <div>
+    <UX v-if="desktop" />
+    <UXmobile v-else />
   </div>
 </template>
 
 <script>
 import { mapState, mapMutations } from 'vuex'
-import Soon from '@/views/ComingSoon.vue'
 import UX from '@/components/portfolio/UX.vue'
-import Title from '@/components/portfolio/global/PortfolioTitles.vue'
+import UXmobile from '@/components/portfolio/UXmobile.vue'
+import { isBrowser } from 'mobile-device-detect'
 
 export default {
   name: 'UXPortfolio',
   components: {
     UX,
-    Title,
-    Soon
+    UXmobile
   },
   data: function() {
     return {
-      title: '',
-      // portfolioTitles: ["Kickass UX", "Words, straight from the User's mouth!", 'I fight for User rights!'],
+      desktop: isBrowser ? true : false
     }
   },
   computed: {
     ...mapState([
-      'activeItem',
-      'activeUxItem',
-      'page',
-      'innerTitle',
-      'projectTitle',
-      'componentKey',
+      // 'activeItem',
+      // 'activeUxItem',
+      // 'page',
+      // 'innerTitle',
+      // 'projectTitle',
+      // 'componentKey',
     ]),
   },
   methods: {
     ...mapMutations([
-      'ACTIVE_ITEM',
-      'ACTIVE_NAV',
-      'ACTIVE_UX_ITEM',
-      'WHAT_PAGE',
-      'INNER_TITLE',
-      'UPDATE_KEY',
+      // 'ACTIVE_ITEM',
+      // 'ACTIVE_NAV',
+      // 'ACTIVE_UX_ITEM',
+      // 'WHAT_PAGE',
+      // 'INNER_TITLE',
+      // 'UPDATE_KEY',
     ]),
-    getNewTitle() {
-      let title = this.portfolioTitles[Math.floor(Math.random() * this.portfolioTitles.length)]
-      this.title = title
-    },
   },
   mounted() {
-    this.ACTIVE_NAV('portfolio')
-    this.getNewTitle()
+
   }
 }
 </script>

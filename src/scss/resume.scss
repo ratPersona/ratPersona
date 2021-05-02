@@ -38,11 +38,17 @@
 
   &.employment {
     h2 {
+      color: $white;
+    }
+    h3 {
       color: #248e2d;
     }
   }
   &.education {
     h2 {
+      color: $white;
+    }
+    h3 {
       color: #29888f;
     }
   }
@@ -73,7 +79,6 @@
         margin-bottom: 20px;
         border-width: 3px;
         border-style: solid;
-        // border: 3px solid $green;
         .icon {
           margin-right: 20px;
         }
@@ -87,6 +92,56 @@
         }
         &.employment {
           border-color: #248e2d;
+        }
+      }
+    }
+    &.employment {
+      .mobile-header {
+        color: #248e2d;
+      }
+    }
+    &.education {
+      .mobile-header {
+        color: #29888f;
+      }
+    }
+    .content-container {
+      .resume-list {
+        padding: 0 0 0 12px;
+        &.edu {
+          li {
+            color: #29888f;
+          }
+        }
+        &.job {
+          li {
+            color: #248e2d;
+          }
+        }
+        li {
+          margin-bottom: 10px;
+          span {
+            color: $white;
+          }
+        }
+      }
+      .edu {
+        // border-bottom: 2px solid #29888f;
+        .title {
+          color: $white;
+        }
+        .flex-container {
+          // border-bottom: 2px solid #29888f;
+        }
+      }
+      .job {
+        // border-bottom: 2px solid #248e2d;
+        .title {
+          color: $white;
+        }
+        .flex-container {
+          // padding-bottom: 20px;
+          // border-bottom: 2px solid #248e2d;
         }
       }
     }
@@ -106,9 +161,7 @@
           height: 50px;
           margin-bottom: 30px;
           &.education {
-            // width: 120px;
-            // margin-bottom: 15px;
-            // height: 150px;
+
           }
         }
       }

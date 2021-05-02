@@ -2,9 +2,11 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 
+import uxRoutes from './ux-projects.js'
+
 Vue.use(VueRouter)
 
-  const routes = [
+const mainRoutes = [
   {
     path: '/',
     name: 'Home',
@@ -62,14 +64,6 @@ Vue.use(VueRouter)
     }
   },
   {
-    path: '/ux-project',
-    name: 'UX Project',
-    component: () => import(/* webpackChunkName: "rats" */ '../views/portfolio/UXProjects.vue'),
-    meta: {
-      isPublic:true
-    }
-  },
-  {
     path: '/illustration-portfolio',
     name: 'Illustration',
     component: () => import(/* webpackChunkName: "rats" */ '../views/portfolio/IllustrationPortfolio.vue'),
@@ -85,14 +79,7 @@ Vue.use(VueRouter)
       isPublic:true
     }
   },
-  {
-    path: '/design-project',
-    name: 'Design Project',
-    component: () => import(/* webpackChunkName: "rats" */ '../views/portfolio/UXProjects.vue'),
-    meta: {
-      isPublic:true
-    }
-  },
+
   {
     path: '/samnagerie',
     name: 'Samnagerie',
@@ -101,18 +88,8 @@ Vue.use(VueRouter)
       isPublic:true
     }
   },
-  {
-    path: '/bvlog',
-    name: 'Bvlog',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "bvlog" */ '../views/Bvlog.vue'),
-    meta: {
-      isPublic:true
-    }
-  }
 ]
+const routes = mainRoutes.concat(uxRoutes);
 
 const router = new VueRouter({
   mode: 'history',

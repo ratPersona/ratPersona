@@ -2,24 +2,30 @@
 @import '@/scss/subpage';
 @import '@/scss/buttons';
 @import '@/scss/resume';
+.mobile-header {
+  // color: #29888f;
+}
 </style>
 
 <template>
   <div class="subpage resume education">
-    <router-link tag="button" to="/employment" class="to-employment desktop">
-      <svg class="icon employment"><use href="#employment"></use></svg>
-    </router-link>
-    <button class="print-me desktop">
-      <svg class="print"><use href="#printer"></use></svg>
-    </button>
+    <div class="mobile-top-bar">
+      <router-link tag="button" to="/resume" class="go-back mobile-top">
+        <svg class="icon back"><use href="#back"></use></svg>
+      </router-link>
+      <h1 class="mobile-header">Education</h1>
+      <button class="search-page mobile-top">
+        <svg class="icon menu"><use href="#mobile-menu"></use></svg>
+      </button>
+    </div>
     <section class="resume-content content-container">
-      <div class="job">
-        <h2>Master of Professional Studies - User Experience</h2>
+      <div class="edu">
+        <h2 class="title">Master of Professional Studies <br/> User Experience</h2>
         <div class="flex-container">
           <div class="flex first">
             <h3>Maryland Institute College of Art</h3>
             <p class="years"><em>2020-2021</em></p>
-            <ul class="green-list">
+            <ul class="resume-list edu">
               <li><span>User Research & Rapport Building</span></li>
               <li><span>Design Principals/Design Thinking</span></li>
               <li><span>Design Sprint Metholodology</span></li>
@@ -43,13 +49,13 @@
           </div> -->
         </div>
       </div>
-      <div class="job">
-        <h2>Certificate of Web Development</h2>
+      <div class="edu">
+        <h2 class="title">Certificate of Web Development</h2>
         <div class="flex-container">
           <div class="flex first">
             <h3>Bloc/Thinkful</h3>
             <p class="years"><em>2016-2017</em></p>
-            <ul class="green-list">
+            <ul class="resume-list edu">
               <li><span>Agile Development/SCRUM</span></li>
               <li><span>Modern Web Trends</span></li>
               <li><span>Real Time Database & Instant Chat Features</span></li>
@@ -71,13 +77,13 @@
           </div> -->
         </div>
       </div>
-      <div class="job">
-        <h2>Bachelor of Fine Arts - Illustration</h2>
+      <div class="edu">
+        <h2 class="title">Bachelor of Fine Arts <br/> Illustration</h2>
         <div class="flex-container">
           <div class="flex first">
             <h3>University of Wisconsin Eau Claire</h3>
             <p class="years"><em>2010-2015</em></p>
-            <ul class="green-list">
+            <ul class="resume-list edu">
               <li><span>Narrative and Editorial practices</span></li>
               <li><span>Expert of Composition, Design, and Execution</span></li>
               <li><span>Oil, Acrylic, and Watercolor painting</span></li>
@@ -100,41 +106,28 @@
           </div> -->
         </div>
       </div>
-      <div class="job">
-        <h2>Bachelor of Arts - German</h2>
+      <div class="edu">
+        <h2 class="title">Bachelor of Arts <br/> German</h2>
         <div class="flex-container">
           <div class="flex first">
             <h3>University of Wisconsin Eau Claire</h3>
             <p class="years"><em>2010-2015</em></p>
-            <ul class="green-list">
+            <ul class="resume-list edu">
               <li><span>Studied Abroad</span></li>
               <li><span>Ja, ich spreche Deutsch</span></li>
               <li><span>Schadenfreude</span></li>
             </ul>
           </div>
-          <!-- <div class="flex separator">
-            <div class="border"></div>
-          </div>
-          <div class="flex last">
-            <p>I absolutely adore Germany, I studied abroad twice and travelled Europe during my time as a German undergrad.</p>
-            <p>The German language is beautiful, despite what everyone else says, and I enjoy watching my favorte anime and cartoons in German.</p>
-            <p>I pursued this secondary degree in the case of being able to use it if I joined an international company, and I don't regret a moment of it!</p>
-          </div> -->
         </div>
       </div>
+      <div class="call-to-action">
+        <h3>Enjoying the Vue?</h3>
+          <a class="contact-btn email" href="mailto:sam@ratpersona.dev">
+            <svg class="icon mobile"><use href="#email"></use></svg>
+            <span class="mobile spacer">I'm here to help!</span>
+          </a>
+      </div>
     </section>
-    <!-- <nav class="subpage-bottom-nav resume">
-      <ul class="internal-nav">
-        <li
-        class="button"
-        :class="'button-' + index "
-        @click="getActive(index)"
-        v-for="(title, index) in titles"
-        :key="title">
-          <button :class="{active : activeItem == index}" class="bottom">{{ title }}</button>
-        </li>
-      </ul>
-    </nav> -->
   </div>
 </template>
 

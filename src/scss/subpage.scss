@@ -82,6 +82,36 @@
     }
   }
 
+  .call-to-action {
+    height: 200px;
+    padding: 20px;
+    .contact-btn {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 3px solid $green;
+      border-radius: 5px;
+      padding: 10px 0;
+    }
+    h3 {
+      color: $green !important;
+      margin-bottom: 20px;
+    }
+    span {
+      color: $white;
+      font-size: 24px;
+      &.spacer {
+        margin-left: 30px;
+      }
+    }
+    .icon {
+      width: 30px;
+      height: 30px;
+      fill: $green;
+    }
+  }
+
   // X-Small devices (portrait phones, less than 576px)
   @media screen and (max-width: 576px) {
 
@@ -93,12 +123,37 @@
   }
 
   // Medium devices (tablets, less than 992px)
-  @media screen and (min-width: 992px) {
-
+  @media screen and (max-width: 992px) {
+    .mobile-top-bar {
+      background: transparent;
+      position: relative;
+      width: 100%;
+      display: flex;
+      .mobile-top {
+        position: relative;
+        // top: 10px;
+        background: transparent;
+        border-radius: 100em;
+        padding: 5px 10px;
+        border: none;
+        outline: none;
+        .icon {
+          fill: $white;
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
   }
 
   // Large devices (desktops, less than 1200px)
   @media screen and (min-width: 1200px) {
+    .content-container {
+      margin: auto;
+      .icon {
+        margin: auto;
+      }
+    }
     .sidebar {
       .flex-col {
         color: $black-blue;

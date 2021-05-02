@@ -77,7 +77,6 @@
    }
  }
 
-
   .ux-portfolio {
     width: 100%;
     position: relative;
@@ -189,6 +188,19 @@
           border-color: #29888f;
         }
       }
+    }
+    .mobile-portfolio {
+      display: block;
+      width: 100%;
+    }
+    .ux-subpage {
+      text-align: center;
+      width: 100%;
+      position: absolute;
+    }
+    .portfolio-thumb {
+      width: 100%;
+      height: auto;
     }
   }
 

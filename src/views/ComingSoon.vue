@@ -1,7 +1,7 @@
 <style lang="scss">
-main {
-  width: 100%;
-}
+// main {
+//   width: 100%;
+// }
   h3 {
     text-align: center;
   }
