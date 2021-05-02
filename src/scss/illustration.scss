@@ -28,9 +28,32 @@
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1000px) {
   .illustration-projects {
     .illustration {
+      .custom-hooper-nav {
+        position: absolute;
+        width: 100%;
+        top: 45%;
+        z-index: 200;
+        button {
+          position: absolute;
+          background: transparent;
+          border: none;
+          .icon {
+            width: 20px;
+            height: 20px;
+            fill: $white;
+          }
+        }
+        .btn-left {
+          left: -20px;
+        }
+        .btn-right {
+          right: -20px;
+          transform: rotate(180deg);
+        }
+      }
       .illustration-content {
         height: 90%;
         .illustration-each {
@@ -47,53 +70,22 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
+      .pic-wrapper {
+        position: relative;
+      }
       .illustration-pic {
         position: absolute;
-        border-radius: 10px;
-        // top: 50px;
-        top: 100px;
-        &.angle {
-          height: 230px;
-          width: auto;
-        }
-        &.ret {
-          left: 29%;
-          // top: 50px;
-          height: 400px;
-          width: auto;
-        }
-        &.smonster {
-          right: 0;
-          height: 300px;
-          width: auto;
-        }
-        &.redhead {
-          left: 0;
-          top: 400px;
-          // top: 300px;
-          height: 230px;
-          width: auto;
-        }
-        &.smokey {
-          left: 50%;
-          height: 300px;
-          width: auto;
-        }
-        &.gungal {
-          left: 13%;
-          height: 232px;
-          width: auto;
-        }
-        &.dark-pals {
-          left: 66%;
-          // top: 200px;
-          height: 300px;
-          width: auto;
-        }
-        &.sexy-moth-man {
-          right: 0;
-          height: 300px;
-          width: auto;
+        height: 100%;
+        width: auto;
+        display: block;
+        margin: auto;
+        right: 0;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        &.big {
+          max-width: 400px;
+          height: auto;
         }
       }
     }

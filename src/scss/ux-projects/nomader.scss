@@ -1,0 +1,393 @@
+// Large devices (desktops, less than 1200px)
+@media screen and (min-width: 1000px) {
+  .ux-portfolio {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    padding: 70px 0 50px;
+    top: -70px;
+    position: relative;
+    .portfolio-card {
+      bottom: 50px;
+      height: 300px;
+      width: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .selection-nav {
+    display: flex;
+    justify-content: space-between;
+    .flex-col {
+      h2 {
+        font-size: 18px;
+      }
+      .icon {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 30px;
+      }
+    }
+  }
+  .cancel-btn {
+    right: 90px;
+    top: 150px;
+    padding: 12px 12px 10px;
+    .icon {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  .case-study-content {
+    width: 1100px;
+    .study-each {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      .study-media {
+        position: relative;
+        width: 30%;
+        .nomader-one {
+          top: -20px;
+          left: -150px;
+          position: absolute;
+          width: 700px;
+          height: auto;
+        }
+      }
+      .study-info {
+        .inner {
+          overflow-y: scroll;
+        }
+      }
+    }
+    h2 {
+      font-size: 20px;
+      margin-top: 0;
+    }
+    .nomader-three {
+      position: absolute;
+      width: 300px;
+      top: -50px;
+      right: 0;
+      &.sketch {
+        right: -50px;
+      }
+      &.sketchflow {
+        right: -50px;
+      }
+      &.wireframes {
+        right: 0;
+        width: 300px;
+        top: 135px;
+        left: 0;
+        margin: auto;
+      }
+    }
+    .nomader-four {
+      position: absolute;
+      width: 400px;
+      top: 50px;
+      right: 50px;
+    }
+    .study-info {
+      .inner {
+        position: relative;
+        z-index: 1;
+      }
+      &.name-info {
+        .inner {
+          margin-left: 150px;
+          padding-right: 15px;
+          max-height: none;
+          max-width: 500px;
+        }
+      }
+      &.method-info {
+        .inner {
+          margin-left: 0;
+        }
+      }
+      &.design-info,
+      &.method-info,
+      &.research-info {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        top: 0;
+        width: 100%;
+        margin: auto;
+        min-height: 250px;
+        .design-buttons,
+        .method-buttons,
+        .research-buttons {
+          width: 20%;
+          button {
+            width: 100%;
+            display: block;
+          }
+        }
+        .design-lower,
+        .method-lower,
+        .research-lower {
+          width: 70%;
+          .flex-container {
+            display: flex;
+            justify-content: space-between;
+          }
+          .info-card {
+            max-width: 600px;
+            padding: 0 15px 15px;
+            color: $white;
+            border-radius: 10px;
+            h2 {
+              em {
+                // color: $white;
+                // font-family: 'ParisDreamer-Regular';
+              }
+            }
+            &.active {
+              &.one {
+                h2, h3 {
+                  color: rgba(11,155,120,1);
+                }
+                border-radius: 10px 10px 10px 0;
+              }
+              &.two {
+                h2, h3 {
+                  color: rgba(39,136,84,1);
+                }
+                border-radius: 10px;
+              }
+              &.three {
+                h2, h3 {
+                  color: rgba(35,135,139,1);
+                }
+                border-radius: 10px;
+              }
+              &.four {
+                h2, h3 {
+                  color: rgba(80,142,165,1);
+                }
+                border-radius: 10px 10px 0 10px;
+              }
+            }
+          }
+        }
+        .method-lower {
+          width: 75%;
+          .info-card {
+            max-width: 550px;
+          }
+        }
+        .inner {
+          display: block;
+          width: 45%;
+          max-width: none;
+          &.card {
+            width: 100%;
+            border-radius: 0 0 10px 10px;
+            padding: 10px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            overflow: visible;
+
+            button {
+              color: $white;
+              background: transparent;
+              border-radius: 100em;
+              border: none;
+              height: 50px;
+              cursor: pointer;
+            }
+            &.one {
+              button {
+                border: 3px solid rgba(11,155,120,.7);
+              }
+            }
+            &.two {
+              button {
+                border: 3px solid rgba(39,136,84,.7);
+              }
+            }
+            &.three {
+              button {
+                border: 3px solid rgba(35,135,139,.7);
+              }
+            }
+            &.four {
+              button {
+                border: 3px solid rgba(80,142,165,.7);
+              }
+            }
+            &.active {
+              button {
+                position: relative;
+                &::after {
+                  content: '';
+                  position: absolute;
+                  display: block;
+                  border-top: 7px solid transparent;
+                  border-bottom: 7px solid transparent;
+                  border-left: 7px solid $white;
+                  bottom: auto;
+                  right: -15px;
+                  top: 20px;
+                }
+              }
+              &.one {
+                button {
+                  border: none;
+                  background: rgba(11,155,120,.7);
+                }
+              }
+              &.two {
+                button {
+                  border: none;
+                  background: rgba(39,136,84,.7);
+                }
+              }
+              &.three {
+                button {
+                  border: none;
+                  background: rgba(35,135,139,.7);
+                }
+              }
+              &.four {
+                button {
+                  border: none;
+                  background: rgba(80,142,165,.7);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// X-Large devices (large desktops, less than 1400px)
+@media screen and (min-width: 1400px) {
+  .selection-nav {
+    .flex-col {
+      h2 {
+        font-size: 24px;
+      }
+      .icon {
+        width: 70px;
+        height: 70px;
+        margin-bottom: 40px;
+      }
+    }
+  }
+}
+
+// X-Large devices (large desktops, less than 1400px)
+@media screen and (min-width: 1800px) {
+  .selection-nav {
+    .flex-col {
+      h2 {
+        font-size: 32px;
+      }
+      .icon {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  .cancel-btn {
+    right: 90px;
+    top: 230px;
+    padding: 12px 12px 10px;
+    .icon {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  .case-study-content {
+    width: 1799px;
+    .study-media {
+      .nomader-one {
+        top: -200px;
+        position: absolute;
+        width: 1000px;
+        height: auto;
+      }
+    }
+    .nomader-three {
+      position: absolute;
+      width: 300px;
+      top: -50px;
+      right: 50px;
+    }
+    .nomader-four {
+      position: absolute;
+      width: 400px;
+      top: 50px;
+      // right: 50px;
+    }
+    .study-info {
+      .inner {
+        position: relative;
+        z-index: 1;
+      }
+      &.name-info {
+        .inner {
+          padding-right: 15px;
+          max-height: 500px;
+          max-width: 600px;
+        }
+      }
+      &.design-info,
+      &.method-info,
+      &.research-info {
+        margin: auto;
+        max-width: 1000px;
+        top: -50px;
+        .research-buttons {
+
+        }
+        .design-lower,
+        .method-lower,
+        .research-lower {
+          h2 {
+            // color: rgba(11,155,120,1);
+          }
+        }
+        .flex-container {
+
+        }
+        .inner {
+          max-width: none;
+          &.card {
+            width: 20%;
+            height: auto;
+            min-height: 100px;
+            border-radius: 0 0 10px 10px;
+            padding: 0 10px 10px;
+            &.one {
+              background: rgba(11,155,120,1);
+            }
+            &.two {
+              background: rgba(39,136,84,1);
+            }
+            &.three {
+              background: rgba(39,136,84,1);
+            }
+            &.four {
+              background: rgba(35,135,139,1);
+            }
+          }
+        }
+      }
+    }
+  }
+}

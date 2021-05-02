@@ -2,16 +2,19 @@
   @import '@/scss/mixins';
   @import '@/scss/portfolio';
   @import '@/scss/illustration';
-  .mobile-portfolio-header {
-    margin: 50px 0 20px !important;
-    font-size: 24px !important;
-    color: #29888f;
-  }
 </style>
 <template>
   <div class="illustration-projects">
     <div class="portfolio illustration">
-      <h1 class="mobile-portfolio-header">Illustration</h1>
+      <div class="mobile-top-bar">
+        <router-link tag="button" to="/resume" class="go-back mobile-top">
+          <svg class="icon back"><use href="#back"></use></svg>
+        </router-link>
+        <h1 class="mobile-header">Illustration</h1>
+        <button class="search-page mobile-top">
+          <svg class="icon menu"><use href="#mobile-menu"></use></svg>
+        </button>
+      </div>
       <section class="illustration-content content-container">
         <div class="illustration-each">
           <h2>Monsters and Maidens</h2>

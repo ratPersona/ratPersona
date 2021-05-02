@@ -20,28 +20,28 @@
       role="button"
       to="/line-webtoon"
       class="portfolio-card">
-        <h2 class="paris-dreamer">Line Webtoon</h2>
+        <h2 class="portfolio-h2">Line Webtoon</h2>
         <img class="portfolio-thumb" src="@/assets/nomader.png">
       </router-link>
       <router-link
       role="button"
       to="/nomader"
       class="portfolio-card">
-        <h2 class="paris-dreamer">Nomader</h2>
+        <h2 class="portfolio-h2">Nomader</h2>
         <img class="portfolio-thumb" src="@/assets/nomader.png">
       </router-link>
       <router-link
       role="button"
       to="/sims"
       class="portfolio-card">
-        <h2 class="paris-dreamer">SIMS</h2>
+        <h2 class="portfolio-h2">SIMS</h2>
         <img class="portfolio-thumb" src="@/assets/sims.png">
       </router-link>
       <router-link
       role="button"
       to="/shop-floor"
       class="portfolio-card">
-        <h2 class="paris-dreamer">Shop Floor App</h2>
+        <h2 class="portfolio-h2">Shop Floor App</h2>
         <img class="portfolio-thumb" src="@/assets/runcharts.png">
       </router-link>
       <div class="call-to-action">

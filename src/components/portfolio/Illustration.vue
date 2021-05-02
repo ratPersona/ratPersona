@@ -8,37 +8,45 @@
 <template>
   <div class="illustration-projects">
     <div class="portfolio illustration">
-      <!-- <router-link tag="button" to="/employment" class="to-employment">
-        <svg class="icon employment"><use href="#employment"></use></svg>
-      </router-link>
-      <button class="print-me">
-        <svg class="print"><use href="#printer"></use></svg>
-      </button> -->
+      <div class="custom-hooper-nav">
+        <button @click="slidePrev()" class="btn-left"><svg class="icon"><use href="#back"></use></svg></button>
+        <button @click="slideNext()" class="btn-right"><svg class="icon"><use href="#back"></use></svg></button>
+      </div>
       <section class="illustration-content content-container">
         <div v-if="activeButton ==  0" class="illustration-each">
           <div class="portfolio monsters-and-maidens">
-            <img class="illustration-pic angle" src="@/assets/Angle.jpg">
-            <img class="illustration-pic dark-pals" src="@/assets/DarkPals.jpg">
-            <img class="illustration-pic gungal" src="@/assets/gungal.jpg">
-            <img class="illustration-pic redhead" src="@/assets/Redhead.jpg">
-            <img class="illustration-pic ret" src="@/assets/Ret.jpg">
-            <img class="illustration-pic smokey" src="@/assets/Smokey.jpg">
-            <img class="illustration-pic smonster" src="@/assets/Smonster.jpg">
+            <hooper ref="carousel" :itemsToShow="3" :itemsToSlide="1" style="height: 400px" :centerMode="false">
+              <slide class="pic-wrapper"><img class="illustration-pic angle" src="@/assets/Angle.jpg"></slide>
+              <slide class="pic-wrapper"><img class="illustration-pic dark-pals" src="@/assets/DarkPals.jpg"></slide>
+              <slide class="pic-wrapper"><img class="illustration-pic gungal" src="@/assets/gungal.jpg"></slide>
+              <slide class="pic-wrapper"><img class="illustration-pic redhead big" src="@/assets/Redhead.jpg"></slide>
+              <slide class="pic-wrapper"><img class="illustration-pic ret" src="@/assets/Ret.jpg"></slide>
+              <slide class="pic-wrapper"><img class="illustration-pic smokey" src="@/assets/Smokey.jpg"></slide>
+              <slide class="pic-wrapper"><img class="illustration-pic smonster" src="@/assets/Smonster.jpg"></slide>
+              <!-- <hooper-navigation slot="hooper-addons"></hooper-navigation> -->
+              <!-- <hooper-pagination slot="hooper-addons"></hooper-pagination> -->
+            </hooper>
           </div>
         </div>
         <div v-if="activeButton ==  1" class="illustration-each">
           <div class="portfolio concept-art">
-            <img class="illustration-pic sexy-moth-man" src="@/assets/SexyMothMan.jpg">
+            <hooper :itemsToShow="3" :itemsToSlide="1" style="height: 400px" :centerMode="false">
+              <slide><img class="illustration-pic sexy-moth-man" src="@/assets/SexyMothMan.jpg"></slide>
+            </hooper>
           </div>
         </div>
         <div v-if="activeButton ==  2" class="illustration-each">
           <div class="portfolio tarot-of-the-rat">
-            <img class="illustration-pic" src="@/assets/prof.jpg">
+            <hooper :itemsToShow="3" :itemsToSlide="1" style="height: 400px" :centerMode="false">
+              <slide><img class="illustration-pic" src="@/assets/prof.jpg"></slide>
+            </hooper>
           </div>
         </div>
         <div v-if="activeButton ==  3" class="illustration-each">
           <div class="portfolio doodles">
-            <img class="illustration-pic" src="@/assets/prof.jpg">
+            <hooper :itemsToShow="3" :itemsToSlide="1" style="height: 400px" :centerMode="false">
+              <slide><img class="illustration-pic" src="@/assets/prof.jpg"></slide>
+            </hooper>
           </div>
         </div>
       </section>
@@ -60,9 +68,21 @@
 
 <script>
 import { mapState, mapGetters } from 'vuex'
+import {
+  Hooper,
+  Slide,
+  Navigation as HooperNavigation,
+  Pagination as HooperPagination
+  } from 'hooper';
+import 'hooper/dist/hooper.css'
 
 export default {
-  // name: 'Illustration',
+  components: {
+    Hooper,
+    HooperNavigation,
+    HooperPagination,
+    Slide
+  },
   data: function() {
     return {
       activeItem: '',
@@ -80,6 +100,12 @@ export default {
     ]),
   },
   methods: {
+    slidePrev() {
+      this.$refs.carousel.slidePrev();
+    },
+    slideNext() {
+      this.$refs.carousel.slideNext();
+    },
     getActive(item) {
       this.activeItem = item
       this.activeButton = item

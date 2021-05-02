@@ -5,7 +5,7 @@ export default [
   {
     path: '/nomader',
     name: 'Nomader',
-    component: () => import(/* webpackChunkName: "rats" */ '../components/portfolio/Nomader.vue'),
+    component: () => import(/* webpackChunkName: "rats" */ '../components/portfolio/nomader/Nomader.vue'),
     meta: {
       isPublic:true
     }
