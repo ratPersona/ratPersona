@@ -203,7 +203,8 @@
       display: block;
       width: 100%;
     }
-    .ux-subpage {
+    .ux-subpage,
+    .design-subpage {
       text-align: center;
       width: 100%;
       position: absolute;
@@ -242,6 +243,9 @@
         margin: auto;
         height: auto;
         max-width: 300px;
+        &.webtoon {
+          max-width: 250px;
+        }
         &.big {
           max-width: 400px;
         }

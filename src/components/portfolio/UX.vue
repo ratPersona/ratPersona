@@ -22,7 +22,7 @@
         to="/line-webtoon"
         class="portfolio-card">
           <h2 class="portfolio-h2">Line Webtoon</h2>
-          <img class="portfolio-thumb" src="@/assets/nomader.png">
+          <img class="portfolio-thumb webtoon" src="@/assets/line-webtoon.png">
         </router-link>
       </slide>
       <slide>
@@ -31,7 +31,7 @@
         to="/nomader"
         class="portfolio-card">
           <h2 class="portfolio-h2">Nomader</h2>
-          <img class="portfolio-thumb" src="@/assets/nomader.png">
+          <img class="portfolio-thumb" src="@/assets/nomader-3.png">
         </router-link>
       </slide>
       <slide>

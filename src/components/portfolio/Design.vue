@@ -1,114 +1,96 @@
 <style lang="scss">
 @import '@/scss/mixins';
- h1 {
-   color: $green;
- }
-  .ux-portfolio {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 100%;
-    padding: 70px 0 50px;
-    top: -70px;
-    position: relative;
-    .portfolio-card {
-      position: relative;
-      bottom: 50px;
-      height: 300px;
-      width: 300px;
-      border-radius: 5px;
-      background-color: transparent;
-      border: none;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      &::after {
-        content: '';
-        position: absolute;
-        display: block;
-        width: 100%;
-        height: 100%;
-        border-radius: 5px;
-        opacity: .4;
-        z-index: 1;
-        transition: opacity ease 300ms, border ease 300ms;
-      }
-
-      .paris-dreamer {
-        position: relative;
-        z-index: 2;
-        font-size: 30px;
-        text-transform: capitalize;
-        color: $white;
-        text-shadow: 5px 5px 20px $black-blue;
-      }
-
-      &:hover {
-        cursor: pointer;
-        .paris-dreamer {
-          font-size: 24px;
-          font-family: 'Paris Dreamer';
-        }
-      }
-    }
-  }
+@import '@/scss/subpage';
+@import '@/scss/portfolio';
 </style>
 
-
 <template>
-  <div class="ux-projects">
-    <horizontal-scroll
-    v-show="activeItem == ''"
-    class="ux-portfolio">
-      <div
-      v-for="card in portfolioItems"
-      :key="card">
-        <button class="portfolio-card" @click="showProject(card)">
-          <h2 class="paris-dreamer">{{ removeChar(card) }}</h2>
-        </button>
-      </div>
-    </horizontal-scroll>
-    <div>
-      <LineWebtoon v-show="activeItem == 'line webtoon'" />
-      <Nomader v-show="activeItem == ' nomader'" />
-      <SIMS v-show="activeItem == 'SIMS'" />
+  <div class="subpage portfolio design-subpage">
+    <div class="mobile-top-bar mobile">
+      <router-link tag="button" to="/portfolio" class="go-back mobile-top">
+        <svg class="icon back"><use href="#back"></use></svg>
+      </router-link>
+      <h1 class="mobile-header">UX</h1>
+      <button class="search-page mobile-top">
+        <svg class="icon menu"><use href="#mobile-menu"></use></svg>
+      </button>
     </div>
+    <hooper :itemsToShow="3" :itemsToSlide="3" style="height: 500px" :centerMode="false">
+      <slide>
+        <router-link
+        role="button"
+        to="/raindrop"
+        class="portfolio-card">
+          <h2 class="portfolio-h2">Raindrop Rattery</h2>
+          <img class="portfolio-thumb webtoon" src="@/assets/raindrop.png">
+        </router-link>
+      </slide>
+      <slide>
+        <router-link
+        role="button"
+        to="/rsg"
+        class="portfolio-card">
+          <h2 class="portfolio-h2">Rats, Science, and Genetics</h2>
+          <img class="portfolio-thumb" src="@/assets/rsgtrans.png">
+        </router-link>
+      </slide>
+      <slide>
+        <router-link
+        role="button"
+        to="/boopsnoot"
+        class="portfolio-card">
+          <h2 class="portfolio-h2">Boopsnoot</h2>
+          <img class="portfolio-thumb" src="@/assets/BSR.png">
+        </router-link>
+      </slide>
+      <slide>
+        <router-link
+        role="button"
+        to="/magic"
+        class="portfolio-card">
+          <h2 class="portfolio-h2">Magic Reptiles</h2>
+          <img class="portfolio-thumb big" src="@/assets/runcharts.png">
+        </router-link>
+      </slide>
+      <hooper-navigation slot="hooper-addons"></hooper-navigation>
+      <hooper-pagination slot="hooper-addons"></hooper-pagination>
+    </hooper>
   </div>
 </template>
 
 <script>
-import HorizontalScroll from 'vue-horizontal-scroll'
-import 'vue-horizontal-scroll/dist/vue-horizontal-scroll.css'
-import LineWebtoon from '@/components/portfolio/LineWebtoon'
-import Nomader from '@/components/portfolio/Nomader'
-import SIMS from '@/components/portfolio/SIMS'
+import { mapState, mapMutations } from 'vuex'
+import {
+  Hooper,
+  Slide,
+  Navigation as HooperNavigation,
+  Pagination as HooperPagination
+  } from 'hooper';
+import 'hooper/dist/hooper.css'
 
 export default {
   components: {
-    HorizontalScroll,
-    LineWebtoon,
-    Nomader,
-    SIMS
+    Hooper,
+    HooperNavigation,
+    HooperPagination,
+    Slide
   },
   data: function() {
     return {
-      portfolioItems: ['line-webtoon', 'nomader', 'SIMS'],
-      activeItem: '',
+
     }
   },
+  computed: {
+    ...mapState([
+
+    ]),
+  },
   methods: {
-    removeChar(value) {
-      value = value.replace(/-/g, ' ');
-      return value
-    },
-    showProject(item) {
-      let newItem = this.removeChar(item)
-      this.activeItem = newItem
-    }
+    ...mapMutations([
+
+    ]),
+  },
+  mounted() {
   }
 }
 </script>
