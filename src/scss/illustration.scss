@@ -1,12 +1,21 @@
 .illustration-projects {
   width: 100%;
   height: 100%;
+
+  .mobile-top-bar {
+    .mobile-header {
+      color: #29888f;
+    }
+  }
+
   .illustration {
     height: 100%;
     margin: auto;
     .illustration-content {
       .illustration-each {
-
+        h2 {
+          color: #29888f;
+        }
       }
     }
   }

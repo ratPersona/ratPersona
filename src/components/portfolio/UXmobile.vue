@@ -2,6 +2,7 @@
 @import '@/scss/mixins';
 @import '@/scss/subpage';
 @import '@/scss/portfolio';
+@import '@/scss/ux';
 </style>
 
 <template>

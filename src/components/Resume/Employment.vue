@@ -20,7 +20,7 @@
             <div class="flex first">
               <h3>Software Developer <span>/</span> UX Designer</h3>
               <p class="years"><em>2019-Present</em></p>
-              <ul class="green-list">
+              <ul class="resume-list job">
                 <li><span>User Experience, Design Sprints, Design Thinking</span></li>
                 <li><span>Creating Personas, refining Heuristics, ensuring Accessibility</span></li>
                 <li><span>Vue, HTML5, CSS3</span></li>
@@ -52,7 +52,7 @@
               <div class="flex first">
                 <h3>Web Developer</h3>
                 <p class="years"><em>2017-2019</em></p>
-                <ul class="green-list">
+                <ul class="resume-list job">
                   <li><span>jQuery, HTML5, CSS3</span></li>
                   <li><span>PHP, SQL</span></li>
                   <li><span>Agile Strategy, SCRUM Master, General Project Management</span></li>
@@ -81,7 +81,7 @@
           <div class="flex first">
             <h3>Runaway and Youth Services Advocate</h3>
             <p class="years"><em>2015-2017</em></p>
-            <ul class="green-list">
+            <ul class="resume-list job">
               <li><span>Counseling, Fundraising, and Outreach</span></li>
               <li><span>Curate Youth Programming</span></li>
               <li><span>Family and One-on-One Para-professional sessions</span></li>
@@ -111,7 +111,7 @@
           <div class="flex first">
             <h3>Interactive Graphics Designer</h3>
             <p class="years"><em>2014-2015</em></p>
-            <ul class="green-list">
+            <ul class="resume-list job">
               <li><span>Instructional Design</span></li>
               <li><span>Graphic & Web Design</span></li>
               <li><span>Transcription & Student Accessibility</span></li>

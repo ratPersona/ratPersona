@@ -147,20 +147,20 @@
   }
 
   // Large devices (desktops, less than 1200px)
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1000px) {
     .content-container {
       margin: auto;
       .icon {
         margin: auto;
       }
     }
-    .sidebar {
-      .flex-col {
-        color: $black-blue;
-        height: 200px;
-        width: 200px;
-      }
-    }
+    // .sidebar {
+    //   .flex-col {
+    //     color: $black-blue;
+    //     height: 200px;
+    //     width: 200px;
+    //   }
+    // }
     &.resume {
       .flex-container {
         position: relative;
@@ -168,6 +168,19 @@
         justify-content: center;
         align-items: center;
         .flex {
+          h2, h3, .years {
+            margin: 0 0 5px 0;
+          }
+          h2 {
+            font-size: 18px;
+          }
+          h3, .years {
+            font-size: 14px;
+          }
+          h2 {
+            font-family: 'Mulish';
+            text-align: left;
+          }
           &.first {
             width: 30%;
             padding-right: 50px;

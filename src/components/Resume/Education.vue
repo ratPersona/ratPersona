@@ -13,12 +13,17 @@
     <button class="print-me desktop">
       <svg class="print"><use href="#printer"></use></svg>
     </button>
+    <div>
+    <div class="desktop-header">
+      <h1>Education</h1>
+    </div>
     <section class="resume-content content-container">
       <div v-if="activeButton ==  0" class="job-each">
         <div class="job">
-          <h2>Master of Professional Studies - User Experience</h2>
+          <!-- <h2>Master of Professional Studies - User Experience</h2> -->
           <div class="flex-container">
             <div class="flex first">
+              <h2>Master of Professional Studies <br /> User Experience</h2>
               <h3>Maryland Institute College of Art</h3>
               <p class="years"><em>2020-2021</em></p>
               <ul class="green-list">
@@ -48,9 +53,10 @@
       </div>
       <div v-if="activeButton ==  1" class="job-each">
         <div class="job">
-          <h2>Certificate of Web Development</h2>
+          <!-- <h2>Certificate of Web Development</h2> -->
           <div class="flex-container">
             <div class="flex first">
+              <h2>Certificate of Web Development</h2>
               <h3>Bloc/Thinkful</h3>
               <p class="years"><em>2016-2017</em></p>
               <ul class="green-list">
@@ -79,9 +85,9 @@
       </div>
       <div v-if="activeButton ==  2" class="job-each">
         <div class="job">
-          <h2>Bachelor of Fine Arts - Illustration</h2>
           <div class="flex-container">
             <div class="flex first">
+              <h2>Bachelor of Fine Arts <br /> Illustration</h2>
               <h3>University of Wisconsin Eau Claire</h3>
               <p class="years"><em>2010-2015</em></p>
               <ul class="green-list">
@@ -110,9 +116,9 @@
       </div>
       <div v-if="activeButton ==  3" class="job-each">
         <div class="job">
-          <h2>Bachelor of Arts - German</h2>
           <div class="flex-container">
             <div class="flex first">
+              <h2>Bachelor of Arts <br /> German</h2>
               <h3>University of Wisconsin Eau Claire</h3>
               <p class="years"><em>2010-2015</em></p>
               <ul class="green-list">
@@ -133,6 +139,7 @@
         </div>
       </div>
     </section>
+  </div>
     <nav class="subpage-bottom-nav resume">
       <ul class="internal-nav">
         <li

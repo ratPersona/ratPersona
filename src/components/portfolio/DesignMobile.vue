@@ -18,31 +18,31 @@
     <div class="content-container">
       <router-link
       role="button"
-      to="/line-webtoon"
+      to="/raindrop"
       class="portfolio-card">
-        <h2 class="portfolio-h2">Line Webtoon</h2>
-        <img class="portfolio-thumb" src="@/assets/nomader.png">
+        <h2 class="portfolio-h2">Raindrop Rattery</h2>
+        <img class="portfolio-thumb webtoon" src="@/assets/raindrop.png">
       </router-link>
       <router-link
       role="button"
-      to="/nomader"
+      to="/rsg"
       class="portfolio-card">
-        <h2 class="portfolio-h2">Nomader</h2>
-        <img class="portfolio-thumb" src="@/assets/nomader.png">
+        <h2 class="portfolio-h2">Rats, Science, and Genetics</h2>
+        <img class="portfolio-thumb" src="@/assets/rsgtrans.png">
       </router-link>
       <router-link
       role="button"
-      to="/sims"
+      to="/boopsnoot"
       class="portfolio-card">
-        <h2 class="portfolio-h2">SIMS</h2>
-        <img class="portfolio-thumb" src="@/assets/sims.png">
+        <h2 class="portfolio-h2">Boopsnoot</h2>
+        <img class="portfolio-thumb" src="@/assets/BSR.png">
       </router-link>
       <router-link
       role="button"
-      to="/shop-floor"
+      to="/magic"
       class="portfolio-card">
-        <h2 class="portfolio-h2">Shop Floor App</h2>
-        <img class="portfolio-thumb" src="@/assets/runcharts.png">
+        <h2 class="portfolio-h2">Magic Reptiles</h2>
+        <img class="portfolio-thumb big" src="@/assets/runcharts.png">
       </router-link>
       <div class="call-to-action">
         <h3>Can't decide what to look at?</h3>
