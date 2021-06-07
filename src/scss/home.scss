@@ -152,6 +152,7 @@
   // Medium devices (tablets, less than 992px)
   @media screen and (min-width: 992px) {
     .content {
+      margin: auto;
       .about {
         width: 100%;
         display: flex;
@@ -187,13 +188,15 @@
         }
 
         .about-me-content {
-          width: 50%;
+          width: 75%;
+          text-align: left;
+          // margin: auto;
           // font-size: 16px;
         }
 
         .main-info {
           text-align: left;
-          min-height: 350px;
+          // min-height: 350px;
           width: 100%;
           // font-size: 16px;
           .flex-outer {
@@ -220,7 +223,7 @@
     .content {
       .about {
         aside {
-          margin-top: 100px;
+          // margin-top: 100px;
           .hello {
               h1 {
                 margin: 0;
@@ -243,7 +246,7 @@
         .about-me-content {
           margin-top: 45px;
           width: 50%;
-          font-size: 13px;
+          font-size: 14px;
         }
 
         .main-info {
