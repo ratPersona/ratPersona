@@ -17,59 +17,67 @@
     <div class="content-container content">
       <div class="about">
         <aside>
-          <div class="about-me-info" v-if="activeButton ==  0">
-            <button
-            class="hello"
-            role="button"
-            @click="getNewGreeting()">
-              <h1 class="header">
-                {{ this.hello }}!
-              </h1>
-            </button>
+          <div class="about-me-info" :class="{first: activeButton ==  0}" v-if="activeButton ==  0">
             <div class="image">
+              <button
+              class="hello"
+              role="button"
+              @click="getNewGreeting()">
+                <h1 class="header">
+                  {{ this.hello }}!
+                </h1>
+              </button>
               <img class="home-pic" src="@/assets/prof.jpg">
               <span class="background"></span>
             </div>
-            <h2 class="name">Sam(b) Nelson <br /><small>She/They</small></h2>
+            <div class="name">
+              <h2>Sam(b) Nelson <br/><small>She/They</small></h2>
+            </div>
           </div>
-          <div class="professional-info" v-if="activeButton ==  1">
+          <div class="professional-info" :class="{second: activeButton ==  1}" v-if="activeButton ==  1">
             <div class="image">
               <img class="home-pic" src="@/assets/prof.jpg">
               <span class="background"></span>
             </div>
-            <h2 class="name">Illustrator <small>||</small> UX Designer <br /><small>&&</small> Developer</h2>
+            <div class="name">
+              <h2>UX<small>,</small> Illustration<small>,</small> Design<small>,</small> Developer</h2>
+            </div>
           </div>
-          <div class="ecology-info" v-if="activeButton ==  2">
+          <div class="ecology-info" :class="{third: activeButton ==  2}" v-if="activeButton ==  2">
             <div class="image">
               <img class="home-pic" src="@/assets/prof.jpg">
               <span class="background"></span>
             </div>
-            <h2 class="name">Animal Husbandry <br/><small> / </small> Ecologist</h2>
+            <div class="name">
+              <h2>Animal Husbandry <small> / </small> Ecologist</h2>
+            </div>
           </div>
-          <div class="video-game-info" v-if="activeButton ==  3">
+          <div class="video-game-info" :class="{fourth: activeButton ==  3}" v-if="activeButton ==  3">
             <div class="image">
               <img class="home-pic" src="@/assets/prof.jpg">
               <span class="background"></span>
             </div>
-            <h2 class="name">Pokemon <br/><small> / </small> Snob</h2>
+            <div class="name">
+              <h2>Pokemon Professor<small> / </small> Foxhound Operative</h2>
+            </div>
           </div>
         </aside>
         <main class="about-me-content">
-          <div class="about-me-info" v-if="activeButton ==  0">
+          <div class="about-me-info" :class="{first: activeButton ==  0}" v-if="activeButton ==  0">
             <h3>Let me say 'Hi!' in all the ways!</h3>
             <p>I'm a non-binary (female-presenting) empath who wants to use their skills for good!</p>
             <p>I'm addicted to romance novels/comics and horror movies, so much so I've made a case study on one of my <router-link to="/line-webtoon">favorite comic apps!</router-link></p>
             <p>I have a Bob's Burgers or Gilmore Girl's quote for any situation (if you need one, let me know!) and I speak in memes.</p>
             <p><router-link to="/contact">Let's get acquainted</router-link> and check out my stuff!</p>
           </div>
-          <div class="professional-info" v-if="activeButton ==  1">
+          <div class="professional-info" :class="{second: activeButton ==  1}" v-if="activeButton ==  1">
             <h3>Creativity is my passion!</h3>
             <p>I possess a BFA in Illustration and I'm finishing my MPS in User Experience Design. Additionally, I learned developer skills through Thinkful, a part-time bootcamp!</p>
             <p>I love to create and when I'm not at work making wireframes, prototyping, and testing software I'm at home drawing monster girls on my iPad or redesigning my favorite video games.</p>
             <p>My main focus in creativtiy is making the world a better place through enjoyable narratives and accessible design!</p>
             <router-link to="/portfolio">Check out my portfolio!</router-link>
           </div>
-          <div class="ecology-info" v-if="activeButton ==  2">
+          <div class="ecology-info" :class="{third: activeButton ==  2}" v-if="activeButton ==  2">
             <h3>Yes, I'm one of those "horse girls".</h3>
             <p>I care very much about animals and I have several species IN my care :).</p>
             <p>I am a rat breeder, a snake keeper, a dragon tamer, a chicken wrangler, a kitty keeper, and a bunny mom!</p>
@@ -77,7 +85,7 @@
             <p>Proper care, treatment, and biology for animal keeping is something I've continued to learn about as an adult with exotic pets, and I love talking about it!</p>
             <p>Feel free to <router-link to="/contact">chat with me</router-link> about my available pets, how to care for exotics, or just to get in touch with another animal maniac!</p>
           </div>
-          <div class="video-game-info" v-if="activeButton ==  3">
+          <div class="video-game-info" :class="{fourth: activeButton ==  3}" v-if="activeButton ==  3">
             <h3>Button mash to win!</h3>
             <p>Video games were the primary reason for my interest in the creative arts and tech!</p>
             <p>I enjoy all genres, and my favorites are FPS games (COD and Overwatch), hack & slash (Bayonetta and Killer is Dead), JRPG (Pokemon!!!), and MMORPGs (WOW)!</p>

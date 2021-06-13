@@ -106,25 +106,6 @@
       }
     }
     .content-container {
-      .resume-list {
-        padding: 0 0 0 12px;
-        &.edu {
-          li {
-            color: #29888f;
-          }
-        }
-        &.job {
-          li {
-            color: #248e2d;
-          }
-        }
-        li {
-          margin-bottom: 10px;
-          span {
-            color: $white;
-          }
-        }
-      }
       .edu {
         // border-bottom: 2px solid #29888f;
         .title {

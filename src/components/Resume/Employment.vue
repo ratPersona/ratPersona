@@ -15,9 +15,10 @@
     <section class="resume-content content-container">
       <div v-if="activeButton ==  0" class="job-each">
         <div class="job">
-          <h2>Mayville Engineering Company</h2>
+          <!-- <h2>Mayville Engineering Company</h2> -->
           <div class="flex-container">
             <div class="flex first">
+              <h2>Mayville Engineering Company</h2>
               <h3>Software Developer <span>/</span> UX Designer</h3>
               <p class="years"><em>2019-Present</em></p>
               <ul class="resume-list job">
@@ -47,9 +48,10 @@
       </div>
       <div v-else-if="activeButton == 1" class="job-each">
           <div class="job">
-            <h2>BrownBoots Interactive</h2>
+            <!-- <h2>BrownBoots Interactive</h2> -->
             <div class="flex-container">
               <div class="flex first">
+                <h2>BrownBoots Interactive</h2>
                 <h3>Web Developer</h3>
                 <p class="years"><em>2017-2019</em></p>
                 <ul class="resume-list job">
@@ -76,9 +78,9 @@
         </div>
       </div>
       <div v-else-if="activeButton == 2" class="job-each">
-        <h2>Americorps</h2>
         <div class="flex-container">
           <div class="flex first">
+            <h2>Americorps</h2>
             <h3>Runaway and Youth Services Advocate</h3>
             <p class="years"><em>2015-2017</em></p>
             <ul class="resume-list job">
@@ -106,9 +108,9 @@
       </div>
 
       <div v-else-if="activeButton == 3" class="job-each">
-        <h2>Center for Excellence in Teaching and Learning</h2>
         <div class="flex-container">
           <div class="flex first">
+            <h2>Center for Excellence in Teaching and Learning</h2>
             <h3>Interactive Graphics Designer</h3>
             <p class="years"><em>2014-2015</em></p>
             <ul class="resume-list job">

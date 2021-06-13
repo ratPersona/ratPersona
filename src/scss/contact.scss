@@ -1,7 +1,15 @@
 @import '@/scss/mixins';
 
+
 .contact {
   text-align: center;
+  .contact-btn {
+    span {
+      &.desktop {
+        color: #fff;
+      }
+    }
+  }
   .socials {
     width: 100%;
     position: absolute;
@@ -34,7 +42,8 @@
     border: none;
     min-height: 40px;
     border-radius: 10px;
-    color: $white;
+    // color: $white;
+    color: #fff;
     font-weight: 800;
     font-size: 16px;
     border: $green 3px solid;
@@ -62,6 +71,7 @@
   .flex-container {
     .contact-container {
       .contact-btn {
+        color: #fff;
         .icon {
           width: 30px;
           height: 30px;
@@ -69,7 +79,7 @@
       }
       &:nth-child(1) {
         .contact-btn {
-          &:hover {
+          &:hover {margin: 0 auto 20px;
             &:first-of-type {
               border-color: rgba(11,155,120,1);
               background-color: rgba(11,155,120,1);
@@ -101,7 +111,7 @@
         fill: $green;
         width: 50px;
         height: 50px;
-        margin-bottom: 20px;
+        margin: 0 auto 20px;
       }
     }
   }
@@ -112,6 +122,10 @@
   .contact {
     text-align: center;
     span {
+      // color: #fff;
+      // &.desktop {
+      //   color: #fff !important;
+      // }
       &.mobile {
         font-size: 22px;
       }
@@ -144,12 +158,16 @@
       .contact-btn {
         margin-bottom: 20px;
         padding: 10px 0;
+        color: #fff;
         &:hover {
           background: transparent !important;
         }
         span {
           margin-left: 20px;
           color: #fff;
+          &.desktop {
+            color: #fff;
+          }
         }
         .icon {
           margin: 0;

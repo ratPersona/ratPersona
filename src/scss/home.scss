@@ -15,6 +15,46 @@
   justify-content: center;
   text-align: center;
 
+  .first {
+    h2 {
+      small {
+        color: $one;
+      }
+    }
+    h3, span, strong {
+      color: $one;
+    }
+  }
+  .second {
+    h2 {
+      small {
+        color: $two;
+      }
+    }
+    h3, span, strong {
+      color: $two;
+    }
+  }
+  .third {
+    h2 {
+      small {
+        color: $three;
+      }
+    }
+    h3, span, strong {
+      color: $three;
+    }
+  }
+  .fourth {
+    h2 {
+      small {
+        color: $four;
+      }
+    }
+    h3, span, strong {
+      color: $four;
+    }
+  }
   .name {
     width: 100%;
     margin: 0 0 20px;
@@ -51,6 +91,7 @@
             z-index: 10;
           }
           .background {
+            display: none;
             width: 200px;
             height: 200px;
             border-radius: 100em;
@@ -61,7 +102,7 @@
             opacity: .6;
             background-color: #29888f;
             // background-color: rgba(98, 168, 142, 0.6);
-            display: block;
+            // display: block;
           }
         }
         h2 {
@@ -99,19 +140,18 @@
       .about {
         aside {
           padding-bottom: 20px;
-          .hello {
-            position: relative;
-            top: 80px;
-            z-index: 10;
-            h1 {
-              color: $white;
-            }
-            .header {
-              font-size: 20px;
-              margin-bottom: 0;
-            }
-          }
           .image {
+            .hello {
+              position: relative;
+              top: 80px;
+              h1 {
+                color: $white;
+              }
+              .header {
+                font-size: 20px;
+                margin-bottom: 0;
+              }
+            }
             z-index: 9;
           }
         }
@@ -130,10 +170,10 @@
   @media screen and (min-width: 768px) {
     .name {
       margin: 0 0 20px;
-      font-size: 28px;
+      font-size: 20px;
       text-align: left;
       small {
-        font-size: 20px;
+        font-size: 18px;
       }
     }
     .content {
@@ -151,6 +191,21 @@
 
   // Medium devices (tablets, less than 992px)
   @media screen and (min-width: 992px) {
+    .name {
+      margin: 0 0 20px;
+      text-align: left;
+      h2 {
+        text-align: center;
+        max-width: 300px;
+        position: relative;
+        z-index: 10;
+        margin: auto;
+        font-size: 24px;
+        small {
+          font-size: 22px;
+        }
+      }
+    }
     .content {
       margin: auto;
       .about {
@@ -159,8 +214,10 @@
         justify-content: space-around;
         align-items: center;
         aside {
+          width: 25%;
           .image {
             position: relative;
+            width: 100%;
             .home-pic {
               width: 300px;
               height: 300px;
@@ -177,13 +234,8 @@
               right: auto;
               left: 65px;
               z-index: 9;
-              // background-color: rgba(98, 168, 142, 0.6);
-              display: block;
+              // display: block;
             }
-          }
-          h2 {
-            position: relative;
-            z-index: 10;
           }
         }
 
@@ -223,15 +275,25 @@
     .content {
       .about {
         aside {
+          // position: relative;
           // margin-top: 100px;
-          .hello {
-              h1 {
-                margin: 0;
-                font-size: 30px;
-                // color: $green;
-              }
-            }
           .image {
+            .hello {
+              width: 100%;
+              z-index: 100;
+              position: absolute;
+              left: 0;
+              top: 0;
+              right: 0;
+              margin: auto;
+                h1 {
+                  top: 0;
+                  color: $white;
+                  margin: 0;
+                  font-size: 30px;
+                  // color: $green;
+                }
+              }
             .home-pic {
               width: 250px;
               height: 250px;
@@ -268,20 +330,30 @@
 
   // X-Large devices (large desktops, less than 1400px)
   @media screen and (min-width: 1800px) {
+    .name {
+      margin: 0 0 20px;
+      text-align: left;
+      h2 {
+        font-size: 28px;
+        small {
+          font-size: 20px;
+        }
+      }
+    }
     .content {
       // position: relative;
       z-index: 100;
       .about {
         aside {
-          .hello {
-              h1 {
-                font-size: 36px;
-              }
-            }
           .image {
+            .hello {
+                h1 {
+                  font-size: 36px;
+                }
+              }
             .home-pic {
-              width: 300px;
-              height: 300px;
+              width: 400px;
+              height: 400px;
             }
             .background {
               width: 300px;
@@ -290,7 +362,7 @@
           }
         }
         .about-me-content {
-          font-size: 16px;
+          font-size: 18px;
           width: 40%;
         }
         .main-info {
