@@ -7,7 +7,7 @@
 <template>
   <section class="subpage">
     <div class="content-container">
-    <h1>Professional Stuff!</h1>
+    <!-- <h1>Professional Stuff!</h1> -->
       <div class="resume">
         <nav
         class="selection-nav">

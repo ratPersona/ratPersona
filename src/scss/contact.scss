@@ -42,7 +42,6 @@
     border: none;
     min-height: 40px;
     border-radius: 10px;
-    // color: $white;
     color: #fff;
     font-weight: 800;
     font-size: 16px;
@@ -77,41 +76,51 @@
           height: 30px;
         }
       }
+      .icon {
+        fill: $green;
+        width: 50px;
+        height: 50px;
+        margin: 0 auto 20px;
+      }
       &:nth-child(1) {
+        .icon {
+          fill: gba(11,155,120,1);
+        }
         .contact-btn {
+          border-color: rgba(11,155,120,1);
           &:hover {margin: 0 auto 20px;
             &:first-of-type {
-              border-color: rgba(11,155,120,1);
               background-color: rgba(11,155,120,1);
             }
           }
         }
       }
       &:nth-child(2) {
+        .icon {
+          fill: rgba(36,143,43,1);
+        }
         .contact-btn {
+          border-color: rgba(36,143,43,1);
           &:hover {
             &:first-of-type {
-              border-color: rgba(36,143,43,1);
+              // border-color: rgba(36,143,43,1);
               background-color: rgba(36,143,43,1);
             }
           }
         }
       }
       &:nth-child(3) {
+        .icon {
+          fill: rgba(80,142,165,1);
+        }
         .contact-btn {
+          border-color: rgba(80,142,165,1);
           &:hover {
             &:first-of-type {
-              border-color: rgba(80,142,165,1);
               background-color: rgba(80,142,165,1);
             }
           }
         }
-      }
-      .icon {
-        fill: $green;
-        width: 50px;
-        height: 50px;
-        margin: 0 auto 20px;
       }
     }
   }
@@ -256,7 +265,7 @@
           }
         }
         .icon {
-          fill: $green;
+          // fill: $green;
           width: 50px;
           height: 50px;
           margin-bottom: 20px;

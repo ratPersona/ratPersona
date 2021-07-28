@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import router from '@/router/index.js'
 
 Vue.use(Vuex)
 
@@ -52,6 +53,9 @@ export default new Vuex.Store({
     },
   },
   actions: {
+    back() {
+      router.go(-1)
+    },
     setActiveButton({commit}, button) {
       commit('ACTIVE_BUTTON', button)
     }

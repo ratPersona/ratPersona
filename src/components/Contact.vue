@@ -31,11 +31,11 @@
           <svg class="icon desktop"><use href="#phone"></use></svg>
           <h2>Call Me (Beep Me):</h2>
           <p>Just remember to leave a voicemail!</p>
-          <a class="contact-btn call" href="tel:+19209600612">
+          <button class="contact-btn call" @click="callMe()">
             <svg class="icon mobile"><use href="#phone"></use></svg>
             <span class="desktop">Beep Boop!</span>
             <span class="mobile">Call Me!</span>
-          </a>
+          </button>
         </div>
       </div>
       <footer class="socials">
@@ -73,6 +73,9 @@ export default {
     }
   },
   methods: {
+    callMe() {
+
+    }
   },
   mounted() {
   }

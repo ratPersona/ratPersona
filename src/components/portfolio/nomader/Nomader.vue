@@ -5,11 +5,11 @@
 
 <template>
   <div class="ux-projects subpage">
-    <!-- <button
+    <button
     class="cancel-btn"
-    @click="closePortfolioPage">
+    @click="back()">
       <svg class="icon"><use href="#cancel"></use></svg>
-    </button> -->
+    </button>
     <section class="case-study-content">
       <div v-if="activeButton ==  0" class="study-each name">
         <div class="study-media">
@@ -221,7 +221,7 @@
 </template>
 
 <script>
-import { mapState, mapGetters } from 'vuex'
+import { mapState, mapGetters, mapMutations } from 'vuex'
 
 // import Navigation from '@/components/portfolio/global/PortfolioNavigation.vue'
 
@@ -248,6 +248,12 @@ export default {
   watch: {
   },
   methods: {
+    ...mapMutations([
+      // 'BACK',
+    ]),
+    back() {
+      this.$store.dispatch('back')
+    },
     getActive(item) {
       this.activeItem = item
       this.activeButton = item

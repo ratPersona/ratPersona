@@ -55,6 +55,16 @@
       color: $four;
     }
   }
+  .fifth {
+    h2 {
+      small {
+        color: $five;
+      }
+    }
+    h3, span, strong {
+      color: $five;
+    }
+  }
   .name {
     width: 100%;
     margin: 0 0 20px;

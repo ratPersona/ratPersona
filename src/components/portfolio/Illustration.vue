@@ -16,6 +16,7 @@
         <div v-if="activeButton ==  0" class="illustration-each">
           <div class="portfolio monsters-and-maidens">
             <hooper ref="carousel" :itemsToShow="3" :itemsToSlide="1" style="height: 400px" :centerMode="false">
+              <slide class="pic-wrapper"><img class="illustration-pic swamp" src="@/assets/swampgirl.jpeg"></slide>
               <slide class="pic-wrapper"><img class="illustration-pic angle" src="@/assets/Angle.jpg"></slide>
               <slide class="pic-wrapper"><img class="illustration-pic dark-pals" src="@/assets/DarkPals.jpg"></slide>
               <slide class="pic-wrapper"><img class="illustration-pic gungal" src="@/assets/gungal.jpg"></slide>
